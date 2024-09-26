@@ -67,9 +67,8 @@ export default function Hero() {
                 <span>Verified Reviews</span>
               </div>
             </div>
-            <h2 className="text-sm uppercase tracking-wider">OUR EXPERTISE</h2>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif leading-tight">
-              EXOTIC DISHES
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight">
+              SOLUSI CATERINGMU!
             </h1>
             <p className="text-sm md:text-base max-w-md">
               Tincidunt id aliquet risus feugiat in ante metus dictum vulputate
@@ -79,7 +78,7 @@ export default function Hero() {
             <Button asChild className="mt-4">
               <Link
                 href="/login"
-                className="text-xl font-bold bg-white text-black rounded-full px-10 py-6 border-2 border-black"
+                className="text-xl font-bold text-black rounded-full px-10 py-6 border-2 border-black"
               >
                 Order Now
               </Link>
