@@ -9,7 +9,7 @@ export function AppleCarousel() {
   ));
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full py-20">
+    <div className="flex flex-col items-center justify-center w-full h-full py-8">
       <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-slate-800 font-sans">
         Our Products
       </h2>

@@ -5,7 +5,7 @@ import { AppleCarousel } from "@/components/appleCarousel";
 
 export default function OurProduct() {
   return (
-    <div className="bg-[#EBEBE5] text-slate-800 py-8">
+    <div className="bg-[#EBEBE5] text-slate-800 py-6">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center">
           <p className="text-base md:text-xl max-w-2xl text-center">

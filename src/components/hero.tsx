@@ -71,9 +71,8 @@ export default function Hero() {
               SOLUSI CATERINGMU!
             </h1>
             <p className="text-sm md:text-base max-w-md">
-              Tincidunt id aliquet risus feugiat in ante metus dictum vulputate
-              mi sit amet mauris commodo quis. Tortor aliquam nulla facilisi
-              cras fermentum odio.
+              Percayakan Alarasa Catering untuk melengkapi setiap acara special
+              kalian! Enak, higienis dan terjangkau!
             </p>
             <Button asChild className="mt-4">
               <Link
@@ -90,7 +89,7 @@ export default function Hero() {
               alt={slides[currentSlide].alt}
               width={800}
               height={600}
-              className="object-cover w-full h-[300px] md:h-[400px] lg:h-[500px]"
+              className="object-cover w-full h-[300px] md:h-[400px] lg:h-[550px]"
             />
             <button
               onClick={prevSlide}
