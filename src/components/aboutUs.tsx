@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -97,8 +95,9 @@ export default function AboutUs() {
           </h2>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xl italic mb-6">
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
+              &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+              leo.&rdquo;
             </p>
             <div className="flex items-center justify-center">
               <Image
