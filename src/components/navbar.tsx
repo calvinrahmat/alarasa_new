@@ -31,19 +31,7 @@ export function Navbar() {
                 href="/about"
                 className="py-4 px-2  font-semibold hover:text-green-500 transition duration-300"
               >
-                About
-              </Link>
-              <Link
-                href="/services"
-                className="py-4 px-2  font-semibold hover:text-green-500 transition duration-300"
-              >
-                Services
-              </Link>
-              <Link
-                href="/contact"
-                className="py-4 px-2  font-semibold hover:text-green-500 transition duration-300"
-              >
-                Contact
+                Tentang Kami
               </Link>
             </div>
           </div>

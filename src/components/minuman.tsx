@@ -5,7 +5,7 @@ export default function ProductCard() {
     <div className="bg-[#F5F5F5] p-8 flex flex-col md:flex-row items-center ">
       <div className="md:w-1/2 space-y-6">
         <h2 className="text-4xl font-bold text-black">
-          TEH <span className="text-[#8B4513]">SEGAR</span>
+          Add On <span className="text-[#8B4513]">Drink</span>
         </h2>
         <p className="text-xl font-semibold text-black">IDR 5.000</p>
         <p className="text-gray-700">

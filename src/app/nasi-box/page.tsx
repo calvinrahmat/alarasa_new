@@ -1,7 +1,7 @@
 import ProductShowcase from "@/components/product-showcase";
 import RiceBox from "@/components/riceBox";
 import Minuman from "@/components/minuman";
-
+import { Review } from "@/components/Review";
 export default function Home() {
   return (
     <main className="mt-20">
@@ -15,6 +15,7 @@ export default function Home() {
           </div>
         </div>
         <Minuman />
+        <Review />
       </div>
     </main>
   );
