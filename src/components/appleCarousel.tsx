@@ -52,18 +52,21 @@ const DummyContent = () => {
 
 const data = [
   {
-    title: "Rice Box",
-    src: "/alarasa.jpg",
+    title: "Nasi Box",
+    src: "/nasi-box.jpg",
     content: <DummyContent />,
+    link: "/nasi-box",
   },
   {
     title: "Prasmanan",
-    src: "/alarasa2.jpg",
+    src: "/prasmanan.jpg",
     content: <DummyContent />,
+    link: "/prasmanan",
   },
   {
     title: "Snack Box / Coffee Break",
-    src: "/alarasa3.jpg",
+    src: "/snack.jpg",
     content: <DummyContent />,
+    link: "/snack-box",
   },
 ];

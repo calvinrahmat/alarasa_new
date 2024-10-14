@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -18,29 +18,29 @@ export default function Footer() {
           {/* Contact Information */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Contact Us</h3>
-            <p>123 Gourmet Street, Foodville, FC 12345</p>
-            <p>Phone: (555) 123-4567</p>
-            <p>Email: info@deliciousdelights.com</p>
+            <p>
+              Jl. Komp. Perumahan DPR - RI Blok C No. 25, RT10/RW01, Kel. Joglo,
+              Kec. Kembangan, Jakarta Barat - 16640
+            </p>
           </div>
 
           {/* Social Media Links */}
           <div className="space-y-4">
             <h3 className="text-xl font-semibold">Follow Us</h3>
             <div className="flex space-x-4">
-              <Link href="https://facebook.com" className="hover:text-blue-400">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61550236231984"
+                className="hover:text-blue-400"
+              >
                 <Facebook size={24} />
                 <span className="sr-only">Facebook</span>
               </Link>
               <Link
-                href="https://instagram.com"
+                href="https://www.instagram.com/alarasa.catering"
                 className="hover:text-pink-400"
               >
                 <Instagram size={24} />
                 <span className="sr-only">Instagram</span>
-              </Link>
-              <Link href="https://twitter.com" className="hover:text-blue-300">
-                <Twitter size={24} />
-                <span className="sr-only">Twitter</span>
               </Link>
             </div>
           </div>

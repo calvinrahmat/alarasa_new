@@ -17,6 +17,7 @@ import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface CarouselProps {
   items: JSX.Element[];
@@ -27,6 +28,7 @@ type Card = {
   src: string;
   title: string;
   content: React.ReactNode;
+  link: string; // Add this line
 };
 
 export const CarouselContext = createContext<{
@@ -186,10 +188,6 @@ export const Card = ({
 
   useOutsideClick(containerRef, () => handleClose());
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
   const handleClose = () => {
     setOpen(false);
     onCardClose(index);
@@ -244,13 +242,14 @@ export const Card = ({
             {card.title}
           </motion.p>
           <div className="mt-auto">
-            <Button
-              onClick={handleOpen}
-              variant="outline"
-              className="bg-white/10 hover:bg-white/20 text-white font-bold border-white/20 md:text-xl"
-            >
-              SEE MORE <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
+            <Link href={card.link}>
+              <Button
+                variant="outline"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold border-white/20 md:text-xl"
+              >
+                SEE MORE <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
         <BlurImage
