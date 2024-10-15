@@ -96,7 +96,7 @@ export default function AboutUs() {
           <div className="grid md:grid-cols-2 gap-8">
             {misi.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-semibold text-slate-800 mb-4">
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-slate-800 mb-4">{service.description}</p>
@@ -118,7 +118,7 @@ export default function AboutUs() {
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-semibold text-slate-800 mb-4">
+                <h3 className="text-2xl font-bold text-slate-800 mb-4">
                   {service.title}
                 </h3>
                 <p className="text-slate-800 mb-4">{service.description}</p>
@@ -146,7 +146,7 @@ export default function AboutUs() {
                 height={400}
                 className="rounded-full mx-auto mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+              <h3 className="text-xl font-bold mb-2">{member.name}</h3>
               <p className="text-slate-800">{member.position}</p>
             </div>
           ))}
