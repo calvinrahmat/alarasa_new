@@ -91,7 +91,7 @@ export default function Component() {
           Menu Basic
         </h1>
         <p className="text-2xl font-semibold text-center mb-6 text-black">
-          IDR 35.000
+          Rp 35.000
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {menuItems.map((item, index) => (

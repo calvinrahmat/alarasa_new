@@ -7,7 +7,7 @@ export default function ProductCard() {
         <h2 className="text-4xl font-bold text-black">
           Add On <span className="text-[#8B4513]">Drink</span>
         </h2>
-        <p className="text-xl font-semibold text-black">IDR 5.000</p>
+        <p className="text-xl font-semibold text-black">Rp 5.000</p>
         <p className="text-gray-700">
           Nikmati kesegaran yang menyegarkan dengan pilihan minuman kami yang
           beragam. Sempurna untuk menemani hidangan utama.
