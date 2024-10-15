@@ -74,10 +74,13 @@ export default function Hero() {
               Percayakan Alarasa Catering untuk melengkapi setiap acara special
               kalian! Enak, higienis dan terjangkau!
             </p>
-            <Button asChild className="mt-4">
+            <Button
+              asChild
+              className="mt-4 bg-[#F5F5F5] md:text-xl hover:bg-[#E0E0E0] transition-colors duration-300 text-black"
+            >
               <Link
-                href="/login"
-                className="text-xl font-bold text-black rounded-full px-10 py-6 border-2 border-black"
+                href="https://api.whatsapp.com/send?phone=6285280730787&text=Halo%20Minrasa!%20Mau%20tanya-tanya%20tentang%20paket%20catering%20Alarasa"
+                className="text-xl font-bold  rounded-full px-10 py-6 border-2 border-black"
               >
                 Order Now
               </Link>
