@@ -116,9 +116,9 @@ const menuItemsRoti = [
 export default function Home() {
   return (
     <main className="mt-20">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <div className="flex flex-col xl:flex-row">
-          <div className="xl:w-1/2 flex justify-center items-center">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col xl:flex-row items-center justify-center">
+          <div className="xl:w-1/2 w-screen px-2 flex justify-center items-center">
             <ProductShowcase
               images={[
                 "/nasi-box.jpg",
