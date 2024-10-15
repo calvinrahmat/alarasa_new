@@ -329,7 +329,7 @@ export default function Home() {
             menuItems={menuItemsKampungHalaman}
           />
         </div>
-        <div className="max-w-6xl mx-auto md:mt-4">
+        <div className="max-w-6xl mx-auto mt-8 md:mt-12">
           <RiceBox title="Menu Premium" menuItems={menuItemsPremium} />
         </div>
         <Minuman />

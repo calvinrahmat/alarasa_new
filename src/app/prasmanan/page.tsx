@@ -48,13 +48,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2 flex justify-center items-center">
             <ProductShowcase
-              images={[
-                "/nasi-box.jpg",
-                "/nasi-box1.jpg",
-                "/nasi-box2.jpg",
-                "/nasi-box3.jpg",
-                "/nasi-box4.jpg",
-              ]}
+              images={["/prasmanan1.jpg", "/prasmanan2.jpg", "/prasmanan3.jpg"]}
               title="Nasi Box"
             />
           </div>

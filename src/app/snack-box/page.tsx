@@ -120,13 +120,7 @@ export default function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-center">
           <div className="xl:w-1/2 w-screen px-2 flex justify-center items-center">
             <ProductShowcase
-              images={[
-                "/nasi-box.jpg",
-                "/nasi-box1.jpg",
-                "/nasi-box2.jpg",
-                "/nasi-box3.jpg",
-                "/nasi-box4.jpg",
-              ]}
+              images={["/snack1.jpg", "/snack2.jpg"]}
               title="Snack Box / Coffee Break"
             />
           </div>
