@@ -60,7 +60,7 @@ const data = [
     title: "Rice Box",
     src: "/nasi-box.jpg",
     content: <DummyContent />,
-    link: "/nasi-box",
+    link: "/rice-box",
   },
   {
     title: "Prasmanan",
