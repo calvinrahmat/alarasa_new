@@ -233,6 +233,9 @@ export const Card = ({
         layoutId={layout ? `card-${card.title}` : undefined}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
+        <Link href={card.link} className="absolute inset-0 z-20">
+          <span className="sr-only">View {card.title}</span>
+        </Link>
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
         <div className="relative z-40 p-8 flex flex-col h-full">
           <motion.p
@@ -242,14 +245,12 @@ export const Card = ({
             {card.title}
           </motion.p>
           <div className="mt-auto">
-            <Link href={card.link}>
-              <Button
-                variant="outline"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold border-white/20 md:text-xl"
-              >
-                SEE MORE <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
+            <Button
+              variant="outline"
+              className="bg-white/10 hover:bg-white/20 text-white font-bold border-white/20 md:text-xl"
+            >
+              SEE MORE <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
           </div>
         </div>
         <BlurImage

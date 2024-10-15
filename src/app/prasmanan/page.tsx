@@ -1,5 +1,4 @@
 import ProductShowcase from "@/components/product-showcase";
-import RiceBox from "@/components/riceBox";
 import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanPrasmanan";
