@@ -36,16 +36,16 @@ const testimonials = [
   {
     quote:
       "Alhamdulillah feedbacknya positif dari peserta kegiatan kami yang makan hidangan dari Alarasa. Makanannya beneran enak-enak.",
-    name: "Jane Austen",
+    name: "Ajeng, Universitas Bakrie",
   },
   {
     quote:
       "Terima kasih banyak Alarasa buat provide hidangan Mott Mac hari ini, kita bakal proses berlangganan terus di Alarasa karena rasanya memuaskan dan harganya yang terjangkau.",
-    name: "Herman Melville",
+    name: "Evelyne, Pt. Mott Mac",
   },
   {
     quote:
       "Thank you Alarasa, tadi makanannya enak enak banget, bos bos pada suka, packaging juga pro banget. Kapan kapan pasti bakal pesen lagi.",
-    name: "Herman Melville",
+    name: "Adira, Tunas Rental Tangerang",
   },
 ];
