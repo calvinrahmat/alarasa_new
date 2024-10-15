@@ -98,7 +98,7 @@ export default function Home() {
         <CTASection
           description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
           primaryCTA={{
-            text: "Dapatkan Promo Snack Box & Coffee Break Sekarang!",
+            text: "Dapatkan Promo Prasmanan Sekarang!",
             href: "#pricing",
           }}
         />
