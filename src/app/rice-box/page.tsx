@@ -370,7 +370,7 @@ export default function Home() {
         <CTASection
           description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
           primaryCTA={{
-            text: "Dapatkan Promo Langganan Nasi Box Sekarang!",
+            text: "Dapatkan Promo Langganan Rice Box Sekarang!",
             href: "#pricing",
           }}
         />
