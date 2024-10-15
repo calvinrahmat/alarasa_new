@@ -10,8 +10,7 @@ export function Review() {
         <InfiniteMovingCards
           items={testimonials}
           direction="right"
-          speed="slow"
-          pauseOnHover={true}
+          speed="normal"
         />
       </div>
     </div>

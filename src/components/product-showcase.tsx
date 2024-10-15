@@ -6,14 +6,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
-const images = [
-  "/nasi-box1.jpg",
-  "/nasi-box2.jpg",
-  "/nasi-box3.jpg",
-  "/nasi-box4.jpg",
-];
+interface ProductShowcaseProps {
+  images: string[];
+  title: string;
+}
 
-export default function Component() {
+export default function ProductShowcase({
+  images,
+  title,
+}: ProductShowcaseProps) {
   const [currentImage, setCurrentImage] = useState(0);
   const [startIndex, setStartIndex] = useState(0);
   const [visibleThumbnails, setVisibleThumbnails] = useState(4);
@@ -48,7 +49,7 @@ export default function Component() {
         <div className="relative aspect-square mb-4">
           <Image
             src={images[currentImage]}
-            alt={`Main product image ${currentImage + 1}`}
+            alt={`Main ${title} image ${currentImage + 1}`}
             layout="fill"
             objectFit="cover"
             className="rounded-lg"
@@ -70,7 +71,7 @@ export default function Component() {
                 >
                   <Image
                     src={src}
-                    alt={`Product image ${startIndex + index + 1}`}
+                    alt={`${title} image ${startIndex + index + 1}`}
                     width={80}
                     height={80}
                     className="rounded w-20 h-20 object-cover"

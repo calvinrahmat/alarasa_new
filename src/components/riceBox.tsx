@@ -3,96 +3,23 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
-export default function Component() {
-  const menuItems = [
-    {
-      name: "Nasi Berkat",
-      items: [
-        "Nasi Gurih",
-        "Ayam Suwir Kecap",
-        "Telor Balado",
-        "Tumis Kangkung Terasi",
-        "Bihun Goreng",
-        "Sambel Bawang",
-        "Kerupuk",
-        "Lalapan",
-      ],
-    },
-    {
-      name: "Nasi Bedhaya",
-      items: [
-        "Nasi Gurih",
-        "Ayam Suwir Opor",
-        "Telor Balado",
-        "Tumis Kangkung Terasi",
-        "Bihun Goreng",
-        "Sambel Bawang",
-        "Kerupuk",
-        "Lalapan",
-      ],
-    },
-    {
-      name: "Nasi Ayam Woku",
-      items: [
-        "Nasi Putih",
-        "Ayam Woku",
-        "Tumis Kangkung",
-        "Tempe Orek",
-        "Mie Goreng",
-        "Sambel Alarasa",
-        "Kerupuk",
-        "Lalapan",
-      ],
-    },
-    {
-      name: "Nasi Bakso",
-      items: [
-        "Nasi Putih",
-        "Tumis Bakso Ayam",
-        "Capcay",
-        "Tumis Kacang Panjang",
-        "Mie Goreng",
-        "Kerupuk",
-        "Lalapan",
-      ],
-    },
-    {
-      name: "Nasi Parahyangan",
-      items: [
-        "Nasi Gurih",
-        "Ayam Bumbu Seblak",
-        "Telur Dadar",
-        "Kentang Balado",
-        "Bihun Goreng",
-        "Sambel Alarasa",
-        "Kerupuk",
-        "Lalapan",
-      ],
-    },
-    {
-      name: "Nasi Saikoro",
-      items: [
-        "Nasi Putih",
-        "Saikoro Cah Toge",
-        "Kentang Balado",
-        "Buncis XO",
-        "Mie Goreng",
-        "Sambel Bawang",
-        "Kerupuk",
-        "Lalapan",
-      ],
-    },
-  ];
+interface MenuItem {
+  name: string;
+  items: string[];
+}
 
+interface RiceBoxProps {
+  title: string;
+  menuItems: MenuItem[];
+}
+
+export default function RiceBox({ title, menuItems }: RiceBoxProps) {
   return (
     <div className="bg-[#EBEBE5] text-white min-h-screen py-8">
       <div className="container mx-auto p-4">
         <h1 className="text-3xl mb-4 text-center font-bold text-black">
-          Menu Basic
+          {title}
         </h1>
-        <p className="text-2xl font-semibold text-center mb-6 text-black">
-          IDR 35.000
-        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {menuItems.map((item, index) => (
             <Card key={index} className="border-none shadow-md">
