@@ -3,6 +3,7 @@ import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanNasiBox";
 import SnackMenu from "@/components/snackMenu";
+import Link from "next/link";
 
 const pricingPlans = [
   {
@@ -117,21 +118,49 @@ export default function Home() {
   return (
     <main className="mt-20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col xl:flex-row items-center justify-center">
-          <div className="xl:w-1/2 w-screen px-2 flex justify-center items-center">
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="md:w-1/2 w-screen px-2 flex justify-center items-center">
             <ProductShowcase
               images={["/snack1.jpg", "/snack2.jpg"]}
-              title="Snack Box / Coffee Break"
+              title="Snack Box & Coffee Break"
             />
           </div>
-          <div className="xl:w-1/2">
-            <PricingComponent
-              title="Snack Box & Coffee Break"
-              subtitle="Pilih Paket Snack Box & Coffee Break yang kamu inginkan"
-              plans={pricingPlans}
-            />
+          <div className="md:w-1/2">
+            <div className="p-8">
+              <h1 className="text-4xl font-bold text-slate-800 mb-4">
+                Snack Box & Coffee Break
+              </h1>
+              <p className="text-lg text-slate-800 mb-6 text-justify">
+                Cemilan manis dan gurih selalu menjadi pilihan favorit untuk
+                melengkapi acara acara kalian. Beragam jenis snack dapat dikemas
+                kedalam box untuk acara yang lebih santai atau dilengkapi dengan
+                sajian minuman hangat seperti kopi dan teh untuk acara yang
+                lebih formal.
+              </p>
+              <div className="flex space-x-4 mb-6">
+                <div className="flex flex-row justify-center items-center space-x-4">
+                  <Link
+                    href="#pricing"
+                    className="animate-bounce inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto animate-jiggle"
+                  >
+                    Pesan Paket Snack Box & Coffee Break
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto"
+                  >
+                    Konsultasi Berlangganan Catering
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <PricingComponent
+          title="Snack Box & Coffee Break"
+          subtitle="Pilih Paket Snack Box & Coffee Break yang kamu inginkan"
+          plans={pricingPlans}
+        />
         <div className="max-w-4xl mx-auto">
           <SnackMenu title="Menu Coffee Break" menuItems={menuItemsRoti} />
         </div>

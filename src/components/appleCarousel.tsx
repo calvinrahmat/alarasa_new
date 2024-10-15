@@ -57,7 +57,7 @@ const DummyContent = () => {
 
 const data = [
   {
-    title: "Nasi Box",
+    title: "Rice Box",
     src: "/nasi-box.jpg",
     content: <DummyContent />,
     link: "/nasi-box",
@@ -69,7 +69,7 @@ const data = [
     link: "/prasmanan",
   },
   {
-    title: "Snack Box / Coffee Break",
+    title: "Snack Box & Coffee Break",
     src: "/snack.jpg",
     content: <DummyContent />,
     link: "/snack-box",

@@ -1,13 +1,5 @@
 import { Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Feature {
   name: string;
@@ -40,7 +32,7 @@ export default function PricingComponent({
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl items-center justify-center">
             {title}
           </h2>
-          <p className="mt-4 text-xl text-gray-600">{subtitle}</p>
+          <p className="mt-4 text-xl text-slate-800">{subtitle}</p>
         </div>
         <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:grid-cols-2">
           {plans.map((plan) => (
@@ -61,9 +53,6 @@ export default function PricingComponent({
               <CardContent>
                 <div className="text-center flex flex-col items-center justify-center gap-2">
                   <span className="text-3xl font-extrabold">{plan.price}</span>
-                  {/* <span className="text-xl font-bold">
-                    Menu yang dapat dipilih
-                  </span> */}
                 </div>
                 <ul className="mt-6 space-y-4">
                   {plan.features.map((feature) => (
@@ -79,22 +68,7 @@ export default function PricingComponent({
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Link
-                  href="https://api.whatsapp.com/send?phone=6285280730787&text=Halo%20Minrasa!%20Mau%20tanya-tanya%20tentang%20paket%20catering%20Alarasa"
-                  passHref
-                  className="items-center justify-center w-full"
-                >
-                  <Button
-                    className="w-full"
-                    variant={
-                      plan.name.toLowerCase() === "pro" ? "default" : "outline"
-                    }
-                  >
-                    {plan.cta}
-                  </Button>
-                </Link>
-              </CardFooter>
+              {/* CardFooter with the "Order Now" button has been removed */}
             </Card>
           ))}
         </div>

@@ -3,6 +3,7 @@ import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanPrasmanan";
 import PrasmananMenu from "@/components/prasmananMenu";
+import Link from "next/link";
 const pricingPlans = [
   {
     name: "Standard A",
@@ -49,17 +50,44 @@ export default function Home() {
           <div className="md:w-1/2 flex justify-center items-center">
             <ProductShowcase
               images={["/prasmanan1.jpg", "/prasmanan2.jpg", "/prasmanan3.jpg"]}
-              title="Nasi Box"
+              title="Rice Box"
             />
           </div>
           <div className="md:w-1/2">
-            <PricingComponent
-              title="Prasmanan"
-              subtitle="Pilih Paket Prasmanan yang kamu inginkan"
-              plans={pricingPlans}
-            />
+            <div className="p-8">
+              <h1 className="text-4xl font-bold text-slate-800 mb-4">
+                Prasmanan
+              </h1>
+              <p className="text-lg text-slate-800 mb-6 text-justify">
+                Prasmanan merupakan solusi untuk elevate acara kalian agar
+                terlihat lebih mewah dan elegan. Tidak hanya menyajikan sajian
+                yang nikmat, Alarasa Catering juga menyediakan semua peralatan
+                prasmanan dimulai dari meja, chaffing dish, dan peralatan makan.
+                One stop solution untuk acara spesial kalian.
+              </p>
+              <div className="flex space-x-4 mb-6">
+                <div className="flex flex-row justify-center items-center space-x-4">
+                  <Link
+                    href="#pricing"
+                    className="animate-bounce inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto animate-jiggle"
+                  >
+                    Pesan Paket Event Prasmanan
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto"
+                  >
+                    Konsultasi Berlangganan Catering
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <PricingComponent
+          title="Pilih Paket Prasmanan yang kamu inginkan"
+          plans={pricingPlans}
+        />
         <div className="max-w-4xl mx-auto">
           <PrasmananMenu />
         </div>

@@ -1,13 +1,5 @@
 import { Check, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 interface Feature {
   name: string;
@@ -18,19 +10,16 @@ interface PricingPlan {
   name: string;
   price: string;
   features: Feature[];
-  cta: string;
   isBestSeller?: boolean;
 }
 
 interface PricingComponentProps {
   title: string;
-  subtitle: string;
   plans: PricingPlan[];
 }
 
 export default function PricingComponent({
   title,
-  subtitle,
   plans,
 }: PricingComponentProps) {
   return (
@@ -40,7 +29,6 @@ export default function PricingComponent({
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl items-center justify-center">
             {title}
           </h2>
-          <p className="mt-4 text-xl text-gray-600">{subtitle}</p>
         </div>
         <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:grid-cols-2">
           {plans.map((plan) => (
@@ -85,22 +73,6 @@ export default function PricingComponent({
                   ))}
                 </ul>
               </CardContent>
-              <CardFooter>
-                <Link
-                  href="https://api.whatsapp.com/send?phone=6285280730787&text=Halo%20Minrasa!%20Mau%20tanya-tanya%20tentang%20paket%20catering%20Alarasa"
-                  passHref
-                  className="items-center justify-center w-full"
-                >
-                  <Button
-                    className="w-full"
-                    variant={
-                      plan.name.toLowerCase() === "pro" ? "default" : "outline"
-                    }
-                  >
-                    {plan.cta}
-                  </Button>
-                </Link>
-              </CardFooter>
             </Card>
           ))}
         </div>

@@ -70,13 +70,13 @@ export function Navbar() {
                       href="/snack-box"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     >
-                      Snack Box
+                      Snack Box & Coffee Break
                     </Link>
                     <Link
-                      href="/nasi-box"
+                      href="/rice-box"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                     >
-                      Nasi Box
+                      Rice Box
                     </Link>
                   </div>
                 </div>
@@ -133,13 +133,13 @@ export function Navbar() {
               href="/snack-box"
               className="block py-2 px-8 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
             >
-              Snack Box
+              Snack Box & Coffee Break
             </Link>
             <Link
-              href="/nasi-box"
+              href="/rice-box"
               className="block py-2 px-8 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
             >
-              Nasi Box
+              Rice Box
             </Link>
           </div>
         </div>

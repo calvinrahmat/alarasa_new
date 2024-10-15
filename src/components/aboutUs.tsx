@@ -23,6 +23,14 @@ const services = [
   },
 ];
 
+const teamMembers = [
+  {
+    name: "Zephaniah Hidajat",
+    position: "Head Chef",
+    image: "/avatar.jpg",
+  },
+];
+
 export default function AboutUs() {
   return (
     <div className="bg-white mt-20">
@@ -60,7 +68,7 @@ export default function AboutUs() {
                 <h3 className="text-2xl font-semibold text-slate-800 mb-4">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-slate-800 mb-4">{service.description}</p>
               </div>
             ))}
           </div>
@@ -72,22 +80,27 @@ export default function AboutUs() {
         <h2 className="text-4xl text-slate-800 font-bold text-center mb-12">
           Meet Our Team
         </h2>
-        <div className="grid md:grid-cols-4 gap-8">
-          {["Digital Marketing", 2, 3, 4].map((member) => (
-            <div key={member} className="text-center text-slate-800">
+        <div
+          className={`grid ${
+            teamMembers.length === 1 ? "md:grid-cols-1" : "md:grid-cols-4"
+          } gap-8`}
+        >
+          {teamMembers.map((member, index) => (
+            <div
+              key={index}
+              className={`text-center text-slate-800 ${
+                teamMembers.length === 1 ? "mx-auto" : ""
+              }`}
+            >
               <Image
-                src={
-                  member === "Digital Marketing"
-                    ? "/avatar.jpg"
-                    : `/placeholder.svg?height=300&width=300&text=${member}`
-                }
-                alt={`Team Member ${member}`}
+                src={member.image}
+                alt={`Team Member ${member.name}`}
                 width={400}
                 height={400}
                 className="rounded-full mx-auto mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">John Doe</h3>
-              <p className="text-gray-600">Position</p>
+              <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
+              <p className="text-slate-800">{member.position}</p>
             </div>
           ))}
         </div>

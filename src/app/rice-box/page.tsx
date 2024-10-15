@@ -3,6 +3,7 @@ import RiceBox from "@/components/riceBox";
 import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanNasiBox";
+import Link from "next/link";
 
 const pricingPlans = [
   {
@@ -311,18 +312,47 @@ export default function Home() {
                 "/nasi-box3.jpg",
                 "/nasi-box4.jpg",
               ]}
-              title="Nasi Box"
+              title="Rice Box"
             />
           </div>
           <div className="md:w-1/2">
-            <PricingComponent
-              title="Nasi Box"
-              subtitle="Pilih Menu Nasi Box yang kamu inginkan"
-              plans={pricingPlans}
-            />
-          </div>
+            <div className="p-8">
+              <h1 className="text-4xl font-bold text-slate-800 mb-4">
+                Rice Box
+              </h1>
+              <p className="text-lg text-slate-800 mb-6 text-justify">
+                Dengan lebih dari 100 variasi lauk, Rice Box menjadi produk
+                andalan Alarasa Catering untuk melengkapi berbagai kebutuhan
+                acara seperti meeting, peresmian kantor, ulang tahun, gathering
+                dan pemberkatan. Dimulai dari harga 35,000 / box, kemasan rice
+                box juga sering dijadikan sebagai solusi untuk staff catering
+                dalam jangka panjang yang lezat dan terjangkau.
+              </p>
+              <div className="flex space-x-4 mb-6">
+                <div className="flex flex-row justify-center items-center space-x-4">
+                  <Link
+                    href="#pricing"
+                    className="animate-bounce inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto animate-jiggle"
+                  >
+                    Pesan Paket Rice Box
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto"
+                  >
+                    Konsultasi Berlangganan Catering
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>{" "}
         </div>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-20">
+          <PricingComponent
+            title="Rice Box"
+            subtitle="Pilih Menu Rice Box yang kamu inginkan"
+            plans={pricingPlans}
+          />
           <RiceBox title="Menu Basic" menuItems={menuItemsBasic} />
           <RiceBox
             title="Menu Kampung Halaman"
