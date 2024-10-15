@@ -92,8 +92,8 @@ export default function Hero() {
               src={slides[currentSlide].src}
               alt={slides[currentSlide].alt}
               width={800}
-              height={600}
-              className="object-cover w-full h-[300px] md:h-[400px] lg:h-[550px]"
+              height={800}
+              className="object-cover w-full h-full aspect-square max-w-full max-h-full"
             />
             <button
               onClick={prevSlide}

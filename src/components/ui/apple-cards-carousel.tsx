@@ -256,7 +256,7 @@ export const Card = ({
           src={card.src}
           alt={card.title}
           fill
-          className="object-cover absolute z-10 inset-0"
+          className="object-cover object-center absolute z-10 inset-0"
         />
       </motion.div>
     </>
