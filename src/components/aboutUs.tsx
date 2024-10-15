@@ -92,12 +92,7 @@ export default function AboutUs() {
           <h1 className="text-4xl font-bold text-slate-800 mb-4 text-center">
             Misi
           </h1>
-          <p className="text-slate-800 mb-4 text-center text-lg font-bold py-6">
-            Untuk memastikan standar dan kualitas pelayanan yang terbaik,
-            Alarasa Catering telah berinvestasi pada equipment dan peralatan
-            dapur dengan skala komersil standar industri. Tentunya, mengutamakan
-            kualitas dan higienitas setiap produk Alarasa Catering
-          </p>
+
           <div className="grid md:grid-cols-2 gap-8">
             {misi.map((service, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-md">
