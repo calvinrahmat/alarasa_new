@@ -25,12 +25,12 @@ const services = [
 
 export default function AboutUs() {
   return (
-    <div className="bg-white">
+    <div className="bg-white mt-20">
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <div className="relative w-full h-[600px] overflow-hidden">
           <Image
-            src="/about-us.jpg"
+            src="/about-us2.jpg"
             alt="About Us"
             layout="fill"
             objectFit="cover"
@@ -69,15 +69,21 @@ export default function AboutUs() {
 
       {/* Team Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
-        <h2 className="text-4xl font-bold text-center mb-12">Meet Our Team</h2>
+        <h2 className="text-4xl text-black font-bold text-center mb-12">
+          Meet Our Team
+        </h2>
         <div className="grid md:grid-cols-4 gap-8">
-          {[1, 2, 3, 4].map((member) => (
-            <div key={member} className="text-center">
+          {["Digital Marketing", 2, 3, 4].map((member) => (
+            <div key={member} className="text-center text-black">
               <Image
-                src={`/placeholder.svg?height=300&width=300&text=Team Member ${member}`}
+                src={
+                  member === "Digital Marketing"
+                    ? "/avatar.jpg"
+                    : `/placeholder.svg?height=300&width=300&text=${member}`
+                }
                 alt={`Team Member ${member}`}
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 className="rounded-full mx-auto mb-4"
               />
               <h3 className="text-xl font-semibold mb-2">John Doe</h3>
@@ -86,37 +92,6 @@ export default function AboutUs() {
           ))}
         </div>
       </section>
-
-      {/* Testimonial Section */}
-      <section className="bg-gray-100 py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">
-            What Our Clients Say
-          </h2>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl italic mb-6">
-              &ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-              elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-              leo.&rdquo;
-            </p>
-            <div className="flex items-center justify-center">
-              <Image
-                src="/placeholder.svg?height=60&width=60"
-                alt="Client"
-                width={60}
-                height={60}
-                className="rounded-full mr-4"
-              />
-              <div className="text-left">
-                <h4 className="font-semibold">Jane Smith</h4>
-                <p className="text-gray-600">CEO, Company Name</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
     </div>
   );
 }
