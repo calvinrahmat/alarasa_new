@@ -9,9 +9,10 @@ import Link from "next/link";
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { src: "/alarasa.jpg", alt: "Exotic dish on a wooden table" },
-    { src: "/alarasa2.jpg", alt: "Another exotic dish" },
-    { src: "/alarasa3.jpg", alt: "Third exotic dish" },
+    { src: "/promo1.jpeg", alt: "Order Dadakan" },
+    { src: "/promo2.jpeg", alt: "Gratis Ongkir" },
+    { src: "/promo3.png", alt: "Nasi Berkat" },
+    { src: "/promo4.png", alt: "Catering Harian" },
   ];
 
   const nextSlide = () => {
