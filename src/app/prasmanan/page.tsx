@@ -4,7 +4,7 @@ import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanPrasmanan";
 import PrasmananMenu from "@/components/prasmananMenu";
 import CTASection from "@/components/CTASection";
-
+import Link from "next/link";
 const pricingPlans = [
   {
     name: "Standard A",
@@ -54,14 +54,35 @@ export default function Home() {
               title="Rice Box"
             />
           </div>
-          <div className="md:w-1/2 text-justify">
-            <CTASection
-              description="Prasmanan merupakan solusi untuk elevate acara kalian agar terlihat lebih mewah dan elegan. Tidak hanya menyajikan sajian yang nikmat, Alarasa Catering juga menyediakan semua peralatan prasmanan dimulai dari meja, chaffing dish, dan peralatan makan. One stop solution untuk acara spesial kalian."
-              primaryCTA={{
-                text: "Pesan Paket Event Prasmanan",
-                href: "#pricing",
-              }}
-            />
+          <div className="md:w-1/2">
+            <div className="p-8">
+              <h1 className="text-4xl font-bold text-slate-800 mb-4">
+                Prasmanan
+              </h1>
+              <p className="text-lg text-slate-800 mb-6 text-justify">
+                Prasmanan merupakan solusi untuk elevate acara kalian agar
+                terlihat lebih mewah dan elegan. Tidak hanya menyajikan sajian
+                yang nikmat, Alarasa Catering juga menyediakan semua peralatan
+                prasmanan dimulai dari meja, chaffing dish, dan peralatan makan.
+                One stop solution untuk acara special kalian.
+              </p>
+              <div className="flex space-x-4 mb-6">
+                <div className="flex flex-row justify-center items-center space-x-4">
+                  <Link
+                    href="#pricing"
+                    className="animate-bounce inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto animate-jiggle"
+                  >
+                    Pesan Paket Event Prasmanan
+                  </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto"
+                  >
+                    Konsultasi Berlangganan Catering
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <PricingComponent
@@ -75,9 +96,9 @@ export default function Home() {
         <Minuman />
         <Review />
         <CTASection
-          description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya"
+          description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
           primaryCTA={{
-            text: "Dapatkan Promo Langganan Nasi Box Sekarang!",
+            text: "Dapatkan Promo Snack Box & Coffee Break Sekarang!",
             href: "#pricing",
           }}
         />
