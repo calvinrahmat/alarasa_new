@@ -1,18 +1,56 @@
 "use client";
 
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
-
+import Image from "next/image";
+const customers = [
+  { name: "atmajaya", logo: "/atma-jaya.png" },
+  { name: "bakrie", logo: "/bakrie.png" },
+  { name: "djp", logo: "/djp.png" },
+  { name: "fatmawati", logo: "/fatmawati.png" },
+  { name: "huawei", logo: "/huawei.png" },
+  { name: "kemendikbud", logo: "/kemendikbud.png" },
+  { name: "kementrian", logo: "/kementrian.png" },
+  { name: "kimia-farma", logo: "/kimia-farma.png" },
+  { name: "paragon", logo: "/paragon.png" },
+];
 export function Review() {
   return (
     <div>
       <div className="h-[40rem] rounded-md flex flex-col antialiased bg-[#EBEBE5] items-center justify-center relative overflow-hidden">
         <h2 className="text-3xl font-bold text-center text-black">Testimoni</h2>
+        <p className="text-center text-black">
+          Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap
+          Hidangan Berbagai Acara
+        </p>
         <InfiniteMovingCards
           items={testimonials}
           direction="right"
           speed="normal"
         />
       </div>
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+            Our Customers
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-center">
+            {customers.map((customer) => (
+              <div
+                key={customer.name}
+                className="flex items-center justify-center"
+              >
+                <Image
+                  src={customer.logo}
+                  alt={`${customer.name} logo`}
+                  width={120}
+                  height={120}
+                  className="max-w-full h-auto"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
