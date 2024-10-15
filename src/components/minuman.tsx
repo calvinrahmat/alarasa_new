@@ -4,15 +4,15 @@ export default function ProductCard() {
   return (
     <div className="bg-[#F5F5F5] p-8 flex flex-col md:flex-row items-center ">
       <div className="md:w-1/2 space-y-6">
-        <h2 className="text-4xl font-bold text-black">
+        <h2 className="text-4xl font-bold text-slate-800">
           Add On <span className="text-[#8B4513]">Drink</span>
         </h2>
-        <p className="text-xl font-semibold text-black">Rp 5.000</p>
+        <p className="text-xl font-semibold text-slate-800">Rp 5.000</p>
         <p className="text-gray-700">
           Nikmati kesegaran yang menyegarkan dengan pilihan minuman kami yang
           beragam. Sempurna untuk menemani hidangan utama.
         </p>
-        <div className="grid grid-cols-2 gap-4 text-black font-handwriting">
+        <div className="grid grid-cols-2 gap-4 text-slate-800 font-handwriting">
           {[
             "TEH JASMINE",
             "TEH JASMINE SEREH",

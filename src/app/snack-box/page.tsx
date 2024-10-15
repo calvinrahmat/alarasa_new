@@ -126,8 +126,8 @@ export default function Home() {
           </div>
           <div className="xl:w-1/2">
             <PricingComponent
-              title="Snack Box / Coffee Break"
-              subtitle="Pilih Paket Snack Box / Coffee Break yang kamu inginkan"
+              title="Snack Box & Coffee Break"
+              subtitle="Pilih Paket Snack Box & Coffee Break yang kamu inginkan"
               plans={pricingPlans}
             />
           </div>

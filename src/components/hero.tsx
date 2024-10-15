@@ -77,7 +77,7 @@ export default function Hero() {
             </p>
             <Button
               asChild
-              className="mt-4 bg-[#F5F5F5] md:text-xl hover:bg-[#E0E0E0] transition-colors duration-300 text-black"
+              className="mt-4 bg-[#F5F5F5] md:text-xl hover:bg-[#E0E0E0] transition-colors duration-300 text-slate-800"
             >
               <Link
                 href="https://api.whatsapp.com/send?phone=6285280730787&text=Halo%20Minrasa!%20Mau%20tanya-tanya%20tentang%20paket%20catering%20Alarasa"

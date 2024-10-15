@@ -19,10 +19,10 @@ export default function SnackMenu({ title, menuItems }: SnackMenuProps) {
   return (
     <div className="bg-[#EBEBE5] text-white min-h-screen py-8">
       <div className="container mx-auto p-4">
-        <h1 className="text-3xl mb-4 text-center font-bold text-black">
+        <h1 className="text-3xl mb-4 text-center font-bold text-slate-800">
           {title}
         </h1>
-        <h2 className="text-xl mb-4 text-center font-bold text-black">
+        <h2 className="text-xl mb-4 text-center font-bold text-slate-800">
           Harga Satuan
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

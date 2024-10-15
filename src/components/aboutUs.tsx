@@ -69,12 +69,12 @@ export default function AboutUs() {
 
       {/* Team Section */}
       <section className="container mx-auto px-4 py-16 md:py-24">
-        <h2 className="text-4xl text-black font-bold text-center mb-12">
+        <h2 className="text-4xl text-slate-800 font-bold text-center mb-12">
           Meet Our Team
         </h2>
         <div className="grid md:grid-cols-4 gap-8">
           {["Digital Marketing", 2, 3, 4].map((member) => (
-            <div key={member} className="text-center text-black">
+            <div key={member} className="text-center text-slate-800">
               <Image
                 src={
                   member === "Digital Marketing"

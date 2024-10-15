@@ -82,7 +82,7 @@ export default function ProductShowcase({
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-0 top-1/2 -translate-y-1/2 text-black font-bold border-black"
+            className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-800 font-bold border-black"
             onClick={prevImage}
             disabled={startIndex === 0}
           >
@@ -91,7 +91,7 @@ export default function ProductShowcase({
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-0 top-1/2 -translate-y-1/2 text-black font-bold border-black"
+            className="absolute right-0 top-1/2 -translate-y-1/2 text-slate-800 font-bold border-black"
             onClick={nextImage}
             disabled={startIndex >= images.length - visibleThumbnails}
           >

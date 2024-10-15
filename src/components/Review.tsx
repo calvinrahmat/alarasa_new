@@ -17,8 +17,10 @@ export function Review() {
   return (
     <div>
       <div className="h-[40rem] rounded-md flex flex-col antialiased bg-[#EBEBE5] items-center justify-center relative overflow-hidden">
-        <h2 className="text-3xl font-bold text-center text-black">Testimoni</h2>
-        <p className="text-center text-black">
+        <h2 className="text-3xl font-bold text-center text-slate-800">
+          Testimoni
+        </h2>
+        <p className="text-center text-slate-800">
           Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap
           Hidangan Berbagai Acara
         </p>
@@ -30,7 +32,7 @@ export function Review() {
       </div>
       <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
         <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-black">
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">
             Our Customers
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-center">

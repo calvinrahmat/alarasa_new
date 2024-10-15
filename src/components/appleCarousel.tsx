@@ -13,6 +13,11 @@ export function AppleCarousel() {
       <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-slate-800 font-sans">
         Our Products
       </h2>
+      <p className="text-base md:text-xl max-w-2xl text-center py-4">
+        Alarasa Catering menyediakan berbagai macam masakan khas Nusantara yang
+        dikemas kedalam beragam kemasan untuk memenuhi segala kebutuhan konsumsi
+        kalian!
+      </p>
       <Carousel items={cards} />
     </div>
   );

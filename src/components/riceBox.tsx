@@ -17,7 +17,7 @@ export default function RiceBox({ title, menuItems }: RiceBoxProps) {
   return (
     <div className="bg-[#EBEBE5] text-white  py-8">
       <div className="container mx-auto p-4">
-        <h1 className="text-3xl mb-4 text-center font-bold text-black">
+        <h1 className="text-3xl mb-4 text-center font-bold text-slate-800">
           {title}
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -31,7 +31,7 @@ export default function RiceBox({ title, menuItems }: RiceBoxProps) {
                   {item.items.map((subItem, subIndex) => (
                     <div key={subIndex} className="flex items-center space-x-2">
                       <div className="w-5 h-5 bg-yellow-300 flex items-center justify-center">
-                        <Check size={16} className="text-black" />
+                        <Check size={16} className="text-slate-800" />
                       </div>
                       <span className="text-sm font-medium leading-none">
                         {subItem}
