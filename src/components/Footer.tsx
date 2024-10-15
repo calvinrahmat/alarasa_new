@@ -17,7 +17,6 @@ export default function Footer() {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Contact Us</h3>
             <p>
               Jl. Komp. Perumahan DPR - RI Blok C No. 25, RT10/RW01, Kel. Joglo,
               Kec. Kembangan, Jakarta Barat - 16640
@@ -26,7 +25,6 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold">Follow Us</h3>
             <div className="flex space-x-4">
               <Link
                 href="https://www.facebook.com/profile.php?id=61550236231984"
