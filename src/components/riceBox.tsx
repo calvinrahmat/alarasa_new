@@ -15,7 +15,7 @@ interface RiceBoxProps {
 
 export default function RiceBox({ title, menuItems }: RiceBoxProps) {
   return (
-    <div className="bg-[#EBEBE5] text-white min-h-screen py-8">
+    <div className="bg-[#EBEBE5] text-white  py-8">
       <div className="container mx-auto p-4">
         <h1 className="text-3xl mb-4 text-center font-bold text-black">
           {title}

@@ -31,6 +31,20 @@ const pricingPlans = [
       { name: "Nasi Jinggo Bali", included: true },
     ],
     cta: "Order Now",
+    isBestSeller: false,
+  },
+  {
+    name: "Premium",
+    price: "Rp. 55.000",
+    features: [
+      { name: "Nasi Alarasa", included: true },
+      { name: "Nasi Oper", included: true },
+      { name: "Nasi Ayam Mentega", included: true },
+      { name: "Nasi Daun Jeruk", included: true },
+      { name: "Nasi Bistik", included: true },
+      { name: "Nasi Dendeng", included: true },
+    ],
+    cta: "Order Now",
     isBestSeller: true,
   },
   // ... other plans
@@ -200,11 +214,94 @@ const menuItemsKampungHalaman = [
   // ... other menu items
 ];
 
+const menuItemsPremium = [
+  {
+    name: "Nasi Alarasa",
+    items: [
+      "Nasi Berkat",
+      "Ayam Suwir Kecap",
+      "Telor Balado",
+      "Tumis Kangkung Terasi",
+      "Bihun Goreng",
+      "Sambel Bawang",
+      "Kerupuk",
+      "Lalapan",
+    ],
+  },
+  {
+    name: "Nasi Opor",
+    items: [
+      "Nasi Gurih",
+      "Ayam Suwir Opor",
+      "Dendeng Balado",
+      "Tempe Oreg",
+      "Bihun Goreng",
+      "Sambel Alarasa",
+      "Kerupuk",
+      "Lalapan",
+    ],
+  },
+  {
+    name: "Nasi Ayam Mentega",
+    items: [
+      "Nasi Putih",
+      "Ayam Ayam Mentega",
+      "Sapi Lada Hitam",
+      "Capcay",
+      "Mie Goreng",
+      "Sambel Bawang",
+      "Kerupuk",
+      "Lalapan",
+    ],
+  },
+  {
+    name: "Nasi Daun Jeruk",
+    items: [
+      "Nasi Daun Jeruk",
+      "Ayam Cabe Ijo",
+      "Tumis Bakso Daging",
+      "Telur Dadar",
+      "Kering Tempe",
+      "Sambal Bawang",
+      "Kerupuk",
+      "Lalapan",
+    ],
+  },
+  {
+    name: "Nasi Bistik",
+    items: [
+      "Nasi Gurih",
+      "Ayam Suwir Keacap",
+      "Bistik Daging",
+      "Tumis Kacang Panjang",
+      "Capcay",
+      "Sambel Bawang",
+      "Kerupuk",
+      "Lalapan",
+    ],
+  },
+  {
+    name: "Nasi Dendeng",
+    items: [
+      "Nasi Gurih",
+      "Ayam Bumbu Seblak",
+      "Dendeng Cabe Ijo",
+      "Kangkung Terasi",
+      "Bihun Goreng",
+      "Sambel Alarasa",
+      "Kerupuk",
+      "Lalapan",
+    ],
+  },
+
+  // ... other menu items
+];
+
 export default function Home() {
   return (
     <main className="mt-20">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="md:w-1/2 flex justify-center items-center">
             <ProductShowcase
               images={[
@@ -231,6 +328,9 @@ export default function Home() {
             title="Menu Kampung Halaman"
             menuItems={menuItemsKampungHalaman}
           />
+        </div>
+        <div className="max-w-6xl mx-auto md:mt-4">
+          <RiceBox title="Menu Premium" menuItems={menuItemsPremium} />
         </div>
         <Minuman />
         <Review />
