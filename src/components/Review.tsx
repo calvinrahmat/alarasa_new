@@ -5,7 +5,6 @@ import Image from "next/image";
 const customers = [
   { name: "atmajaya", logo: "/atma-jaya.png" },
   { name: "bakrie", logo: "/bakrie.png" },
-  { name: "djp", logo: "/djp.png" },
   { name: "fatmawati", logo: "/fatmawati.png" },
   { name: "huawei", logo: "/huawei.png" },
   { name: "kemendikbud", logo: "/kemendikbud.png" },

@@ -1,19 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import Logo from "./logo";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleProducts = () => {
+    setIsProductsOpen(!isProductsOpen);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+        setIsProductsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <nav className="bg-[#1C2C1C] fixed top-0 left-0 right-0 z-50">
+    <nav className="bg-[#1C2C1C] fixed top-0 left-0 right-0 z-50" ref={navRef}>
       <div className="max-w-6xl mx-auto px-4 py-2">
         <div className="flex justify-between">
           <div className="flex items-center space-x-7">
@@ -23,15 +43,49 @@ export function Navbar() {
             <div className="hidden md:flex items-center space-x-1 text-xl text-white">
               <Link
                 href="/"
-                className="py-4 px-2  font-semibold hover:text-green-500 transition duration-300"
+                className="py-4 px-2 font-semibold hover:text-green-500 transition duration-300"
               >
                 Home
               </Link>
+              <div className="relative group">
+                <button
+                  onClick={toggleProducts}
+                  className="py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center"
+                >
+                  Products <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                <div
+                  className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none ${
+                    isProductsOpen ? "block" : "hidden"
+                  }`}
+                >
+                  <div className="py-1">
+                    <Link
+                      href="/prasmanan"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Prasmanan
+                    </Link>
+                    <Link
+                      href="/snack-box"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Snack Box
+                    </Link>
+                    <Link
+                      href="/nasi-box"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Nasi Box
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <Link
                 href="/about"
-                className="py-4 px-2  font-semibold hover:text-green-500 transition duration-300"
+                className="py-4 px-2 font-semibold hover:text-green-500 transition duration-300"
               >
-                Tentang Kami
+                About Us
               </Link>
             </div>
           </div>
@@ -52,27 +106,48 @@ export function Navbar() {
       <div className={`md:hidden ${isOpen ? "block" : "hidden"}`}>
         <Link
           href="/"
-          className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-4 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Home
         </Link>
+        <div>
+          <button
+            onClick={toggleProducts}
+            className="flex justify-between items-center w-full py-2 px-4 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+          >
+            Products
+            {isProductsOpen ? (
+              <ChevronUp className="h-4 w-4" />
+            ) : (
+              <ChevronDown className="h-4 w-4" />
+            )}
+          </button>
+          <div className={`bg-gray-700 ${isProductsOpen ? "block" : "hidden"}`}>
+            <Link
+              href="/prasmanan"
+              className="block py-2 px-8 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+            >
+              Prasmanan
+            </Link>
+            <Link
+              href="/snack-box"
+              className="block py-2 px-8 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+            >
+              Snack Box
+            </Link>
+            <Link
+              href="/nasi-box"
+              className="block py-2 px-8 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+            >
+              Nasi Box
+            </Link>
+          </div>
+        </div>
         <Link
           href="/about"
-          className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-4 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           About
-        </Link>
-        <Link
-          href="/services"
-          className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300"
-        >
-          Services
-        </Link>
-        <Link
-          href="/contact"
-          className="block py-2 px-4 text-sm hover:bg-green-500 hover:text-white transition duration-300"
-        >
-          Contact
         </Link>
       </div>
     </nav>
