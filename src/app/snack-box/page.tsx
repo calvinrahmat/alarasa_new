@@ -4,6 +4,7 @@ import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanNasiBox";
 import SnackMenu from "@/components/snackMenu";
 import Link from "next/link";
+import CTASection from "@/components/CTASection";
 
 const pricingPlans = [
   {
@@ -166,6 +167,13 @@ export default function Home() {
         </div>
         <Minuman />
         <Review />
+        <CTASection
+          description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
+          primaryCTA={{
+            text: "Dapatkan Promo Snack Box & Coffee Break Sekarang!",
+            href: "#pricing",
+          }}
+        />
       </div>
     </main>
   );

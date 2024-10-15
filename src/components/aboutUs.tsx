@@ -25,8 +25,18 @@ const services = [
 
 const teamMembers = [
   {
+    name: "Vincent Goenawan",
+    position: "Founder & CEO",
+    image: "/avatar.jpg",
+  },
+  {
     name: "Zephaniah Hidajat",
     position: "Head Chef",
+    image: "/avatar.jpg",
+  },
+  {
+    name: "Gita Febryanti",
+    position: "Customer Service",
     image: "/avatar.jpg",
   },
 ];
@@ -76,21 +86,15 @@ export default function AboutUs() {
       </section>
 
       {/* Team Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="container mx-auto px-4 py-16 md:py-24 flex flex-col items-center">
         <h2 className="text-4xl text-slate-800 font-bold text-center mb-12">
           Meet Our Team
         </h2>
-        <div
-          className={`grid ${
-            teamMembers.length === 1 ? "md:grid-cols-1" : "md:grid-cols-4"
-          } gap-8`}
-        >
+        <div className="flex flex-wrap justify-center gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`text-center text-slate-800 ${
-                teamMembers.length === 1 ? "mx-auto" : ""
-              }`}
+              className="text-center text-slate-800 w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
             >
               <Image
                 src={member.image}

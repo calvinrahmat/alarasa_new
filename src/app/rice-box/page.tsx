@@ -4,6 +4,7 @@ import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import PricingComponent from "@/components/pricingPlanNasiBox";
 import Link from "next/link";
+import CTASection from "@/components/CTASection";
 
 const pricingPlans = [
   {
@@ -345,14 +346,16 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>{" "}
+          </div>
         </div>
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-20">
+        <div>
           <PricingComponent
             title="Rice Box"
             subtitle="Pilih Menu Rice Box yang kamu inginkan"
             plans={pricingPlans}
           />
+        </div>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-20">
           <RiceBox title="Menu Basic" menuItems={menuItemsBasic} />
           <RiceBox
             title="Menu Kampung Halaman"
@@ -364,6 +367,13 @@ export default function Home() {
         </div>
         <Minuman />
         <Review />
+        <CTASection
+          description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
+          primaryCTA={{
+            text: "Dapatkan Promo Langganan Nasi Box Sekarang!",
+            href: "#pricing",
+          }}
+        />
       </div>
     </main>
   );
