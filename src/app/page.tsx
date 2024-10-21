@@ -1,11 +1,15 @@
-import Hero from "@/components/hero";
+import Hero from "@/components/hero-home";
 import OurProduct from "@/components/ourProduct";
+import ParallaxHighlights from "@/components/parallax-highlights";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <main>
       <Hero />
       <OurProduct />
+      <ParallaxHighlights />
     </main>
   );
-}
+};
+
+export default Home;

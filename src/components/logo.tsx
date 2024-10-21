@@ -13,20 +13,24 @@ const berenikaBold = localFont({
   variable: "--font-berenika",
 });
 
-const Logo = () => {
+interface LogoProps {
+  showText: boolean;
+}
+
+const Logo: React.FC<LogoProps> = ({ showText }) => {
   return (
-    <>
-      <Link href={"/"}>
-        <div className="flex justify-between items-center">
-          <Image src="/logo.png" alt="logo" width={60} height={60} />
+    <Link href={"/"}>
+      <div className="flex justify-between items-center">
+        <Image src="/logo.png" alt="logo" width={60} height={60} />
+        {showText && (
           <div
-            className={`${berenikaBold.variable} font-berenika text-2xl text-white`}
+            className={`${berenikaBold.variable} font-berenika text-2xl text-white ml-2`}
           >
             alarasa
           </div>
-        </div>
-      </Link>
-    </>
+        )}
+      </div>
+    </Link>
   );
 };
 

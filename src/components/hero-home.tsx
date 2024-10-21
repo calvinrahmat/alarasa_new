@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0"
@@ -17,10 +17,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black opacity-50 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 text-center sm:text-left px-4 sm:px-6 lg:px-8 max-w-xl mx-auto sm:mx-0 sm:ml-16 md:ml-24">
-        <div className="flex flex-col mb-4 items-center sm:items-start">
-          <div className="flex flex-col sm:flex-row items-center">
-            <div className="flex mb-2 sm:mb-0">
+      <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24">
+        <div className="flex md:flex-row mb-4">
+          <div className="flex items-center">
+            <div className="flex">
               {[...Array(5)].map((_, index) => (
                 <svg
                   key={index}
@@ -48,10 +48,8 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <div className="flex flex-col sm:flex-row sm:ml-2 items-center">
-              <p className="text-sm font-medium text-white mb-2 sm:mb-0 sm:mr-4">
-                4.5/5
-              </p>
+            <div className="flex">
+              <p className="text-sm font-medium text-white mr-4">4.5/5</p>
               <div className="flex items-center text-white text-sm">
                 <span className="font-bold underline">185+</span>
                 <span className="ml-2">Pembeli merasa puas</span>
