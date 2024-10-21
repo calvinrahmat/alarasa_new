@@ -23,9 +23,7 @@ const Logo: React.FC<LogoProps> = ({ showText }) => {
       <div className="flex justify-between items-center">
         <Image src="/logo.png" alt="logo" width={60} height={60} />
         {showText && (
-          <div
-            className={`${berenikaBold.variable} font-berenika text-2xl text-white ml-2`}
-          >
+          <div className={`${berenikaBold.className} text-2xl text-white ml-2`}>
             alarasa
           </div>
         )}
