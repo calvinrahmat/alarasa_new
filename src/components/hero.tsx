@@ -52,10 +52,6 @@ export default function Hero() {
               <p className="text-sm font-medium text-white mb-2 sm:mb-0 sm:mr-4">
                 4.5/5
               </p>
-              <div className="flex items-center text-white text-sm">
-                <span className="font-bold underline">185+</span>
-                <span className="ml-2">Pembeli merasa puas</span>
-              </div>
             </div>
           </div>
         </div>

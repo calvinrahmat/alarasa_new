@@ -18,8 +18,8 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24">
-        <div className="flex md:flex-row mb-4">
-          <div className="flex items-center">
+        <div className="flex flex-col mb-4">
+          <div className="flex items-center mb-2">
             <div className="flex">
               {[...Array(5)].map((_, index) => (
                 <svg
@@ -48,19 +48,17 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <div className="flex">
-              <p className="text-sm font-medium text-white mr-4">4.5/5</p>
-              <div className="flex items-center text-white text-sm">
-                <span className="font-bold underline">185+</span>
-                <span className="ml-2">Pembeli merasa puas</span>
-              </div>
-            </div>
+            <p className="text-sm font-medium text-white ml-2">4.5/5</p>
+          </div>
+          <div className="flex items-center text-white text-sm">
+            <span className="font-bold underline">185+</span>
+            <span className="ml-2">Pembeli merasa puas</span>
           </div>
         </div>
         <h1 className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
           SOLUSI CATERINGMU!
         </h1>
-        <p className="mt-6 text-xl sm:text-2xl text-gray-300">
+        <p className="mt-6 text-xl sm:text-2xl text-white">
           Percayakan Alarasa Catering untuk melengkapi setiap acara special
           kalian! Enak, higienis dan terjangkau!
         </p>
