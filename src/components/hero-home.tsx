@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [isHighlighted, setIsHighlighted] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false);
 
   useEffect(() => {
-    setIsHighlighted(true);
+    setIsAnimated(true);
   }, []);
 
   return (
@@ -65,15 +65,22 @@ export default function Hero() {
         </div>
         <h1 className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
           <span
-            className={`relative inline-block ${
-              isHighlighted ? "animate-highlight" : ""
+            className={`relative inline-block transition-all duration-1000 ${
+              isAnimated
+                ? "translate-y-0 opacity-100"
+                : "translate-y-10 opacity-0"
             }`}
           >
             SOLUSI CATERINGMU!
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-400 opacity-50 transform -skew-x-12"></span>
           </span>
         </h1>
-        <p className="mt-6 text-xl sm:text-2xl text-white">
+        <p
+          className={`mt-6 text-xl sm:text-2xl text-white transition-all duration-1000 delay-300 ${
+            isAnimated
+              ? "translate-x-0 opacity-100"
+              : "translate-x-10 opacity-0"
+          }`}
+        >
           Percayakan Alarasa Catering untuk melengkapi setiap acara special
           kalian! Enak, higienis dan terjangkau!
         </p>

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { motion } from "framer-motion";
 
 export function AppleCarousel() {
   const cards = data.map((card, index) => (
@@ -10,14 +11,24 @@ export function AppleCarousel() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full py-8">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-slate-800 font-sans">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-slate-800 font-sans"
+      >
         Our Products
-      </h2>
-      <p className="text-base md:text-xl max-w-2xl text-center py-4">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-base md:text-xl max-w-2xl text-center py-4"
+      >
         Alarasa Catering menyediakan berbagai macam masakan khas Nusantara yang
         dikemas kedalam beragam kemasan untuk memenuhi segala kebutuhan konsumsi
         kalian!
-      </p>
+      </motion.p>
       <Carousel items={cards} />
     </div>
   );
