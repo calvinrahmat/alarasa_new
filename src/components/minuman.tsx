@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import Image from "next/image";
 
 export default function ProductCard() {
   return (
@@ -28,7 +29,13 @@ export default function ProductCard() {
         </div>
       </div>
       <div className="md:w-1/2 mt-8 md:mt-0 relative">
-        <img src="/minuman.png" alt="Minuman" />
+        <Image
+          src="/minuman.png"
+          alt="Minuman"
+          width={500}
+          height={500}
+          layout="responsive"
+        />
       </div>
     </div>
   );

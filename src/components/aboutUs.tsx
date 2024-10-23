@@ -1,4 +1,6 @@
 import Image from "next/image";
+import HeroAbout from "@/components/hero-about";
+import ValuesAndVision from "@/components/valuesAndVision";
 
 const services = [
   {
@@ -23,23 +25,6 @@ const services = [
   },
 ];
 
-const misi = [
-  {
-    title: "",
-    description:
-      "Memberikan pilihan yang beragam untuk melengkapi berbagai jenis kebutuhan.",
-  },
-  {
-    title: "",
-    description: "Menyajikan produk yang lezat dan dinikmati setiap customer.",
-  },
-  {
-    title: "",
-    description:
-      "Menyediakan jasa dan pelayanan terbaik dengan harga yang terjangkau.",
-  },
-];
-
 const teamMembers = [
   {
     name: "Vincent Goenawan",
@@ -60,51 +45,11 @@ const teamMembers = [
 
 export default function AboutUs() {
   return (
-    <div className="bg-white mt-20">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative h-[80vh] overflow-hidden">
-        <div className="relative w-full h-[600px] overflow-hidden">
-          <Image
-            src="/about-us2.jpg"
-            alt="About Us"
-            layout="fill"
-            objectFit="cover"
-            className="z-0"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-20 z-10" />
-          <div className="absolute top-0 left-0 w-full h-full flex items-center z-20 p-8">
-            <div className="bg-white p-8 max-w-md">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                VISI KAMI
-              </h2>
-              <p className="text-gray-700">
-                Menjadi top of mind perusahaan catering di JABODETABEK yang
-                mengutamakan standar kualitas dan pelayanan yang memuaskan
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroAbout />
 
-      {/* Mission Section */}
-      <section className="bg-[#EBEBE5] py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-slate-800 mb-4 text-center">
-            Misi
-          </h1>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {misi.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-slate-800 mb-4">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ValuesAndVision />
 
       {/* Services Section */}
       <section className="bg-[#EBEBE5] py-16 mt-10 md:py-24">
@@ -150,7 +95,7 @@ export default function AboutUs() {
       {/* Kitchen Photos Section */}
       <section className="bg-[#EBEBE5] py-16 md:py-24">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl text-slate-800 font-bold text-center mb-12">
+          <h2 className="text-5xl text-slate-800 font-bold text-center mb-8">
             Our Kitchen
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
