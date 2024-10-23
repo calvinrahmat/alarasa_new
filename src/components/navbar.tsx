@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "./logo";
+import { usePathname } from "next/navigation";
 
 export function Navbar(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,6 +19,7 @@ export function Navbar(): JSX.Element {
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileProductsOpen] = useState(false);
   const [showLogoText, setShowLogoText] = useState(true);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -75,6 +77,11 @@ export function Navbar(): JSX.Element {
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
+
+  useEffect(() => {
+    setIsOpen(false);
+    setIsProductsMenuOpen(false);
+  }, [pathname]);
 
   const handleProductsMouseEnter = () => {
     if (productsMenuTimeout.current) {
