@@ -1,6 +1,14 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 export default function Hero() {
+  const [isHighlighted, setIsHighlighted] = useState(false);
+
+  useEffect(() => {
+    setIsHighlighted(true);
+  }, []);
+
   return (
     <div className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -56,7 +64,14 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
-          SOLUSI CATERINGMU!
+          <span
+            className={`relative inline-block ${
+              isHighlighted ? "animate-highlight" : ""
+            }`}
+          >
+            SOLUSI CATERINGMU!
+            <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-400 opacity-50 transform -skew-x-12"></span>
+          </span>
         </h1>
         <p className="mt-6 text-xl sm:text-2xl text-white">
           Percayakan Alarasa Catering untuk melengkapi setiap acara special

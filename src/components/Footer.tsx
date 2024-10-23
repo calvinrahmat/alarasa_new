@@ -1,6 +1,17 @@
 import { Facebook, Instagram } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const berenikaBold = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Berenika-Bold.ttf",
+      weight: "700",
+    },
+  ],
+  variable: "--font-berenika",
+});
 
 export default function Footer() {
   return (
@@ -11,7 +22,9 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center">
               <Image src="/logo.png" alt="alarasa" width={50} height={50} />
-              <h2 className="text-2xl font-bold">alarasa</h2>
+              <h2 className={`${berenikaBold.className} text-2xl ml-2`}>
+                alarasa
+              </h2>
             </div>
           </div>
 
