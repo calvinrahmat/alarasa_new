@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { Highlight } from "./ui/hero-highlight";
 
 export default function Hero() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -26,7 +28,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24">
-        <div className="flex flex-col mb-4">
+        <div className="flex flex-col mb-6">
           <div className="flex items-center mb-2">
             <div className="flex">
               {[...Array(5)].map((_, index) => (
@@ -63,19 +65,37 @@ export default function Hero() {
             <span className="ml-2">Pembeli merasa puas</span>
           </div>
         </div>
-        <h1 className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
-          <span
-            className={`relative inline-block transition-all duration-1000 ${
-              isAnimated
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
-          >
-            SOLUSI CATERINGMU!
-          </span>
-        </h1>
+
+        <motion.h1
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: [20, -5, 0],
+          }}
+          transition={{
+            duration: 0.5,
+            ease: [0.4, 0.0, 0.2, 1],
+          }}
+          className="font-sans md:font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-6"
+        >
+          <Highlight className="text-black dark:text-white">
+            <span
+              className={`relative inline-block transition-all duration-1000 ${
+                isAnimated
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
+              }`}
+            >
+              SOLUSI CATERINGMU!
+            </span>
+          </Highlight>
+        </motion.h1>
+
         <p
-          className={`mt-6 text-xl sm:text-2xl text-white transition-all duration-1000 delay-300 ${
+          className={`text-xl sm:text-2xl text-white transition-all duration-1000 delay-300 ${
             isAnimated
               ? "translate-x-0 opacity-100"
               : "translate-x-10 opacity-0"
