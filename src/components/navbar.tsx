@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "./logo";
-import { usePathname } from "next/navigation";
 
 export function Navbar(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +18,6 @@ export function Navbar(): JSX.Element {
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileProductsOpen] = useState(false);
   const [showLogoText, setShowLogoText] = useState(true);
-  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -77,11 +75,6 @@ export function Navbar(): JSX.Element {
       window.removeEventListener("resize", checkMobile);
     };
   }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-    setIsProductsMenuOpen(false);
-  }, [pathname]);
 
   const handleProductsMouseEnter = () => {
     if (productsMenuTimeout.current) {
@@ -147,19 +140,19 @@ export function Navbar(): JSX.Element {
                     <div className="py-1">
                       <Link
                         href="/prasmanan"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Prasmanan
                       </Link>
                       <Link
                         href="/snack-box"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Snack Box & Coffee Break
                       </Link>
                       <Link
                         href="/rice-box"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-left"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Rice Box
                       </Link>
@@ -196,32 +189,32 @@ export function Navbar(): JSX.Element {
       <div className={`md:hidden ${isOpen ? "block" : "hidden"} relative z-10`}>
         <Link
           href="/"
-          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300 text-left"
+          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Home
         </Link>
-        <div className="py-2 px-6 text-sm text-white text-left">Products</div>
+        <div className="py-2 px-6 text-sm text-white">Products</div>
         <Link
           href="/prasmanan"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300 text-left"
+          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Prasmanan
         </Link>
         <Link
           href="/snack-box"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300 text-left"
+          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Snack Box & Coffee Break
         </Link>
         <Link
           href="/rice-box"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300 text-left"
+          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Rice Box
         </Link>
         <Link
           href="/about"
-          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300 text-left"
+          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           About
         </Link>
