@@ -110,65 +110,73 @@ export function Navbar(): JSX.Element {
             : "bg-[#1C2C1C]"
         }`}
       ></div>
-      <div className="max-w-6xl mx-auto px-4 py-2 relative z-10">
-        <div className="flex justify-between">
-          <div className="flex items-center space-x-7">
+      <div className="xl:px-16 mx-auto px-4 py-2 relative z-10">
+        <div className="flex justify-between items-center">
+          <div className="flex-shrink-0">
             <Logo showText={!isMobile || showLogoText || isOpen} />
-            <div className="hidden md:flex items-center space-x-1 text-xl">
-              <Link
-                href="/"
-                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+          </div>
+          <div className="hidden md:flex items-center space-x-7">
+            <Link
+              href="/"
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+                isAtTop && !isHovered ? "text-white" : "text-white"
+              }`}
+            >
+              Home
+            </Link>
+            <div
+              className="relative"
+              onMouseEnter={handleProductsMouseEnter}
+              onMouseLeave={handleProductsMouseLeave}
+            >
+              <button
+                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center ${
                   isAtTop && !isHovered ? "text-white" : "text-white"
                 }`}
               >
-                Home
-              </Link>
-              <div
-                className="relative"
-                onMouseEnter={handleProductsMouseEnter}
-                onMouseLeave={handleProductsMouseLeave}
-              >
-                <button
-                  className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center ${
-                    isAtTop && !isHovered ? "text-white" : "text-white"
-                  }`}
-                >
-                  Products <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                {isProductsMenuOpen && (
-                  <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
-                    <div className="py-1">
-                      <Link
-                        href="/prasmanan"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Prasmanan
-                      </Link>
-                      <Link
-                        href="/snack-box"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Snack Box & Coffee Break
-                      </Link>
-                      <Link
-                        href="/rice-box"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Rice Box
-                      </Link>
-                    </div>
+                Products <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              {isProductsMenuOpen && (
+                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
+                  <div className="py-1">
+                    <Link
+                      href="/prasmanan"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Prasmanan
+                    </Link>
+                    <Link
+                      href="/snack-box"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Snack Box & Coffee Break
+                    </Link>
+                    <Link
+                      href="/rice-box"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                    >
+                      Rice Box
+                    </Link>
                   </div>
-                )}
-              </div>
-              <Link
-                href="/about"
-                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
-                  isAtTop && !isHovered ? "text-white" : "text-white"
-                }`}
-              >
-                About Us
-              </Link>
+                </div>
+              )}
             </div>
+            <Link
+              href="/about"
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+                isAtTop && !isHovered ? "text-white" : "text-white"
+              }`}
+            >
+              About Us
+            </Link>
+            <Link
+              href="/article"
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+                isAtTop && !isHovered ? "text-white" : "text-white"
+              }`}
+            >
+              Article
+            </Link>
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -216,7 +224,13 @@ export function Navbar(): JSX.Element {
           href="/about"
           className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
-          About
+          About Us
+        </Link>
+        <Link
+          href="/article"
+          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+        >
+          Article
         </Link>
       </div>
     </nav>
