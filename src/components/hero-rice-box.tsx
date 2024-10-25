@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Component from "./whatsapp";
 
 export default function Hero() {
+  const whatsappComponent = Component({});
+  const whatsappUrl = whatsappComponent.props.href;
+
   return (
     <div className="relative bg-black  text-white py-16 px-4 md:px-8 lg:px-16 min-h-[80vh] flex items-center">
       {/* Background image */}
@@ -22,8 +26,8 @@ export default function Hero() {
         <div className="space-y-6 flex justify-center items-center">
           <div className="relative w-full max-w-[300px] md:max-w-[600px] aspect-square">
             <Image
-              src="/rice-box.png"
-              alt="Rice Box"
+              src="/nasi-box.png"
+              alt="Nasi Box"
               layout="fill"
               objectFit="contain"
               className="rounded-lg"
@@ -60,14 +64,16 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
             <Link
-              href="#pricing"
+              href="https://drive.google.com/file/d/1lTXRcIhaWAbG6psapEnIDh2FpjMqAKFV/view?usp=drivesdk"
               className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full text-center"
             >
               LIHAT MENU NASI BOX
             </Link>
             <Link
-              href="/contact"
+              href={whatsappUrl}
               className="inline-block bg-yellow-500 font-bold text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300  w-full text-center animate-bounce"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               PESAN CATERING NASI BOX
             </Link>

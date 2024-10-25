@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HeroSnack />
-      <main className="mt-20">
+      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 w-screen px-2 flex justify-center items-center">
@@ -19,10 +19,10 @@ export default function Home() {
             </div>
             <div className="md:w-1/2">
               <div className="p-8">
-                <h1 className="text-4xl font-bold text-slate-800 mb-4">
+                <h1 className="text-4xl font-bold  mb-4">
                   Snack Box & Coffee Break
                 </h1>
-                <p className="text-lg text-slate-800 mb-6 text-justify">
+                <p className="text-lg  mb-6 text-justify">
                   Cemilan manis dan gurih selalu menjadi pilihan favorit untuk
                   melengkapi acara acara kalian. Beragam jenis snack dapat
                   dikemas kedalam box untuk acara yang lebih santai atau
@@ -36,12 +36,6 @@ export default function Home() {
                       className=" inline-block bg-green-600  text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto"
                     >
                       Lihat Menu Snack Box & Coffee Break
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className="inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto animate-bounce"
-                    >
-                      Konsultasi Berlangganan Catering
                     </Link>
                   </div>
                 </div>

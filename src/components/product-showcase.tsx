@@ -37,16 +37,18 @@ export default function ProductShowcase({
     setStartIndex((prev) =>
       Math.min(prev + 1, images.length - visibleThumbnails)
     );
+    setCurrentImage((prev) => (prev + 1) % images.length);
   };
 
   const prevImage = () => {
     setStartIndex((prev) => Math.max(prev - 1, 0));
+    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
   };
 
   return (
     <Card className="w-full max-w-3xl mx-auto bg-[#EBEBE5] border-black">
       <CardContent className="p-4 sm:p-6">
-        <div className="relative aspect-square mb-4">
+        <div className="relative aspect-square mb-4 overflow-hidden">
           <Image
             src={images[currentImage]}
             alt={`Main ${title} image ${currentImage + 1}`}
@@ -69,13 +71,14 @@ export default function ProductShowcase({
                       : ""
                   }`}
                 >
-                  <Image
-                    src={src}
-                    alt={`${title} image ${startIndex + index + 1}`}
-                    width={80}
-                    height={80}
-                    className="rounded w-20 h-20 object-cover"
-                  />
+                  <div className="relative w-20 h-20 overflow-hidden rounded">
+                    <Image
+                      src={src}
+                      alt={`${title} image ${startIndex + index + 1}`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
                 </button>
               ))}
           </div>
@@ -84,7 +87,7 @@ export default function ProductShowcase({
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-800 font-bold border-black"
             onClick={prevImage}
-            disabled={startIndex === 0}
+            disabled={currentImage === 0 && startIndex === 0}
           >
             <ChevronLeft className="h-4 w-4" />
           </Button>
@@ -93,7 +96,10 @@ export default function ProductShowcase({
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 text-slate-800 font-bold border-black"
             onClick={nextImage}
-            disabled={startIndex >= images.length - visibleThumbnails}
+            disabled={
+              currentImage === images.length - 1 &&
+              startIndex >= images.length - visibleThumbnails
+            }
           >
             <ChevronRight className="h-4 w-4" />
           </Button>

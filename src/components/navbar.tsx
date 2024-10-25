@@ -15,13 +15,14 @@ export function Navbar(): JSX.Element {
   const navRef = useRef<HTMLDivElement>(null);
   const lastScrollY = useRef(0);
   const productsMenuTimeout = useRef<NodeJS.Timeout | null>(null);
+  const productsMenuRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileProductsOpen] = useState(false);
   const [showLogoText, setShowLogoText] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    setShowLogoText(true); // Always show logo text when toggling menu
+    setShowLogoText(true);
   };
 
   useEffect(() => {
@@ -80,14 +81,19 @@ export function Navbar(): JSX.Element {
     if (productsMenuTimeout.current) {
       clearTimeout(productsMenuTimeout.current);
     }
-    setIsProductsMenuOpen(true);
-    setIsVisible(true); // Ensure navbar is visible when submenu is open
+    productsMenuTimeout.current = setTimeout(() => {
+      setIsProductsMenuOpen(true);
+      setIsVisible(true); // Ensure navbar is visible when submenu is open
+    }, 100); // Small delay before opening the menu
   };
 
   const handleProductsMouseLeave = () => {
+    if (productsMenuTimeout.current) {
+      clearTimeout(productsMenuTimeout.current);
+    }
     productsMenuTimeout.current = setTimeout(() => {
       setIsProductsMenuOpen(false);
-    }, 300); // 300ms delay before closing the menu
+    }, 3000); // Increased delay to 3 seconds before closing the menu
   };
 
   return (
@@ -120,7 +126,7 @@ export function Navbar(): JSX.Element {
           <div className="hidden md:flex items-center space-x-7">
             <Link
               href="/"
-              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
                 isAtTop && !isHovered ? "text-white" : "text-white"
               }`}
             >
@@ -130,34 +136,35 @@ export function Navbar(): JSX.Element {
               className="relative"
               onMouseEnter={handleProductsMouseEnter}
               onMouseLeave={handleProductsMouseLeave}
+              ref={productsMenuRef}
             >
               <button
-                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center ${
+                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center text-lg ${
                   isAtTop && !isHovered ? "text-white" : "text-white"
                 }`}
               >
-                Products <ChevronDown className="ml-1 h-4 w-4" />
+                Products <ChevronDown className="ml-1 h-5 w-5" />
               </button>
               {isProductsMenuOpen && (
-                <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
+                <div className="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
                   <div className="py-1">
                     <Link
                       href="/prasmanan"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
                     >
                       Prasmanan
                     </Link>
                     <Link
                       href="/snack-box"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
                     >
                       Snack Box & Coffee Break
                     </Link>
                     <Link
-                      href="/rice-box"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      href="/nasi-box"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
                     >
-                      Rice Box
+                      Nasi Box
                     </Link>
                   </div>
                 </div>
@@ -165,7 +172,7 @@ export function Navbar(): JSX.Element {
             </div>
             <Link
               href="/about"
-              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
                 isAtTop && !isHovered ? "text-white" : "text-white"
               }`}
             >
@@ -173,7 +180,7 @@ export function Navbar(): JSX.Element {
             </Link>
             <Link
               href="/article"
-              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 ${
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
                 isAtTop && !isHovered ? "text-white" : "text-white"
               }`}
             >
@@ -217,10 +224,10 @@ export function Navbar(): JSX.Element {
           Snack Box & Coffee Break
         </Link>
         <Link
-          href="/rice-box"
+          href="/nasi-box"
           className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
-          Rice Box
+          Nasi Box
         </Link>
         <Link
           href="/about"

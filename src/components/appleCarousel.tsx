@@ -102,10 +102,10 @@ const DummyContent = () => {
 
 const data = [
   {
-    title: "Rice Box",
+    title: "Nasi Box",
     src: "/nasi-box.jpg",
     content: <DummyContent />,
-    link: "/rice-box",
+    link: "/nasi-box",
   },
   {
     title: "Prasmanan",
