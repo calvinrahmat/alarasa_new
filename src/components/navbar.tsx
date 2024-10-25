@@ -101,13 +101,15 @@ export function Navbar(): JSX.Element {
     >
       <div
         className={`w-full h-full absolute top-0 left-0 transition-all duration-300 ${
-          isAtTop && !isHovered && !isOpen ? "h-0" : "h-full"
+          isAtTop && !isHovered && !isOpen
+            ? "bg-transparent"
+            : "bg-[#1C2C1C]/80"
         } ${
           isMobile
             ? isOpen || isMobileProductsOpen
-              ? "bg-[#1C2C1C]"
+              ? "bg-[#1C2C1C]/95"
               : "bg-transparent"
-            : "bg-[#1C2C1C]"
+            : ""
         }`}
       ></div>
       <div className="xl:px-16 mx-auto px-4 py-2 relative z-10">

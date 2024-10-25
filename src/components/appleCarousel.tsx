@@ -10,12 +10,12 @@ export function AppleCarousel() {
   ));
 
   return (
-    <div className="flex flex-col items-center justify-center w-full h-full py-8">
+    <div className="flex text-slate-100 flex-col items-center justify-center w-full h-full py-8">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-slate-800 font-sans"
+        className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-slate-100 font-sans"
       >
         Our Products
       </motion.h2>

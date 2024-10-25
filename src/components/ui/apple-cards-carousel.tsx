@@ -259,7 +259,7 @@ export const Card = ({
             <Link href={card.link}>
               <Button
                 variant="outline"
-                className="bg-[#F5F5F5] md:text-xl hover:bg-[#E0E0E0] transition-colors duration-300"
+                className="bg-[#F5F5F5] text-slate-800 md:text-xl hover:bg-[#E0E0E0] transition-colors duration-300"
               >
                 SEE MORE <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
