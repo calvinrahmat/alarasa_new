@@ -1,5 +1,4 @@
 import ProductShowcase from "@/components/product-showcase";
-import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
@@ -57,7 +56,6 @@ export default function Home() {
             </div>
           </div>
 
-          <Minuman />
           <Review />
           <CTASection
             description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."

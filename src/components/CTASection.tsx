@@ -11,7 +11,7 @@ interface CTASectionProps {
 const CTASection: React.FC<CTASectionProps> = ({ description, primaryCTA }) => {
   return (
     <div className="p-8 flex flex-col items-center">
-      <p className="text-lg text-slate-800 mb-6 text-center max-w-2xl">
+      <p className="text-lg text-slate-100 mb-6 text-center max-w-2xl">
         {description}
       </p>
       <div className="mb-6">

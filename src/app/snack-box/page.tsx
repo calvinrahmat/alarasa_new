@@ -1,5 +1,4 @@
 import ProductShowcase from "@/components/product-showcase";
-import Minuman from "@/components/minuman";
 import { Review } from "@/components/Review";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
@@ -50,7 +49,6 @@ export default function Home() {
             </div>
           </div>
 
-          <Minuman />
           <Review />
           <CTASection
             description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."

@@ -78,7 +78,7 @@ export default function Hero() {
             duration: 0.5,
             ease: [0.4, 0.0, 0.2, 1],
           }}
-          className="font-sans md:font-serif text-2xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-relaxed lg:leading-snug mb-6"
+          className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
         >
           <span
             className={`relative text-yellow-300 inline-block transition-all duration-1000 ${
