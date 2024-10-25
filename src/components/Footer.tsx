@@ -15,7 +15,7 @@ const berenikaBold = localFont({
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1C2C1C] text-white">
+    <footer className="bg-gradient-to-b from-[#1C2C1C] to-[#2A3F2A] text-white">
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and About */}

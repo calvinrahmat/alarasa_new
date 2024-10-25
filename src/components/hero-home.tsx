@@ -22,8 +22,8 @@ export default function Hero() {
         }}
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-70 z-10" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/90 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24">

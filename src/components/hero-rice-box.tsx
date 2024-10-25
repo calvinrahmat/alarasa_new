@@ -7,14 +7,14 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/nasi-box.jpg')",
+          backgroundImage: "url('/kitchen3.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 z-10" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/90 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-3xl">
