@@ -34,13 +34,13 @@ export default function Home() {
                   <div className="flex flex-row justify-center items-center space-x-4">
                     <Link
                       href="#pricing"
-                      className=" inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto"
+                      className=" inline-block bg-green-600  text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto"
                     >
                       Lihat Menu Snack Box & Coffee Break
                     </Link>
                     <Link
                       href="/contact"
-                      className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto animate-bounce"
+                      className="inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300 text-sm w-full sm:w-auto animate-bounce"
                     >
                       Konsultasi Berlangganan Catering
                     </Link>
