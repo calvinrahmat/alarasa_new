@@ -18,7 +18,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <h1 className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+        <h1 className="font-sans md:font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
           ABOUT US
         </h1>
       </div>

@@ -55,7 +55,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <h1 className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
+        <h1 className="font-sans md:font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
           SOLUSI CATERINGMU!
         </h1>
         <p className="mt-6 text-xl sm:text-2xl text-gray-300">

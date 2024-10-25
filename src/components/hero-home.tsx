@@ -22,8 +22,8 @@ export default function Hero() {
         }}
       />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/90 z-10" />
+      {/* Green Overlay */}
+      <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24">
@@ -78,7 +78,7 @@ export default function Hero() {
             duration: 0.5,
             ease: [0.4, 0.0, 0.2, 1],
           }}
-          className="font-sans md:font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
+          className="font-sans md:font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
         >
           <span
             className={`relative text-yellow-300 inline-block transition-all duration-1000 ${
