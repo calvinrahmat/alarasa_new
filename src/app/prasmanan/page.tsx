@@ -13,11 +13,7 @@ export default function PrasmananPage() {
           <div className="flex flex-col md:flex-row items-center justify-center">
             <div className="md:w-1/2 flex justify-center items-center">
               <ProductShowcase
-                images={[
-                  "/prasmanan1.jpg",
-                  "/prasmanan2.jpg",
-                  "/prasmanan3.jpg",
-                ]}
+                images={["/prasmanan2.jpg", "/prasmanan3.jpg"]}
                 title="Nasi Box"
               />
             </div>

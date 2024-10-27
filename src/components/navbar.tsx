@@ -3,6 +3,7 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "./logo";
 
@@ -14,11 +15,11 @@ export function Navbar(): JSX.Element {
   const [isProductsMenuOpen, setIsProductsMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
   const lastScrollY = useRef(0);
-  const productsMenuTimeout = useRef<NodeJS.Timeout | null>(null);
   const productsMenuRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileProductsOpen] = useState(false);
   const [showLogoText, setShowLogoText] = useState(true);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -53,8 +54,14 @@ export function Navbar(): JSX.Element {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        productsMenuRef.current &&
+        !productsMenuRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
+        setIsProductsMenuOpen(false);
       }
     };
 
@@ -77,23 +84,13 @@ export function Navbar(): JSX.Element {
     };
   }, []);
 
-  const handleProductsMouseEnter = () => {
-    if (productsMenuTimeout.current) {
-      clearTimeout(productsMenuTimeout.current);
-    }
-    productsMenuTimeout.current = setTimeout(() => {
-      setIsProductsMenuOpen(true);
-      setIsVisible(true); // Ensure navbar is visible when submenu is open
-    }, 100); // Small delay before opening the menu
-  };
+  useEffect(() => {
+    setIsOpen(false);
+    setIsProductsMenuOpen(false); // Add this line
+  }, [pathname]);
 
-  const handleProductsMouseLeave = () => {
-    if (productsMenuTimeout.current) {
-      clearTimeout(productsMenuTimeout.current);
-    }
-    productsMenuTimeout.current = setTimeout(() => {
-      setIsProductsMenuOpen(false);
-    }, 3000); // Increased delay to 3 seconds before closing the menu
+  const toggleProductsMenu = () => {
+    setIsProductsMenuOpen(!isProductsMenuOpen);
   };
 
   return (
@@ -132,16 +129,12 @@ export function Navbar(): JSX.Element {
             >
               Home
             </Link>
-            <div
-              className="relative"
-              onMouseEnter={handleProductsMouseEnter}
-              onMouseLeave={handleProductsMouseLeave}
-              ref={productsMenuRef}
-            >
+            <div className="relative" ref={productsMenuRef}>
               <button
                 className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center text-lg ${
                   isAtTop && !isHovered ? "text-white" : "text-white"
                 }`}
+                onClick={toggleProductsMenu}
               >
                 Products <ChevronDown className="ml-1 h-5 w-5" />
               </button>
