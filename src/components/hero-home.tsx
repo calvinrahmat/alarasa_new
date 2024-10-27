@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hero() {
   const [isAnimated, setIsAnimated] = useState(false);
@@ -13,15 +14,16 @@ export default function Hero() {
   return (
     <div className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/hero-image.jpeg')",
-          backgroundSize: "451px 720px",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero-image.jpeg"
+          alt="Our product in use in a modern office setting"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+        />
+      </div>
 
       {/* Green Overlay */}
       <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
