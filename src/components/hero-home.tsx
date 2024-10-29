@@ -14,13 +14,12 @@ export default function Hero() {
   return (
     <div className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 bg-bottom">
         <Image
-          src="/hero-image.jpeg"
-          alt="Our product in use in a modern office setting"
+          src="/hero-image2.jpg"
+          alt="Nasi Box"
           layout="fill"
           objectFit="cover"
-          quality={100}
           priority
         />
       </div>
@@ -29,7 +28,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24">
+      <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24 pb-20">
         <div className="flex flex-col mb-6">
           <div className="flex items-center mb-2">
             <div className="flex">
@@ -81,10 +80,10 @@ export default function Hero() {
             duration: 0.5,
             ease: [0.4, 0.0, 0.2, 1],
           }}
-          className="font-sans md:font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
+          className="font-sans md:font-sans text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
         >
           <span
-            className={`relative text-yellow-300 inline-block transition-all duration-1000 ${
+            className={`relative text-yellow-300  inline-block transition-all duration-1000 ${
               isAnimated
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
@@ -107,9 +106,7 @@ export default function Hero() {
       </div>
 
       {/* Attribution for screen readers */}
-      <div className="sr-only">
-        Background image: Our product in use in a modern office setting
-      </div>
+      <div className="sr-only">Background image: Na</div>
     </div>
   );
 }

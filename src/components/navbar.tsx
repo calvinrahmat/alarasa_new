@@ -142,6 +142,12 @@ export function Navbar(): JSX.Element {
                 <div className="absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y divide-gray-100 focus:outline-none">
                   <div className="py-1">
                     <Link
+                      href="/nasi-box"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
+                    >
+                      Nasi Box
+                    </Link>
+                    <Link
                       href="/prasmanan"
                       className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
                     >
@@ -152,12 +158,6 @@ export function Navbar(): JSX.Element {
                       className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
                     >
                       Snack Box & Coffee Break
-                    </Link>
-                    <Link
-                      href="/nasi-box"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
-                    >
-                      Nasi Box
                     </Link>
                   </div>
                 </div>
@@ -203,7 +203,14 @@ export function Navbar(): JSX.Element {
         >
           Home
         </Link>
+
         <div className="py-2 px-6 text-sm text-white">Products</div>
+        <Link
+          href="/nasi-box"
+          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+        >
+          Nasi Box
+        </Link>
         <Link
           href="/prasmanan"
           className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
@@ -216,12 +223,7 @@ export function Navbar(): JSX.Element {
         >
           Snack Box & Coffee Break
         </Link>
-        <Link
-          href="/nasi-box"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
-        >
-          Nasi Box
-        </Link>
+
         <Link
           href="/about"
           className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
