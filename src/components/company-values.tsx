@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 export default function CompanyValues() {
   const values = [
@@ -49,6 +50,15 @@ export default function CompanyValues() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="lg:w-3/5 flex items-center justify-center">
+          <Image
+            src="/our-values.png"
+            alt="Our Values"
+            width={300}
+            height={800}
+            className="object-cover rounded-lg"
+          />
         </div>
       </div>
     </div>

@@ -19,13 +19,13 @@ export default function Component() {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 text-slate-800">
+    <div className="container  mx-auto px-4 py-8 text-slate-800">
       <h1 className="text-5xl font-bold mb-8 border-t pt-4">VISI DAN MISI</h1>
       <div className="flex flex-col md:flex-row">
         <div className="w-full">
           <p className="mb-8 text-lg">
             Menjadi top of mind perusahaan catering di JABODETABEK yang
-            mengutamakan standar kualitas dan pelayanan yang memuaskan
+            mengutamakan standar kualitas dan pelayanan yang memuaskan.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {qualityItems.map((item) => (

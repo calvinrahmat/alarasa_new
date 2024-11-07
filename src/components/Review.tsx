@@ -20,64 +20,77 @@ export function Review() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setPosition((prevPosition) => (prevPosition + 1) % testimonials.length);
-    }, 5000); // Change card every 5 seconds
+    }, 5000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div>
-      <div className="h-[40rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden">
-        <h2 className="text-3xl font-bold text-center text-slate-100 mb-4">
-          Testimoni
-        </h2>
-        <p className="text-center text-slate-100 mb-8">
-          Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap
-          Hidangan Berbagai Acara
-        </p>
-        <div className="w-full max-w-md px-4">
-          <div className="relative h-64 overflow-hidden">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`absolute w-full transition-all duration-500 ease-in-out ${
-                  index === position
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-full"
-                }`}
-              >
-                <blockquote className="text-lg italic text-slate-100 mb-4">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-                <p className="font-semibold text-slate-100">
-                  {testimonial.name}
-                </p>
-              </div>
-            ))}
+    <div className="w-full">
+      <div className="relative w-full">
+        <div className="absolute inset-0 z-0 w-full">
+          <Image
+            src="/kitchen3.jpg"
+            alt="Review Background"
+            layout="fill"
+            objectFit="cover"
+            priority
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
+
+        <div className="relative z-20 h-[30rem] w-full flex flex-col antialiased items-center justify-center">
+          <p className="text-center text-yellow-300 mb-8 px-4 md:text-2xl font-bold">
+            Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai
+            Pelengkap Hidangan Berbagai Acara!
+          </p>
+          <div className="w-full max-w-md px-4">
+            <div className="relative h-48 overflow-hidden">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className={`absolute w-full transition-all duration-500 ease-in-out ${
+                    index === position
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-full"
+                  }`}
+                >
+                  <blockquote className="text-lg italic text-slate-100 mb-4">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+                  <p className="font-semibold text-slate-100">
+                    {testimonial.name}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-slate-100">
+      <section className="w-full py-6 md:py-12 lg:py-12 bg-gray-100">
+        <div className="w-full max-w-[2000px] mx-auto px-4 md:px-6">
+          <h2 className="text-3xl font-bold text-center mb-12 text-slate-800">
             Our Customers
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-center">
-            {customers.map((customer) => (
-              <div
-                key={customer.name}
-                className="flex items-center justify-center"
-              >
-                <Image
-                  src={customer.logo}
-                  alt={`${customer.name} logo`}
-                  width={120}
-                  height={120}
-                  className="max-w-full h-auto"
-                />
-              </div>
-            ))}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-scroll whitespace-nowrap">
+              {[...customers, ...customers].map((customer, index) => (
+                <div
+                  key={`${customer.name}-${index}`}
+                  className="flex-shrink-0 mx-4 flex items-center justify-center bg-white p-4 rounded-lg"
+                >
+                  <Image
+                    src={customer.logo}
+                    alt={`${customer.name} logo`}
+                    width={120}
+                    height={120}
+                    className="max-w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

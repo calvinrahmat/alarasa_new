@@ -1,21 +1,17 @@
-import ProductShowcase from "@/components/product-showcase";
 import { Review } from "@/components/Review";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
 import HeroPrasmanan from "@/components/hero-prasmanan";
-
+import ImageSlider from "@/components/image-slider";
 export default function PrasmananPage() {
   return (
     <div className="bg-[#042824] min-h-screen text-slate-100">
       <HeroPrasmanan />
       <main className="mt-20">
-        <div className="container mx-auto px-4">
+        <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-center">
-            <div className="md:w-1/2 flex justify-center items-center">
-              <ProductShowcase
-                images={["/prasmanan2.jpg", "/prasmanan3.jpg"]}
-                title="Nasi Box"
-              />
+            <div className="w-full md:w-1/2 px-4 md:px-0">
+              <ImageSlider images={["/prasmanan2.jpg", "/prasmanan3.jpg"]} />
             </div>
             <div className="md:w-1/2">
               <div className="p-8">
@@ -49,6 +45,7 @@ export default function PrasmananPage() {
               href: "#pricing",
             }}
           />
+          <div className="h-20 md:h-32 lg:h-40"></div>
         </div>
       </main>
     </div>

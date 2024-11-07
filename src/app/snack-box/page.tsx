@@ -1,21 +1,18 @@
-import ProductShowcase from "@/components/product-showcase";
 import { Review } from "@/components/Review";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import HeroSnack from "@/components/hero-snack";
+import ImageSlider from "@/components/image-slider";
 
 export default function Home() {
   return (
     <>
       <HeroSnack />
       <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-6">
-        <div className="container mx-auto px-4">
+        <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-center">
-            <div className="md:w-1/2 w-screen px-2 flex justify-center items-center">
-              <ProductShowcase
-                images={["/snack1.jpg", "/snack2.jpg"]}
-                title="Snack Box & Coffee Break"
-              />
+            <div className="w-full md:w-1/2 px-4 md:px-0">
+              <ImageSlider images={["/snack1.jpg", "/snack2.jpg"]} />
             </div>
             <div className="md:w-1/2">
               <div className="p-8">

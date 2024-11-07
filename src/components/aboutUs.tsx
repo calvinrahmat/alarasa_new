@@ -1,53 +1,18 @@
 import Image from "next/image";
 import HeroAbout from "@/components/hero-about";
 import ValuesAndVision from "@/components/valuesAndVision";
-
-const services = [
-  {
-    title: "Dapur Komersil",
-    description:
-      "Untuk memastikan standar dan kualitas pelayanan yang terbaik, Alarasa Catering telah berinvestasi pada equipment dan peralatan dapur dengan skala komersil standar industri. Tentunya, mengutamakan kualitas dan higienitas setiap produk Alarasa Catering.",
-  },
-  {
-    title: "Tenaga Kerja Professional",
-    description:
-      "Setiap produk dari Alarasa Catering diolah dan disortir oleh tenaga kerja professional dengan latar belakang yang terpecaya, memastikan mutu dan kualitas yang terjamin.",
-  },
-  {
-    title: "Layanan Cepat",
-    description:
-      "Didukung dengan kapasitas dapur berstandar komersil dan tenaga kerja professional, Alarasa Catering dapat melayani last minute dan same-day order .",
-  },
-  {
-    title: "Harga Bersaing",
-    description:
-      "Dari setiap keunggulan Alarasa Catering, harga produk yang ditawarkan masih sangat terjangkau yaitu dimulai dari 35,000 per porsinya.",
-  },
-];
+import OurValues from "@/components/ourValues";
 
 export default function AboutUs() {
   return (
-    <div className="bg-white">
+    <div className="bg-[#EBEBE5]">
       {/* Hero Section */}
       <HeroAbout />
 
       <ValuesAndVision />
 
       {/* Services Section */}
-      <section className="bg-[#EBEBE5] py-16 mt-10 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
-                <h3 className="text-2xl font-bold text-slate-800 mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-slate-800 mb-4">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <OurValues />
 
       {/* Kitchen Photos Section */}
       <section className="bg-[#EBEBE5] py-16 md:py-24">

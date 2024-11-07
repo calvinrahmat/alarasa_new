@@ -1,18 +1,17 @@
-import ProductShowcase from "@/components/product-showcase";
 import { Review } from "@/components/Review";
 import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import HeroRiceBox from "@/components/hero-rice-box";
-
+import ImageSlider from "@/components/image-slider";
 export default function Home() {
   return (
     <>
       <HeroRiceBox />
       <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-6">
-        <div className="container mx-auto px-4">
+        <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-center">
-            <div className="md:w-1/2 flex justify-center items-center">
-              <ProductShowcase
+            <div className="w-full md:w-1/2 px-4 md:px-0">
+              <ImageSlider
                 images={[
                   "/BASIC MENU - NASI AYAM WOKU (FLATLAY).jpg",
                   "/BASIC MENU - NASI BERKAT (FLATLAY).jpg",
@@ -24,7 +23,6 @@ export default function Home() {
                   "/PREMIUM MENU - NASI AYAM MENTEGA (FLATLAY).jpg",
                   "/PREMIUM MENU - NASI OPOR (FLATLAY).jpg",
                 ]}
-                title="Nasi Box"
               />
             </div>
             <div className="md:w-1/2">
@@ -32,7 +30,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold text-slate-100 mb-4">
                   Nasi Box
                 </h1>
-                <p className="text-lg text-slate-100 mb-6 text-justify">
+                <p className="text-lg text-slate-100 mb-6 text-left">
                   Dengan lebih dari 100 variasi lauk, Nasi Box menjadi produk
                   andalan Alarasa Catering untuk melengkapi berbagai kebutuhan
                   acara seperti meeting, peresmian kantor, ulang tahun,
