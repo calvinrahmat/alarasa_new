@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <HeroRiceBox />
-      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-6">
+      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-10">
         <div className="w-full">
-          <div className="flex flex-col md:flex-row items-center justify-center">
-            <div className="w-full md:w-1/2 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row items-center justify-center min-h-dvh">
+            <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
               <ImageSlider
                 images={[
                   "/BASIC MENU - NASI AYAM WOKU (FLATLAY).jpg",
@@ -25,12 +25,12 @@ export default function Home() {
                 ]}
               />
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-10">
               <div className="p-8">
                 <h1 className="text-4xl font-bold text-slate-100 mb-4">
                   Nasi Box
                 </h1>
-                <p className="text-lg text-slate-100 mb-6 text-left">
+                <p className="text-lg text-slate-100 mb-6 text-justify pe-10">
                   Dengan lebih dari 100 variasi lauk, Nasi Box menjadi produk
                   andalan Alarasa Catering untuk melengkapi berbagai kebutuhan
                   acara seperti meeting, peresmian kantor, ulang tahun,

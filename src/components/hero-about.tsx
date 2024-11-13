@@ -23,10 +23,10 @@ export default function Hero() {
         <h1 className="font-sans md:font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold text-yellow-300 tracking-tight mb-6">
           ALARASA CATERING
         </h1>
-        <p className="text-white text-base md:text-2xl leading-relaxed font-medium">
+        <p className="text-white text-base md:text-xl lg:text-2xl leading-relaxed font-medium text-justify pe-10">
           Alarasa Catering merupakan perusahaan catering yang berkomitmen untuk
           menyajikan aneka lauk selera nusantara yang dikemas dalam berbagai
-          macam kemasan untuk memenuhi kebutuhan setiap acara. <br /> Dengan
+          macam kemasan untuk memenuhi kebutuhan setiap acara. <br /> <br /> Dengan
           pengalaman dan dedikasi dalam bidang kuliner, Alarasa Catering
           menyajikan produk dengan mengutamakan mutu dan kualitas yang didukung
           oleh tenaga kerja professional dan peralatan dapur berstandar komersil
