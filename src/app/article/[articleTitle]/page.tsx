@@ -30,7 +30,7 @@ export default function Article({ params }: { params: tParams }) {
     };
 
     return (
-        <div className="p-6 max-w-5xl mx-auto space-y-12 my-20">
+        <div className="p-6 max-w-5xl mx-auto space-y-12 my-20 text-black">
             {/* Title Section with Full-Width Image */}
             <section className="w-full mb-12">
                 <h1 className="text-3xl sm:text-4xl font-bold text-center mt-4">{articleData.title}</h1>
