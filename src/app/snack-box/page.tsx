@@ -8,18 +8,18 @@ export default function Home() {
   return (
     <>
       <HeroSnack />
-      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-6">
+      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-10">
         <div className="w-full">
-          <div className="flex flex-col md:flex-row items-center justify-center">
-            <div className="w-full md:w-1/2 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row items-center justify-center min-h-dvh">
+            <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
               <ImageSlider images={["/snack1.jpg", "/snack2.jpg"]} />
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 mb-10">
               <div className="p-8">
-                <h1 className="text-4xl font-bold  mb-4">
+                <h1 className="text-4xl font-bold mb-4">
                   Snack Box & Coffee Break
                 </h1>
-                <p className="text-lg  mb-6 text-justify">
+                <p className="text-lg mb-6 text-justify pe-10">
                   Cemilan manis dan gurih selalu menjadi pilihan favorit untuk
                   melengkapi acara acara kalian. Beragam jenis snack dapat
                   dikemas kedalam box untuk acara yang lebih santai atau

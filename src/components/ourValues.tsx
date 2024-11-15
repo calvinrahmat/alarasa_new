@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Component() {
   return (
-    <div className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 min-h-screen p-8">
+    <div className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 min-h-screen p-8 ">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* First Section */}
         <div className="grid md:grid-cols-2 gap-8 items-center">

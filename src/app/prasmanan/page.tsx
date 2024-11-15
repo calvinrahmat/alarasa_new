@@ -5,18 +5,18 @@ import HeroPrasmanan from "@/components/hero-prasmanan";
 import ImageSlider from "@/components/image-slider";
 export default function PrasmananPage() {
   return (
-    <div className="bg-[#042824] min-h-screen text-slate-100">
+    <div className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] min-h-screen text-slate-100">
       <HeroPrasmanan />
-      <main className="mt-20">
+      <main className="my-10">
         <div className="w-full">
-          <div className="flex flex-col md:flex-row items-center justify-center">
-            <div className="w-full md:w-1/2 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row items-center justify-center min-h-dvh">
+            <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
               <ImageSlider images={["/prasmanan2.jpg", "/prasmanan3.jpg"]} />
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 pe-5 mb-10">
               <div className="p-8">
                 <h1 className="text-4xl font-bold mb-4">Prasmanan</h1>
-                <p className="text-lg mb-6 text-justify">
+                <p className="text-lg mb-6 text-justify pe-10">
                   Prasmanan merupakan solusi untuk elevate acara kalian agar
                   terlihat lebih mewah dan elegan. Tidak hanya menyajikan sajian
                   yang nikmat, Alarasa Catering juga menyediakan semua peralatan
