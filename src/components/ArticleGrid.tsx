@@ -25,7 +25,7 @@ export default function Component() {
             date: "14 AUGUST 2024",
             title:
                 "ITV Highlight Cutting-Edge EV Skills Training at Lincoln College Group and IMI",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "News", "Higher Education"],
             slug: "itv-highlight-ev-training",
           },
@@ -33,56 +33,56 @@ export default function Component() {
             date: "11 JULY 2024",
             title:
                 "Lincoln College University Centre Celebrates National Student Survey Success 2024",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "News", "Higher Education"],
             slug: "national-student-survey-success",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
           {
             date: "08 JULY 2024",
             title: "Access to University Class of 2024 Celebration",
-            image: "/placeholder.svg?height=400&width=600",
+            image: "/about-us2.jpg",
             categories: ["Lincoln College", "Higher Education", "News"],
             slug: "university-class-celebration",
           },
@@ -118,7 +118,7 @@ export default function Component() {
   }, []);
 
 // Avoid rendering pagination until on the client
-  if (!isClient) return null;
+//   if (!isClient) return null;
 
 
   // const [currentPage, setCurrentPage] = useState(1);

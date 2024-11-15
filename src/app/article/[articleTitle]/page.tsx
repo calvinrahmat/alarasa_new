@@ -1,7 +1,12 @@
 "use client"
-import React, {useEffect, useState,useRef} from "react";
-export default function Article({ params }: { params: { articleTitle: string } }) {
-    const articleTitle = React.use(params).articleTitle;
+import React, { useRef, useState} from "react";
+type tParams = Promise<{ slug: string }>;
+
+export default function Article({ params }: { params: tParams }) {
+    // const articleTitle = React.use(params).articleTitle;
+    // const { articleSlug } = await params;
+    const [articleSlug, setArticleSlug] = useState<string>();
+    params.then(value => setArticleSlug(value.slug))
     const subtitleRefs = {
         intro: useRef(null),
         section1: useRef(null),
@@ -15,11 +20,13 @@ export default function Article({ params }: { params: { articleTitle: string } }
             "ITV Highlight Cutting-Edge EV Skills Training at Lincoln College Group and IMI",
         image: "/about-us2.jpg",
         categories: ["Lincoln College", "News", "Higher Education"],
-        slug: "itv-highlight-ev-training",
+        slug: articleSlug,
     }
 
-    const scrollToSection = (ref) => {
-        ref.current.scrollIntoView({ behavior: 'smooth' });
+    const scrollToSection = (ref:React.RefObject<HTMLDivElement>) => {
+        if(ref.current){
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
