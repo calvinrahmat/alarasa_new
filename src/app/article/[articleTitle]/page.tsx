@@ -1,5 +1,6 @@
 "use client"
 import React, { useRef, useState} from "react";
+import Image from "next/image"; 
 type tParams = Promise<{ slug: string }>;
 
 export default function Article({ params }: { params: tParams }) {
@@ -37,9 +38,11 @@ export default function Article({ params }: { params: tParams }) {
                 <div className="text-gray-600 text-sm text-center mt-2">
                     <span>{articleData.date}</span> | <span>{articleData.categories.join(",")}</span>
                 </div>
-                <img
+                <Image
                     src={articleData.image} // Replace with actual image path
-                    alt="Article Cover"
+                    alt={"Article Cover"}
+                    width={500}  // specify appropriate width
+                    height={300} // specify appropriate height
                     className="w-full h-64 object-cover rounded-lg my-4"
                 />
             </section>
