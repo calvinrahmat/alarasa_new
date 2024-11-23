@@ -141,13 +141,14 @@ export default function Article() {
                 <h1 className="text-3xl sm:text-4xl font-bold text-center mt-4">{articleData.title}</h1>
                 <div className="text-gray-600 text-sm text-center mt-2">
                     <span>{formatDate(articleData.publishedAt)}</span> | <span>{articleData.categories.map((cat) => cat.title).join(", ")}</span>
-                </div>{articleData.categories.join(",")}
+                </div>
                 <Image
                     src={urlForImage(articleData.mainImage).url()}
                     alt={articleData.mainImage.alt || 'Article image'}
+                    layout="responsive"
                     width={500}  // specify appropriate width
                     height={300} // specify appropriate height
-                    className="w-full h-64 object-cover rounded-lg my-4"
+                    className="w-auto h-auto object-cover rounded-lg my-4 object-center"
                 />
             </section>
 
