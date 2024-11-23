@@ -6,89 +6,53 @@ import Link from "next/link";
 import Image from "next/image";
 import {useState,useEffect} from "react";
 import {useRouter} from "next/navigation";
+import { client } from '@/sanity/lib/client'; // Adjust the path as necessary
+import { urlForImage } from '@/sanity/lib/image'; // Add this import
 
 interface Article {
-  date: string;
   title: string;
-  image: string;
-  categories: string[];
-  slug: string;
+  slug: { current: string; _type: 'slug' };
+  author: { _ref: string; _type: 'reference' };
+  mainImage: {
+    _type: 'image';
+    alt: string;
+    asset: {
+      _ref?: string;
+      url?: string;
+    };
+  };
+  categories: Array<{
+    _ref: string;
+    _type: 'reference';
+    _key: string;
+    title: string;
+    color: string;
+  }>;
+  publishedAt: string;
+  body: string;
 }
 
 export default function Component() {
   const router = useRouter();
   const [articles,setArticles]=useState<Article[]>([]);
   useEffect(() => {
-    setArticles(
-        [
-          {
-            date: "14 AUGUST 2024",
-            title:
-                "ITV Highlight Cutting-Edge EV Skills Training at Lincoln College Group and IMI",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "News", "Higher Education"],
-            slug: "itv-highlight-ev-training",
-          },
-          {
-            date: "11 JULY 2024",
-            title:
-                "Lincoln College University Centre Celebrates National Student Survey Success 2024",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "News", "Higher Education"],
-            slug: "national-student-survey-success",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          {
-            date: "08 JULY 2024",
-            title: "Access to University Class of 2024 Celebration",
-            image: "/about-us2.jpg",
-            categories: ["Lincoln College", "Higher Education", "News"],
-            slug: "university-class-celebration",
-          },
-          // Add more articles as needed
-        ]
-    )
+    const fetchArticles = async () => {
+      const query = `*[_type == "post"]{
+        title, 
+        slug, 
+        author, 
+        mainImage, 
+        categories[]->{
+          title,
+          color
+        }, 
+        publishedAt, 
+        body
+      }`;
+      const fetchedArticles = await client.fetch(query);
+      setArticles(fetchedArticles);
+    };
+    fetchArticles();
   }, []);
 
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -138,75 +102,86 @@ export default function Component() {
   );
 
   return (
-      <>
-        {isClient && (
-            <div className="container mx-auto py-8 text-slate-800">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {displayedArticles.map((article, index) => (
-                    <Card
-                        key={index}
-                        onClick={() => router.push(`/article/${article.slug}`)}
-                        className="overflow-hidden rounded-lg shadow-lg max-w-sm mx-auto"
-                    >
-                      <div className="relative w-full h-48 md:h-56 lg:h-64">
-                        <Image
-                            src={article.image}
-                            alt={article.title}
-                            fill
-                            className="object-cover rounded-t-lg"
-                        />
-                      </div>
-                      <CardContent className="p-4 lg:p-6">
-                        <div className="text-xs md:text-sm font-medium text-muted-foreground mb-2">
-                          {article.date}
-                        </div>
-                        <h2 className="text-lg md:text-xl font-bold leading-tight mb-2">
-                          {article.title}
-                        </h2>
-                      </CardContent>
-                      <CardFooter className="p-4 lg:p-6 pt-0 flex flex-col gap-2">
-                        <div className="flex flex-wrap gap-2">
-                          {article.categories.map((category, idx) => (
-                              <Link
-                                  key={idx}
-                                  href={`/category/${category
-                                      .toLowerCase()
-                                      .replace(" ", "-")}`}
-                                  className="text-xs md:text-sm text-primary hover:underline"
-                              >
-                                {category}
-                                {idx < article.categories.length - 1 && ", "}
-                              </Link>
-                          ))}
-                        </div>
+    <>
+      {isClient && (
+        <div className="container mx-auto py-8 text-slate-800">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {displayedArticles.map((article, index) => (
+              <Card
+                key={index}
+                onClick={() => router.push(`/article/${article.slug.current}`)}
+                className="overflow-hidden rounded-lg shadow-lg max-w-sm mx-auto"
+              >
+                <div className="relative w-full h-48 md:h-56 lg:h-64">
+                  {article.mainImage && (
+                    <Image
+                      src={urlForImage(article.mainImage)
+                        .url()}
+                      alt={article.mainImage.alt || 'Article image'}
+                      fill
+                      className="object-cover rounded-t-lg"
+                      priority={index === 0}
+                    />
+                  )}
+                </div>
+                <CardContent className="p-4 lg:p-6">
+                  <div className="text-xs md:text-sm font-medium text-muted-foreground mb-2">
+                    {new Date(article.publishedAt).toLocaleDateString('en-UK', {
+                      day: '2-digit',
+                      month: 'long',
+                      year: 'numeric'
+                    }).replace(
+                      /([A-Za-z]+)/,
+                      (match) => match.toUpperCase()
+                    )}
+                  </div>
+                  <h2 className="text-lg md:text-xl font-bold leading-tight mb-2">
+                    {article.title}
+                  </h2>
+                </CardContent>
+                <CardFooter className="p-4 lg:p-6 pt-0 flex flex-col gap-2">
+                  {/* Categories will need to be fetched separately or included in the initial query */}
+                  <div className="gap-2 justify-end mt-auto">
+                    {article.categories?.map((category, idx) => (
+                      <span key={idx}>
                         <Link
-                            href={`/article/${article.slug}`}
-                            className="flex items-center gap-1 text-sm font-medium hover:underline ml-auto"
+                          href={`/category/${category.title.toLowerCase()}`}
+                          className="text-xs font-medium uppercase hover:underline"
+                          onClick={(e) => e.stopPropagation()}
                         >
-                          Read more
-                          <ChevronRight className="h-4 w-4"/>
+                          {category.title}
                         </Link>
-                      </CardFooter>
-                    </Card>
-                ))}
-              </div>
-
-              {/* Pagination */}
-              <div className="flex justify-center items-center gap-2 mt-8">
-                {[...Array(totalPages)].map((_, index) => (
-                    <Button
-                        key={index}
-                        variant={index + 1 === currentPage ? "default" : "ghost"}
-                        className="w-10 h-10 p-0"
-                        onClick={() => handlePageChange(index + 1)}
-                    >
-                      {index + 1}
-                    </Button>
-                ))}
-              </div>
-            </div>
-        )}
-      </>
-
+                        {idx < article.categories.length - 1 && ", "}
+                      </span>
+                    ))}
+                  </div>
+                  <Link
+                    href={`/article/${article.slug.current}`}
+                    className="flex items-center gap-1 text-sm font-medium hover:underline ml-auto"
+                  >
+                    Read more
+                    <ChevronRight className="h-4 w-4"/>
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+  
+          {/* Pagination */}
+          <div className="flex justify-center items-center gap-2 mt-8">
+            {[...Array(totalPages)].map((_, index) => (
+              <Button
+                key={index}
+                variant={index + 1 === currentPage ? "default" : "ghost"}
+                className="w-10 h-10 p-0"
+                onClick={() => handlePageChange(index + 1)}
+              >
+                {index + 1}
+              </Button>
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 }
