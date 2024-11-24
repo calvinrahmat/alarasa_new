@@ -21,22 +21,28 @@ export default function AboutUs() {
             Our Kitchen
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "/kitchen1.jpg",
-              "/kitchen2.jpg",
-              "/kitchen3.jpg",
-              "/kitchen4.jpg",
-            ].map((photo, index) => (
-              <div key={index} className="overflow-hidden rounded-lg shadow-md">
-                <Image
-                  src={photo}
-                  alt={`Kitchen Photo ${index + 1}`}
-                  width={600}
-                  height={400}
-                  className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
-                />
-              </div>
-            ))}
+            {["/kitchen1.jpg", "/kitchen2.jpg", "/kitchen3.jpg"].map(
+              (photo, index) => (
+                <div key={index} className="overflow-hidden rounded-lg shadow-md">
+                  <Image
+                    src={photo}
+                    alt={`Kitchen Photo ${index + 1}`}
+                    width={600}
+                    height={400}
+                    className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
+                  />
+                </div>
+              )
+            )}
+            <div className="overflow-hidden rounded-lg shadow-md lg:col-span-1 lg:col-start-2">
+              <Image
+                src="/kitchen4.jpg"
+                alt="Kitchen Photo 4"
+                width={600}
+                height={400}
+                className="w-full h-64 object-cover transition-transform duration-300 hover:scale-110"
+              />
+            </div>
           </div>
         </div>
       </section>

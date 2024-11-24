@@ -64,37 +64,26 @@ export default function Component() {
   }, []);
 
   const [articlesPerPage, setArticlesPerPage] = useState(3);
+  
   useEffect(() => {
     const updateArticlesPerPage = () => {
-      if (window.innerWidth < 640) {
-        setArticlesPerPage(1); // Small screens
-      } else if (window.innerWidth < 1024) {
-        setArticlesPerPage(2); // Medium screens
+      if (window.innerWidth >= 640 && window.innerWidth < 1024) {
+        setArticlesPerPage(4); // Medium screens
       } else {
-        setArticlesPerPage(3); // Large screens
+        setArticlesPerPage(3); // Small and Large screens
       }
     };
 
     updateArticlesPerPage(); // Set initial value
-
     window.addEventListener("resize", updateArticlesPerPage);
     return () => window.removeEventListener("resize", updateArticlesPerPage);
   }, []);
 
-// Avoid rendering pagination until on the client
-//   if (!isClient) return null;
-
-
-  // const [currentPage, setCurrentPage] = useState(1);
-  // useEffect(() => {
-  //   setCurrentPage(1); // Ensure the page is set on the client after hydration
-  // }, []);
   const totalPages = Math.ceil(articles.length / articlesPerPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
   };
-
 
   const displayedArticles: Article[] = articles.slice(
       (currentPage - 1) * articlesPerPage,
