@@ -30,7 +30,7 @@ export default function Home() {
                   <div className="flex flex-row justify-center items-center space-x-4">
                     <Link
                       href="#pricing"
-                      className=" inline-block bg-green-600  text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto"
+                      className=" inline-block bg-green-600  text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
                     >
                       Lihat Menu Snack Box & Coffee Break
                     </Link>
@@ -45,7 +45,7 @@ export default function Home() {
             description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
             primaryCTA={{
               text: "Dapatkan Promo Snack Box & Coffee Break Sekarang!",
-              href: "#pricing",
+              href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
             }}
           />
         </div>

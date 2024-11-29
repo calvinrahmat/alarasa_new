@@ -16,7 +16,7 @@ export default function PrasmananPage() {
             <div className="md:w-1/2 pe-5 mb-10">
               <div className="p-8">
                 <h1 className="text-4xl font-bold mb-4">Prasmanan</h1>
-                <p className="text-lg mb-6 text-justify pe-10">
+                <p className="text-lg mb-6 text-left">
                   Prasmanan merupakan solusi untuk elevate acara kalian agar
                   terlihat lebih mewah dan elegan. Tidak hanya menyajikan sajian
                   yang nikmat, Alarasa Catering juga menyediakan semua peralatan
@@ -26,8 +26,8 @@ export default function PrasmananPage() {
                 <div className="flex space-x-4 mb-6">
                   <div className="flex flex-row justify-center items-center space-x-4">
                     <Link
-                      href="https://drive.google.com/file/d/1cjCdUPGleTbKIJ-T2fwSTKEseLdY_NLr/view?usp=sharing"
-                      className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto"
+                      href="https://drive.google.com/file/d/1PHHj1eeNMt6pBvoEsR0GcHUt0VawW2FS/view?usp=drive_link"
+                      className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
                     >
                       Lihat Menu Prasmanan
                     </Link>
@@ -42,7 +42,7 @@ export default function PrasmananPage() {
             description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
             primaryCTA={{
               text: "Dapatkan Promo Prasmanan Sekarang!",
-              href: "#pricing",
+              href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
             }}
           />
           <div className="h-20 md:h-32 lg:h-40"></div>

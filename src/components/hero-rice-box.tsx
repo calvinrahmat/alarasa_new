@@ -64,13 +64,13 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
             <Link
               href="https://drive.google.com/file/d/1lTXRcIhaWAbG6psapEnIDh2FpjMqAKFV/view?usp=drivesdk"
-              className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full text-center"
+              className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full text-center"
             >
               LIHAT MENU NASI BOX
             </Link>
             <Link
               href={whatsappUrl}
-              className="inline-block bg-yellow-500 font-bold text-white py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300  w-full text-center animate-bounce"
+              className="inline-block bg-yellow-500 font-bold text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300  w-full text-center animate-bounce"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -30,7 +30,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold text-slate-100 mb-4">
                   Nasi Box
                 </h1>
-                <p className="text-lg text-slate-100 mb-6 text-justify pe-10">
+                <p className="text-lg text-slate-100 mb-6 text-left">
                   Dengan lebih dari 100 variasi lauk, Nasi Box menjadi produk
                   andalan Alarasa Catering untuk melengkapi berbagai kebutuhan
                   acara seperti meeting, peresmian kantor, ulang tahun,
@@ -41,8 +41,8 @@ export default function Home() {
                 <div className="flex space-x-4 mb-6">
                   <div className="flex flex-row justify-center items-center space-x-4">
                     <Link
-                      href="https://drive.google.com/file/d/1lTXRcIhaWAbG6psapEnIDh2FpjMqAKFV/view?usp=drivesdk"
-                      className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto"
+                      href="https://drive.google.com/file/d/183B2pQSgkSnIFSYuWB04tGfYGuZGrbiU/view?usp=drive_link"
+                      className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
                     >
                       LIHAT MENU NASI BOX
                     </Link>
@@ -57,7 +57,7 @@ export default function Home() {
             description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
             primaryCTA={{
               text: "Dapatkan Promo Langganan Nasi Box Sekarang!",
-              href: "#pricing",
+              href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
             }}
           />
         </div>

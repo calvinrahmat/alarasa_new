@@ -12,9 +12,14 @@ module.exports = {
           "0%": { width: "0%" },
           "100%": { width: "100%" },
         },
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-120px * 9))" },
+        },
       },
       animation: {
         highlight: "highlight 1s ease-in-out forwards",
+        scroll: "scroll 20s linear infinite",
       },
     },
   },
