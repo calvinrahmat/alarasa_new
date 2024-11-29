@@ -9,7 +9,7 @@ export default function Component() {
           <div className="relative aspect-square md:aspect-[4/3]">
             <Image
               src="/kitchen2.jpg"
-              alt="Spacecraft in assembly"
+              alt="kitchen"
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
@@ -37,7 +37,7 @@ export default function Component() {
           <div className="relative aspect-square md:aspect-[4/3] order-1 md:order-2">
             <Image
               src="/kitchen3.jpg"
-              alt="Silhouette overlooking launch facility"
+              alt="kitchen"
               layout="fill"
               objectFit="cover"
               className="rounded-lg"
