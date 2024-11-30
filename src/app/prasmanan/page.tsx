@@ -5,9 +5,9 @@ import HeroPrasmanan from "@/components/hero-prasmanan";
 import ImageSlider from "@/components/image-slider";
 export default function PrasmananPage() {
   return (
-    <div className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] min-h-screen text-slate-100">
+    <>
       <HeroPrasmanan />
-      <main className="my-10">
+      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-10">
         <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-center min-h-dvh">
             <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
@@ -45,9 +45,8 @@ export default function PrasmananPage() {
               href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
             }}
           />
-          <div className="h-20 md:h-32 lg:h-40"></div>
         </div>
       </main>
-    </div>
+    </>
   );
 }

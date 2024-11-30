@@ -7,14 +7,14 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/about-us2.jpg')",
+          backgroundImage: "url('/article-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black opacity-50 z-10" />
+      <div className="absolute inset-0 bg-black opacity-70 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-3xl">
