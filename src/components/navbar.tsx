@@ -126,7 +126,7 @@ export function Navbar(): JSX.Element {
             <Link
               href="/"
               className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage ? 'text-slate-800' : isAtTop && !isHovered ? "text-white" : "text-white"
+                isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
               }`}
             >
               Home
@@ -134,7 +134,7 @@ export function Navbar(): JSX.Element {
             <div className="relative" ref={productsMenuRef}>
               <button
                 className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center text-lg ${
-                  isArticleDetailPage ? 'text-slate-800' : isAtTop && !isHovered ? "text-white" : "text-white"
+                  isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
                 }`}
                 onClick={toggleProductsMenu}
               >
@@ -168,7 +168,7 @@ export function Navbar(): JSX.Element {
             <Link
               href="/about"
               className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage ? 'text-slate-800' : isAtTop && !isHovered ? "text-white" : "text-white"
+                isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
               }`}
             >
               About Us
@@ -176,7 +176,7 @@ export function Navbar(): JSX.Element {
             <Link
               href="/article"
               className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage ? 'text-slate-800' : isAtTop && !isHovered ? "text-white" : "text-white"
+                isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
               }`}
             >
               Article
@@ -185,7 +185,7 @@ export function Navbar(): JSX.Element {
           <div className="md:hidden flex items-center">
             <button
               className={`outline-none mobile-menu-button ${
-                isArticleDetailPage ? 'text-slate-800' : isAtTop && !isHovered ? "text-white" : "text-white"
+                isArticleDetailPage ? 'text-slate-800' : "text-white"
               }`}
               onClick={toggleMenu}
             >
@@ -201,14 +201,13 @@ export function Navbar(): JSX.Element {
       <div className={`md:hidden ${isOpen ? "block" : "hidden"} relative z-10`}>
         <Link
           href="/"
-          className={`block py-2 px-6 text-sm hover:bg-green-500 hover:text-white transition duration-300 ${
-            isArticleDetailPage ? 'text-slate-800' : 'text-white'
-          }`}
+          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Home
         </Link>
 
-        <div className={`py-2 px-6 text-sm ${isArticleDetailPage ? 'text-slate-800' : 'text-white'}`}>
+        <div className={`block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+ `}>
           Products
         </div>
         <Link

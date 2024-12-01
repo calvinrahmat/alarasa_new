@@ -20,7 +20,7 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ showText }) => {
   const pathname = usePathname();
-  const isArticlePage = pathname?.includes('article');
+  const isArticlePage = pathname?.includes('article/');
 
   return (
     <Link href={"/"}>
