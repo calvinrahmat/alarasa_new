@@ -130,20 +130,7 @@ export default function Component() {
                 </CardContent>
                 <CardFooter className="p-4 lg:p-6 pt-0 flex flex-col gap-2">
                   {/* Categories will need to be fetched separately or included in the initial query */}
-                  <div className="gap-2 justify-end mt-auto">
-                    {article.categories?.map((category, idx) => (
-                      <span key={idx}>
-                        <Link
-                          href={`/category/${category.title.toLowerCase()}`}
-                          className="text-xs font-medium uppercase hover:underline"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          {category.title}
-                        </Link>
-                        {idx < article.categories.length - 1 && ", "}
-                      </span>
-                    ))}
-                  </div>
+                  
                   <Link
                     href={`/article/${article.slug.current}`}
                     className="flex items-center gap-1 text-sm font-medium hover:underline ml-auto"

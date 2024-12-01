@@ -2,6 +2,7 @@ import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const berenikaBold = localFont({
   src: [
@@ -18,12 +19,17 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ showText }) => {
+  const pathname = usePathname();
+  const isArticlePage = pathname?.includes('article');
+
   return (
     <Link href={"/"}>
       <div className="flex justify-between items-center">
         <Image src="/logo.png" alt="logo" width={60} height={60} />
         {showText && (
-          <div className={`${berenikaBold.className} text-2xl text-white ml-2`}>
+          <div className={`${berenikaBold.className} text-2xl ml-2 ${
+            isArticlePage ? 'text-slate-800' : 'text-white'
+          }`}>
             alarasa
           </div>
         )}
