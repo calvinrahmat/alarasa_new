@@ -7,7 +7,6 @@
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-import {tags} from 'sanity-plugin-tags'
 
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
@@ -24,7 +23,6 @@ export default defineConfig({
   schema,
   plugins: [
     structureTool({structure}),
-    tags({}),
     // Vision is for querying with GROQ from inside the Studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({defaultApiVersion: apiVersion}),
