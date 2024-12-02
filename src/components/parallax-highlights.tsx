@@ -8,7 +8,7 @@ const highlights = [
   { number: "1000+", description: "Satisfied Customers" },
   { number: "50+", description: "Menu Variations" },
   { number: "5+", description: "Years of Experience" },
-  { number: "4.5", description: "Star Rating" },
+  { number: "4.8", description: "Star Rating" },
 ];
 
 export default function ParallaxHighlights() {

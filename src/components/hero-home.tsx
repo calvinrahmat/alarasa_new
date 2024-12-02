@@ -59,7 +59,7 @@ export default function Hero() {
                 </svg>
               ))}
             </div>
-            <p className="text-sm font-medium text-white ml-2">4.5/5</p>
+            <p className="text-sm font-medium text-white ml-2">4.8/5</p>
           </div>
           <div className="flex items-center text-white text-sm">
             <span className="font-bold underline">185+</span>

@@ -50,7 +50,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col sm:flex-row sm:ml-2 items-center">
               <p className="text-sm font-medium text-white mb-2 sm:mb-0 sm:mr-4">
-                4.5/5
+                4.8/5
               </p>
             </div>
           </div>
