@@ -19,7 +19,7 @@ export default function Home() {
                 <h1 className="text-4xl font-bold mb-4">
                   Snack Box & Coffee Break
                 </h1>
-                <p className="text-lg mb-6 text-justify pe-10">
+                <p className="text-lg mb-6 text-left">
                   Cemilan manis dan gurih selalu menjadi pilihan favorit untuk
                   melengkapi acara acara kalian. Beragam jenis snack dapat
                   dikemas kedalam box untuk acara yang lebih santai atau

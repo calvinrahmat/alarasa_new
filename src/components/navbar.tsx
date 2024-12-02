@@ -201,13 +201,12 @@ export function Navbar(): JSX.Element {
       <div className={`md:hidden ${isOpen ? "block" : "hidden"} relative z-10`}>
         <Link
           href="/"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
         >
           Home
         </Link>
 
-        <div className={`block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
- `}>
+        <div className="block py-2 px-6 text-sm text-white bg-green-900/30">
           Products
         </div>
         <Link
