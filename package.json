@@ -20,6 +20,7 @@
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.64.1",
     "@tabler/icons-react": "^3.17.0",
+    "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.8",
@@ -33,6 +34,7 @@
     "sanity": "^3.64.1",
     "sanity-plugin-seo": "^1.2.5",
     "sanity-plugin-tags": "^2.1.0",
+    "sonner": "^1.7.0",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"

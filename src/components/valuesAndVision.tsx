@@ -19,23 +19,24 @@ export default function Component() {
   ];
 
   return (
-      <div
-          className="min-h-screen flex items-center justify-center bg-[#233523] text-white px-4 py-12">
+      <div className="min-h-screen flex items-center justify-center bg-[#233523] text-white px-4 py-12">
         <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-yellow-400 mb-8 tracking-wide">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-yellow-400 mb-12 tracking-wide">
             VISI DAN MISI
           </h1>
-          <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl mb-16 max-w-3xl mx-auto leading-relaxed">
             Menjadi top of mind perusahaan catering di JABODETABEK yang
             mengutamakan standar kualitas dan pelayanan yang memuaskan.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {qualityItems.map((item) => (
-                <div key={item.id} className="flex items-center justify-center">
-              <span className="text-yellow-400 font-bold text-3xl mr-4">
-                {item.id}
-              </span>
-                  <p className="text-base md:text-lg">{item.description}</p>
+                <div key={item.id} className="flex items-center justify-center space-x-6">
+                  <span className="text-yellow-400 font-bold text-6xl">
+                    {item.id}
+                  </span>
+                  <p className="text-base md:text-lg leading-relaxed text-left">
+                    {item.description}
+                  </p>
                 </div>
             ))}
           </div>

@@ -17,8 +17,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Alarasa",
-  description: "Alarasa",
+  title: "SOLUSI CATERINGMU! Percayakan Alarasa Catering untuk melengkapi setiap acara special kalian! Enak, higienis dan terjangkau!",
+  description: "Alarasa Catering merupakan perusahaan catering yang berkomitmen untuk menyajikan aneka lauk selera nusantara yang dikemas dalam berbagai macam kemasan untuk memenuhi kebutuhan setiap acara.",
 };
 
 export default function RootLayout({
