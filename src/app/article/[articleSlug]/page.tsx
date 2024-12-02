@@ -58,7 +58,7 @@ export default function Article() {
                         if (el && !subtitleRefs[headerId]) {
                             subtitleRefs[headerId] = { current: el };
                         }
-                    }} className="text-3xl font-bold my-3">
+                    }} className="text-2xl sm:text-3xl font-bold my-3 break-words">
                         {children}
                     </h2>
                 );
@@ -70,16 +70,18 @@ export default function Article() {
                         if (el && !subtitleRefs[headerId]) {
                             subtitleRefs[headerId] = { current: el };
                         }
-                    }} className="text-2xl font-semibold my-3">
+                    }} className="text-xl sm:text-2xl font-semibold my-3 break-words">
                         {children}
                     </h3>
                 );
             },
-            normal: ({ children }) => <p className="my-4">{children}</p>,
+            normal: ({ children }) => <p className="my-4 break-words">{children}</p>,
         },
         marks: {
             link: ({ children, value }) => (
-                <a href={value?.href} className="text-blue-600 hover:underline">{children}</a>
+                <a href={value?.href} className="text-blue-600 hover:underline break-words">
+                    {children}
+                </a>
             ),
         },
     };
@@ -139,34 +141,35 @@ export default function Article() {
     }
 
     return (
-        <div className="p-6 max-w-5xl mx-auto space-y-12 my-20">
+        <div className="px-4 sm:px-6 max-w-5xl mx-auto my-20 overflow-hidden">
             {/* Title Section with Full-Width Image */}
-            <section className="w-full mb-12 text-slate-800">
-                <h1 className="text-3xl sm:text-4xl font-bold text-center mt-4">{articleData.title}</h1>
+            <section className="w-full mb-8 text-slate-800">
+                <h1 className="text-3xl sm:text-4xl font-bold text-center mt-4 px-2">{articleData.title}</h1>
                 <div className="text-gray-600 text-sm text-center mt-2">
                     <span>{formatDate(articleData.publishedAt)}</span>
                 </div>
-                <Image
-                    src={urlForImage(articleData.mainImage).url()}
-                    alt={articleData.mainImage.alt || 'Article image'}
-                    layout="responsive"
-                    width={500}
-                    height={300}
-                    className="w-auto h-auto object-cover rounded-lg my-4 object-center"
-                />
+                <div className="relative w-full aspect-video mt-4">
+                    <Image
+                        src={urlForImage(articleData.mainImage).url()}
+                        alt={articleData.mainImage.alt || 'Article image'}
+                        fill
+                        className="object-cover rounded-lg object-center"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                    />
+                </div>
             </section>
 
             {/* Content and TOC Section */}
-            <div className="flex flex-col lg:flex-row space-y-8 lg:space-y-0 lg:space-x-8 text-slate-800">
+            <div className="flex flex-col lg:flex-row lg:space-x-8 text-slate-800">
                 {/* Table of Contents */}
-                <aside className="hidden lg:block w-1/5 lg:sticky lg:top-6 h-max mr-6 ml-3">
+                <aside className="hidden lg:block w-1/5 lg:sticky lg:top-6 h-max">
                     <h2 className="text-lg font-semibold mb-4">Table of Contents</h2>
                     <ul className="space-y-2 text-blue-600">
                         {tocSections.map((section) => (
                             <li
                                 key={section.ref}
                                 onClick={() => scrollToSection(subtitleRefs[section.ref])}
-                                className="cursor-pointer hover:underline"
+                                className="cursor-pointer hover:underline text-sm"
                             >
                                 {section.title}
                             </li>
@@ -175,7 +178,7 @@ export default function Article() {
                 </aside>
 
                 {/* Blog Content */}
-                <article className="w-full lg:w-3/4 prose prose-slate max-w-none">
+                <article className="w-full lg:w-3/4 prose prose-sm sm:prose lg:prose-lg prose-slate max-w-none overflow-hidden">
                     <PortableText 
                         value={articleData.body}
                         components={components}
