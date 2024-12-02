@@ -45,6 +45,8 @@ export default function PrasmananPage() {
             primaryCTA={{
               text: "Dapatkan Promo Prasmanan Sekarang!",
               href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
+              target: "_blank",
+              rel: "noopener noreferrer",
             }}
           />
         </div>

@@ -1,14 +1,16 @@
 import Link from "next/link";
 
-interface CTASectionProps {
+interface CTAProps {
   description: string;
   primaryCTA: {
     text: string;
     href: string;
+    target?: string;
+    rel?: string;
   };
 }
 
-const CTASection: React.FC<CTASectionProps> = ({ description, primaryCTA }) => {
+const CTASection: React.FC<CTAProps> = ({ description, primaryCTA }) => {
   return (
     <div className="p-8 flex flex-col items-center">
       <p className="text-lg text-slate-100 mb-6 text-center max-w-2xl">

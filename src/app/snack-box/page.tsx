@@ -48,6 +48,8 @@ export default function Home() {
             primaryCTA={{
               text: "Dapatkan Promo Snack Box & Coffee Break Sekarang!",
               href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
+              target: "_blank",
+              rel: "noopener noreferrer",
             }}
           />
         </div>
