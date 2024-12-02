@@ -7,6 +7,26 @@ import { urlForImage } from "@/sanity/lib/image";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
 import { NextSeo } from "next-seo";
 
+interface Block {
+    _type: 'block';
+    _key: string;
+    style: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'blockquote';
+    children: Array<Span>;
+    markDefs?: Array<MarkDef>;
+}
+
+interface Span {
+    _type: 'span';
+    _key: string;
+    text: string;
+    marks?: string[];
+}
+
+interface MarkDef {
+    _type: 'link';
+    _key: string;
+    href: string;
+}
 
 interface Article {
     title: string;
@@ -28,7 +48,7 @@ interface Article {
         color: string;
     }>;
     publishedAt: string;
-    body: Array<any>;
+    body: Array<Block>;
     seo?: {
         metaTitle?: string;
         metaDescription?: string;
