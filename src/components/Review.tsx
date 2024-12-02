@@ -58,10 +58,10 @@ export function Review() {
                         : "opacity-0 translate-x-full"
                     }`}
                   >
-                    <blockquote className="text-lg italic text-slate-100 mb-4">
+                    <blockquote className="text-lg italic text-slate-100 mb-4 text-center">
                       &ldquo;{testimonial.quote}&rdquo;
                     </blockquote>
-                    <p className="font-semibold text-slate-100">
+                    <p className="font-semibold text-slate-100 text-center">
                       {testimonial.name}
                     </p>
                   </div>
