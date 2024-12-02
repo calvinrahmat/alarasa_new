@@ -65,6 +65,8 @@ export default function Hero() {
             <Link
               href="https://drive.google.com/file/d/183B2pQSgkSnIFSYuWB04tGfYGuZGrbiU/view?usp=drive_link"
               className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full text-center"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               LIHAT MENU NASI BOX
             </Link>
