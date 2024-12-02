@@ -193,6 +193,8 @@ export default function Article() {
 
     if (!articleData) {
         return <div>Loading...</div>; // Show loading while data is being fetched
+    }else {
+        console.log("articleData:", articleData)
     }
 
     return (

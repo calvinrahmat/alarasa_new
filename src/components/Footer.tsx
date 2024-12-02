@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Information */}
-          <div className="space-y-4">
+          <div className="space-y-4 text-center">
             <p>
               Jl. Komp. Perumahan DPR - RI Blok C No. 25, RT10/RW01, Kel. Joglo,
               Kec. Kembangan, Jakarta Barat - 16640
@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="space-y-4">
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 md:justify-end">
               <Link
                 href="https://www.facebook.com/profile.php?id=61550236231984"
                 className="hover:text-blue-400"
