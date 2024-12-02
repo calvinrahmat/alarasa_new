@@ -63,14 +63,14 @@ export default function Component() {
     setCurrentPage(1); // Set default page only after client mount
   }, []);
 
-  const [articlesPerPage, setArticlesPerPage] = useState(3);
+  const [articlesPerPage, setArticlesPerPage] = useState(6);
   
   useEffect(() => {
     const updateArticlesPerPage = () => {
       if (window.innerWidth >= 640 && window.innerWidth < 1024) {
-        setArticlesPerPage(4); // Medium screens
+        setArticlesPerPage(6); // Medium screens
       } else {
-        setArticlesPerPage(3); // Small and Large screens
+        setArticlesPerPage(6); // Small and Large screens
       }
     };
 
