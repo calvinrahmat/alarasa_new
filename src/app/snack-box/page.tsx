@@ -29,8 +29,10 @@ export default function Home() {
                 <div className="flex space-x-4 mb-6">
                   <div className="flex flex-row justify-center items-center space-x-4">
                     <Link
-                      href="#pricing"
-                      className=" inline-block bg-green-600  text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
+                      href="https://drive.google.com/file/d/1sA96FIAWPKsVBYLhw_YQ7SwePG6dO0Dp/view?usp=sharing"
+                      className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Lihat Menu Snack Box & Coffee Break
                     </Link>

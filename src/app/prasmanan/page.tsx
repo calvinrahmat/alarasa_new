@@ -28,6 +28,8 @@ export default function PrasmananPage() {
                     <Link
                       href="https://drive.google.com/file/d/1PHHj1eeNMt6pBvoEsR0GcHUt0VawW2FS/view?usp=drive_link"
                       className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Lihat Menu Prasmanan
                     </Link>
