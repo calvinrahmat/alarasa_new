@@ -5,8 +5,23 @@ export const postType = defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
+  groups: [{
+    title: 'SEO',
+    name: 'seo'
+  },
+  {
+    title: 'Main',
+    name: 'main',
+    default: true
+  }],
   icon: DocumentTextIcon,
   fields: [
+    defineField({
+      title: "Seo",
+      name: "seo",
+      type: "seoMetaFields",
+      group: "seo"
+    }),
     defineField({
       name: 'title',
       type: 'string',

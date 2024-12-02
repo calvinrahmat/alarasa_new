@@ -5,6 +5,8 @@ import { useParams } from "next/navigation";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 import { PortableText, PortableTextReactComponents } from "@portabletext/react";
+import { NextSeo } from "next-seo";
+
 
 interface Article {
     title: string;
@@ -26,16 +28,25 @@ interface Article {
         color: string;
     }>;
     publishedAt: string;
-    body: Array<{
-        _key: string;
-        _type: string;
-        style: string;
-        children: Array<{
-            _key: string;
-            _type: string;
-            text: string;
-        }>;
-    }>;
+    body: Array<any>;
+    seo?: {
+        metaTitle?: string;
+        metaDescription?: string;
+        nofollowAttributes?: boolean;
+        openGraph?: {
+            title?: string;
+            description?: string;
+            url?: string;
+            siteName?: string;
+        };
+        seoKeywords?: string[];
+        twitter?: {
+            cardType?: string;
+            handle?: string;
+            site?: string;
+            creator?: string;
+        };
+    };
 }
 
 interface TocSection {
@@ -48,6 +59,8 @@ export default function Article() {
     const [articleData, setArticleData] = useState<Article | null>(null);
     const subtitleRefs: { [key: string]: React.RefObject<HTMLHeadingElement> } = {};
     const [tocSections, setTocSections] = useState<TocSection[]>([]);
+
+
 
     const components: Partial<PortableTextReactComponents> = {
         block: {
@@ -97,7 +110,28 @@ export default function Article() {
                 color
             },
             publishedAt,
-            body
+            body,
+            seo {
+                _type,
+                metaTitle,
+                metaDescription,
+                nofollowAttributes,
+                openGraph{
+                _type,
+                title,
+                url,
+                description,
+                siteName
+                },
+                seoKeywords,
+                twitter{
+                _type,
+                cardType,
+                handle,
+                site,
+                creator
+                }
+            }
         }`;
         const param = { articleSlug };
         client.fetch(query, param)
@@ -107,6 +141,7 @@ export default function Article() {
             .catch(console.error);
     }, [articleSlug]);
 
+    
     const scrollToSection = (ref: { current: HTMLElement | null }) => {
         if (ref.current) {
             ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -119,8 +154,8 @@ export default function Article() {
             articleData.body.forEach((block) => {
                 if (block._type === 'block' && (block.style === 'h2' || block.style === 'h3')) {
                     const text = block.children
-                        .filter(child => child._type === 'span')
-                        .map(child => child.text)
+                        .filter((child: { _type: string }) => child._type === 'span')
+                        .map((child: { text: string }) => child.text)
                         .join('');
                     const headerId = `section-${block._key}`;
                     tocSections.push({ title: text, ref: headerId });
@@ -141,6 +176,38 @@ export default function Article() {
     }
 
     return (
+        <>
+        <NextSeo
+            title={articleData.seo?.metaTitle || articleData.title}
+            description={articleData.seo?.metaDescription || articleData.body?.[0]?.children?.[0]?.text?.slice(0, 160)}
+            noindex={articleData.seo?.nofollowAttributes}
+            nofollow={articleData.seo?.nofollowAttributes}
+            openGraph={{
+                title: articleData.seo?.openGraph?.title || articleData.seo?.metaTitle || articleData.title,
+                description: articleData.seo?.openGraph?.description || articleData.seo?.metaDescription,
+                url: articleData.seo?.openGraph?.url,
+                siteName: articleData.seo?.openGraph?.siteName,
+                images: [
+                    {
+                        url: urlForImage(articleData.mainImage).url(),
+                        alt: articleData.mainImage.alt || articleData.title,
+                    },
+                ],
+                type: 'article',
+            }}
+            twitter={{
+                cardType: articleData.seo?.twitter?.cardType || 'summary_large_image',
+                handle: articleData.seo?.twitter?.handle,
+                site: articleData.seo?.twitter?.site,
+            }}
+            additionalMetaTags={[
+                {
+                    name: 'keywords',
+                    content: articleData.seo?.seoKeywords?.join(', ') || '',
+                },
+            ]}
+        />
+        
         <div className="px-4 sm:px-6 max-w-5xl mx-auto my-20 overflow-hidden">
             {/* Title Section with Full-Width Image */}
             <section className="w-full mb-8 text-slate-800">
@@ -186,5 +253,6 @@ export default function Article() {
                 </article>
             </div>
         </div>
+        </>
     );
 }
