@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="space-y-6 flex justify-center items-center">
           <div className="relative w-full max-w-[300px] md:max-w-[600px] aspect-square">
             <Image
-              src="/prasmanan.png"
+              src="/prasmanan-hero.png"
               alt="Prasmanan"
               layout="fill"
               objectFit="contain"
