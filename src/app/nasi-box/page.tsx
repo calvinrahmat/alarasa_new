@@ -13,15 +13,15 @@ export default function Home() {
             <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
               <ImageSlider
                 images={[
-                  "/BASIC MENU - NASI AYAM WOKU (FLATLAY).jpg",
-                  "/BASIC MENU - NASI BERKAT (FLATLAY).jpg",
-                  "/BASIC MENU - NASI SAIKORO (FLATLAY).jpg",
-                  "/KAMPUNG HALAMAN MENU - NASI JINGGO BALI (FLATLAY).jpeg",
-                  "/KAMPUNG HALAMAN MENU - NASI KUNING CIREBON (FLATLAY).jpeg",
-                  "/KAMPUNG HALAMAN MENU - NASI PADANG (FLATLAY).jpg",
-                  "/PREMIUM MENU - NASI ALARASA (FLATLAY).jpg",
-                  "/PREMIUM MENU - NASI AYAM MENTEGA (FLATLAY).jpg",
-                  "/PREMIUM MENU - NASI OPOR (FLATLAY).jpg",
+                  "/NASI-AYAM-WOKU.jpg",
+                  "/NASI-BERKAT.jpg",
+                  "/NASI-SAIKORO.jpg",
+                  "/NASI-JINGGO-BALI.jpeg",
+                  "/NASI-KUNING-CIREBON.jpeg",
+                  "/NASI-PADANG.jpg",
+                  "/NASI-ALARASA.jpg",
+                  "/NASI-AYAM-MENTEGA.jpg",
+                  "/NASI-OPOR.jpg",
                 ]}
               />
             </div>
