@@ -109,7 +109,7 @@ const data = [
   },
   {
     title: "Prasmanan",
-    src: "/home-prasmanan.jpg",
+    src: "/prasmanan4.jpg",
     content: <DummyContent />,
     link: "/prasmanan",
   },
