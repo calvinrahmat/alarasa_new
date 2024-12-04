@@ -20,6 +20,8 @@ const CTASection: React.FC<CTAProps> = ({ description, primaryCTA }) => {
         <Link
           href={primaryCTA.href}
           className="animate-bounce inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto animate-jiggle"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           {primaryCTA.text}
         </Link>
