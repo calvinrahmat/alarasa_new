@@ -12,7 +12,14 @@ export default function Home() {
         <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-center min-h-dvh">
             <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
-              <ImageSlider images={["/snack1.jpg", "/snack2.jpg"]} />
+              <ImageSlider
+                images={[
+                  "/snack1.jpg",
+                  "/snack2.jpg",
+                  "/snack3.png",
+                  "/snack4.png",
+                ]}
+              />
             </div>
             <div className="md:w-1/2 mb-10">
               <div className="p-8">

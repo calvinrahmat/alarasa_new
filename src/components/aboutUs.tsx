@@ -18,12 +18,15 @@ export default function AboutUs() {
       <section className="bg-[#EBEBE5] py-16 md:py-24">
         <div className="container mx-auto px-4">
           <h2 className="text-5xl text-slate-800 font-bold text-center mb-8">
-            Our Kitchen
+            Dapur Kami
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {["/kitchen1.jpg", "/kitchen2.jpg", "/kitchen3.jpg"].map(
               (photo, index) => (
-                <div key={index} className="overflow-hidden rounded-lg shadow-md">
+                <div
+                  key={index}
+                  className="overflow-hidden rounded-lg shadow-md"
+                >
                   <Image
                     src={photo}
                     alt={`Kitchen Photo ${index + 1}`}
