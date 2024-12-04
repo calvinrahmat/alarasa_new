@@ -11,7 +11,14 @@ export default function PrasmananPage() {
         <div className="w-full">
           <div className="flex flex-col md:flex-row items-center justify-center min-h-dvh">
             <div className="w-full md:w-1/2 px-4 md:px-0 min-h-[50vh] md:min-h-[75vh]">
-              <ImageSlider images={["/prasmanan2.jpg", "/prasmanan3.jpg"]} />
+              <ImageSlider
+                images={[
+                  "/prasmanan3.jpg",
+                  "/prasmanan4.jpg",
+                  "/prasmanan5.PNG",
+                  "/prasmanan2.jpg",
+                ]}
+              />
             </div>
             <div className="md:w-1/2 pe-5 mb-10">
               <div className="p-8">
