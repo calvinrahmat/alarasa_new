@@ -61,7 +61,7 @@ export default function Home() {
           description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
           primaryCTA={{
             text: "Dapatkan Promo Langganan Nasi Box Sekarang!",
-            href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
+            href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang Paket Catering Nasi Box Alarasa")}`,
             target: "_blank",
             rel: "noopener noreferrer",
           }}

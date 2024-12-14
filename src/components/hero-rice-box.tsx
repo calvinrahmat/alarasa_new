@@ -1,11 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import Component from "./whatsapp";
 
 export default function Hero() {
-  const whatsappComponent = Component({});
-  const whatsappUrl = whatsappComponent.props.href;
-
   return (
     <div className="relative bg-black  text-white py-16 px-4 md:px-8 lg:px-16 min-h-[80vh] flex items-center">
       {/* Background image */}
@@ -71,7 +67,7 @@ export default function Hero() {
               LIHAT MENU NASI BOX
             </Link>
             <Link
-              href={whatsappUrl}
+              href={`https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang Paket Catering Nasi Box Alarasa")}`}
               className="inline-block bg-yellow-500 font-bold text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300  w-full text-center animate-bounce"
               target="_blank"
               rel="noopener noreferrer"

@@ -56,7 +56,7 @@ export default function Home() {
           description="Sudah ada 1000++ Snackbox dan Coffee Break Terjual Sebagai Pelengkap Hidangan Berbagai Acara. Snackbox & Coffebreak Premium MUlai dari 20Rb-an, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."
           primaryCTA={{
             text: "Dapatkan Promo Snack Box & Coffee Break Sekarang!",
-            href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa")}`,
+            href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Snack Box & Coffee Break Alarasa")}`,
             target: "_blank",
             rel: "noopener noreferrer",
           }}
