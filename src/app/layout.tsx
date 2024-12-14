@@ -4,7 +4,6 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
-import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 const geistSans = localFont({
