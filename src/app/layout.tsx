@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className="flex flex-col min-h-screen">
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-N32T9JLD"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MD5GR22W"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
