@@ -5,6 +5,8 @@ import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
 import Whatsapp from "@/components/whatsapp";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { FacebookPixelEvents } from "@/components/pixel-events";
+import { Suspense } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -41,6 +43,9 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <Suspense fallback={null}>
+          <FacebookPixelEvents />
+        </Suspense>
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
