@@ -1,3 +1,7 @@
+"use client";
+
+import { sendGTMEvent } from "@next/third-parties/google";
+
 export default function Component({
   phoneNumber = "6285280730787",
   message = "Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa",
@@ -13,6 +17,12 @@ export default function Component({
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 z-[9999] sm:p-4"
       aria-label="Chat on WhatsApp"
+      onClick={() =>
+        sendGTMEvent({
+          event: "button_click",
+          value: "WhatsApp Floating Button",
+        })
+      }
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
