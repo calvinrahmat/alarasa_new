@@ -31,7 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <GoogleTagManager gtmId="GTM-N32T9JLD" />
+      <GoogleTagManager gtmId="GTM-MD5GR22W" />
       <body className="flex flex-col min-h-screen">
         <noscript>
           <iframe
