@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
@@ -64,24 +63,14 @@ export default function Hero() {
           </div>
         </div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
-          className="font-sans text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
-        >
+        <h1 className="font-sans text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6">
           <span className="text-yellow-300">SOLUSI CATERINGMU!</span>
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-          className="text-xl sm:text-2xl text-white"
-        >
+        <p className="text-xl sm:text-2xl text-white">
           Percayakan Alarasa Catering untuk melengkapi setiap acara special
           kalian! Enak, higienis dan terjangkau!
-        </motion.p>
+        </p>
       </div>
     </div>
   );
