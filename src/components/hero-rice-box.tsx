@@ -69,7 +69,13 @@ export default function Hero() {
             >
               LIHAT MENU NASI BOX
             </Link>
-            <OrderButton />
+            <OrderButton
+              value="PESAN CATERING NASI BOX"
+              whatsappText="Halo Minrasa! Mau tanya-tanya tentang Paket Catering Nasi Box Alarasa"
+              phoneNumber="6285280730787"
+            >
+              PESAN CATERING NASI BOX
+            </OrderButton>
           </div>
         </div>
       </div>

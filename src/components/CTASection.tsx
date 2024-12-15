@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 interface CTAProps {
   description: string;
@@ -7,6 +10,7 @@ interface CTAProps {
     href: string;
     target?: string;
     rel?: string;
+    gtmValue?: string;
   };
 }
 
@@ -22,6 +26,12 @@ const CTASection: React.FC<CTAProps> = ({ description, primaryCTA }) => {
           className="animate-bounce inline-block bg-red-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-red-800 transition duration-300 w-full sm:w-auto animate-jiggle"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() =>
+            sendGTMEvent({
+              event: "button_click",
+              value: primaryCTA.gtmValue || primaryCTA.text,
+            })
+          }
         >
           {primaryCTA.text}
         </Link>

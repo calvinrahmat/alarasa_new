@@ -64,6 +64,7 @@ export default function Home() {
             href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang Paket Catering Nasi Box Alarasa")}`,
             target: "_blank",
             rel: "noopener noreferrer",
+            gtmValue: "PESAN CATERING NASI BOX",
           }}
         />
       </main>

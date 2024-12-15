@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import OrderButton from "./OrderButton";
 
 export default function Hero() {
   return (
@@ -66,16 +67,12 @@ export default function Hero() {
             >
               LIHAT MENU PRASMANAN
             </Link>
-            <Link
-              href={`https://wa.me/6285280730787?text=${encodeURIComponent(
-                "Halo Minrasa! Mau tanya-tanya tentang paket Catering Prasmanan Alarasa"
-              )}`}
-              className="inline-block bg-yellow-500 font-bold text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300  w-full text-center animate-bounce"
-              target="_blank"
-              rel="noopener noreferrer"
+            <OrderButton
+              value="PESAN CATERING PRASMANAN"
+              whatsappText="Halo Minrasa! Mau tanya-tanya tentang Paket Catering Prasmanan"
             >
               PESAN CATERING PRASMANAN
-            </Link>
+            </OrderButton>
           </div>
         </div>
       </div>

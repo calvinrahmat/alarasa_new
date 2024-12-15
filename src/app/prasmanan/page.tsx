@@ -59,6 +59,7 @@ export default function PrasmananPage() {
             href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket Catering Prasmanan Alarasa")}`,
             target: "_blank",
             rel: "noopener noreferrer",
+            gtmValue: "PESAN CATERING PRASMANAN",
           }}
         />
       </main>

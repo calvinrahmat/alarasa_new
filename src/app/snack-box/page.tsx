@@ -59,6 +59,7 @@ export default function Home() {
             href: `https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang paket catering Snack Box & Coffee Break Alarasa")}`,
             target: "_blank",
             rel: "noopener noreferrer",
+            gtmValue: "PESAN CATERING SNACK & COFFEE BREAK",
           }}
         />
       </main>
