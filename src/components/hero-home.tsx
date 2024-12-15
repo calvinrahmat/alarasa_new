@@ -1,16 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
-  const [isAnimated, setIsAnimated] = useState(false);
-
-  useEffect(() => {
-    setIsAnimated(true);
-  }, []);
-
   return (
     <div className="relative h-screen flex items-center overflow-hidden">
       {/* Background Image */}
@@ -18,9 +11,13 @@ export default function Hero() {
         <Image
           src="/hero-image2.jpg"
           alt="Nasi Box"
-          layout="fill"
-          objectFit="cover"
-          priority
+          width={1920}
+          height={1080}
+          priority={true}
+          quality={85}
+          className="object-cover w-full h-full"
+          placeholder="blur"
+          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx4eHRoaHSQrJyEwPENDPzE2O0FBNi5RXUFGSYtNTltcYWFhR2N9fUN2XHlwZHOBcW7/2wBDARUXFx4aHR4eHG5gQD5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm7/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
       </div>
 
@@ -68,45 +65,24 @@ export default function Hero() {
         </div>
 
         <motion.h1
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: [20, -5, 0],
-          }}
-          transition={{
-            duration: 0.5,
-            ease: [0.4, 0.0, 0.2, 1],
-          }}
-          className="font-sans md:font-sans text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 dark:text-white max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="font-sans text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6"
         >
-          <span
-            className={`relative text-yellow-300  inline-block transition-all duration-1000 ${
-              isAnimated
-                ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
-            }`}
-          >
-            SOLUSI CATERINGMU!
-          </span>
+          <span className="text-yellow-300">SOLUSI CATERINGMU!</span>
         </motion.h1>
 
-        <p
-          className={`text-xl sm:text-2xl text-white transition-all duration-1000 delay-300 ${
-            isAnimated
-              ? "translate-x-0 opacity-100"
-              : "translate-x-10 opacity-0"
-          }`}
+        <motion.p
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="text-xl sm:text-2xl text-white"
         >
           Percayakan Alarasa Catering untuk melengkapi setiap acara special
           kalian! Enak, higienis dan terjangkau!
-        </p>
+        </motion.p>
       </div>
-
-      {/* Attribution for screen readers */}
-      <div className="sr-only">Background image: Na</div>
     </div>
   );
 }

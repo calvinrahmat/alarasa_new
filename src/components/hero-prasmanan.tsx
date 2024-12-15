@@ -70,6 +70,7 @@ export default function Hero() {
             <OrderButton
               value="PESAN CATERING PRASMANAN"
               whatsappText="Halo Minrasa! Mau tanya-tanya tentang Paket Catering Prasmanan"
+              phoneNumber="6285280730787"
             >
               PESAN CATERING PRASMANAN
             </OrderButton>
