@@ -20,16 +20,25 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ showText }) => {
   const pathname = usePathname();
-  const isArticlePage = pathname?.includes('article/');
+  const isArticlePage = pathname?.includes("article/");
 
   return (
-    <Link href={"/"}>
+    <Link href="/" aria-label="Go to homepage">
       <div className="flex justify-between items-center">
-        <Image src="/logo.png" alt="logo" width={60} height={60} />
+        <Image
+          src="/logo.png"
+          alt="Alarasa logo"
+          width={60}
+          height={60}
+          priority
+          quality={90}
+        />
         {showText && (
-          <div className={`${berenikaBold.className} text-2xl ml-2 ${
-            isArticlePage ? 'text-slate-800' : 'text-white'
-          }`}>
+          <div
+            className={`${berenikaBold.className} text-2xl ml-2 ${
+              isArticlePage ? "text-slate-800" : "text-white"
+            }`}
+          >
             alarasa
           </div>
         )}
