@@ -14,8 +14,13 @@ export default function PrasmananPage() {
             <div className="w-full md:w-1/2 px-4 md:px-0 flex items-center justify-center">
               <ImageSlider
                 images={[
-                  "/prasmanan3.jpg",
                   "/prasmanan4.jpg",
+                  "/prasmanan-1.jpg",
+                  "/prasmanan-2.jpg",
+                  "/prasmanan-capcay.jpg",
+                  "/prasmanan-daging.jpg",
+                  "/prasmanan-telor.jpg",
+                  "/prasmanan3.jpg",
                   "/prasmanan5.PNG",
                   "/prasmanan2.jpg",
                 ]}
