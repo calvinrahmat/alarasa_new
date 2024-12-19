@@ -13,15 +13,14 @@ export default function Home() {
             <div className="w-full md:w-1/2 px-4 md:px-0 flex items-center justify-center">
               <ImageSlider
                 images={[
-                  "/NASI-AYAM-WOKU.jpg",
-                  "/NASI-BERKAT.jpg",
-                  "/NASI-SAIKORO.jpg",
-                  "/NASI-JINGGO-BALI.jpeg",
-                  "/NASI-KUNING-CIREBON.jpeg",
-                  "/NASI-PADANG.jpg",
-                  "/NASI-ALARASA.jpg",
-                  "/NASI-AYAM-MENTEGA.jpg",
-                  "/NASI-OPOR.jpg",
+                  "/nasi-saikoro.png",
+                  "/nasi-alarasa.png",
+                  "/nasi-ayam-mentega.png",
+                  "/nasi-berkat.png",
+                  "/nasi-padang.png",
+                  "/nasi-ayam-woku.png",
+                  "/nasi-kuning-cirebon.png",
+                  "/nasi-jinggo.png",
                 ]}
               />
             </div>
