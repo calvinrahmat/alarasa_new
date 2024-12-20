@@ -93,7 +93,7 @@ export function Navbar(): JSX.Element {
     setIsProductsMenuOpen(!isProductsMenuOpen);
   };
 
-  const isArticleDetailPage = pathname?.includes('/article/');
+  const isArticleDetailPage = pathname?.includes("/article/");
 
   return (
     <nav
@@ -126,7 +126,7 @@ export function Navbar(): JSX.Element {
             <Link
               href="/"
               className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
+                isArticleDetailPage && isAtTop ? "text-slate-800" : "text-white"
               }`}
             >
               Home
@@ -134,7 +134,9 @@ export function Navbar(): JSX.Element {
             <div className="relative" ref={productsMenuRef}>
               <button
                 className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center text-lg ${
-                  isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
+                  isArticleDetailPage && isAtTop
+                    ? "text-slate-800"
+                    : "text-white"
                 }`}
                 onClick={toggleProductsMenu}
               >
@@ -168,7 +170,7 @@ export function Navbar(): JSX.Element {
             <Link
               href="/about"
               className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
+                isArticleDetailPage && isAtTop ? "text-slate-800" : "text-white"
               }`}
             >
               About Us
@@ -176,16 +178,16 @@ export function Navbar(): JSX.Element {
             <Link
               href="/article"
               className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage && isAtTop ? 'text-slate-800' : "text-white"
+                isArticleDetailPage && isAtTop ? "text-slate-800" : "text-white"
               }`}
             >
-              Article
+              Blog
             </Link>
           </div>
           <div className="md:hidden flex items-center">
             <button
               className={`outline-none mobile-menu-button ${
-                isArticleDetailPage ? 'text-slate-800' : "text-white"
+                isArticleDetailPage ? "text-slate-800" : "text-white"
               }`}
               onClick={toggleMenu}
             >
