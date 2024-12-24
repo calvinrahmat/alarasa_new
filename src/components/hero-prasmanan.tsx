@@ -38,14 +38,14 @@ export default function Hero() {
             SOLUSI CATERING PRASMANAN-MU!
           </h1>
           <p className="font-sans text-base md:text-xl xl:text-2xl text-white font-bold mb-6">
-            PRASMANAN EXCLUSIVE MULAI DARI 75 RB MINIMAL ORDER 50 PAX
+            PRASMANAN EXCLUSIVE MULAI DARI 75 RB
             <br />
             TERIMA PENGIRIMAN JADETABEK
             <br />
             DIMASAK OLEH KOKI PROFESIONAL & DAPUR HIGIENIS
           </p>
           <p className="text-lg mb-4">
-            Terima catering setiap hari dengan minimal order 30 box dan H-1
+            Terima catering setiap hari dengan minimal order 50 pax dan H-1
             sebelum acara, kamu dapat menikmati kelezatan cita rasa nusantara
             pada catering PRASMANAN alarasa.
           </p>
