@@ -78,7 +78,7 @@ export default function Component() {
           </div>
           <div className="relative aspect-square md:aspect-[4/3] order-1 md:order-2">
             <Image
-              src="/menu-basic.png"
+              src="/PAKET-CATERING.jpg"
               alt="Silhouette overlooking launch facility"
               layout="fill"
               objectFit="object-scale-down h-48 w-48"
