@@ -45,9 +45,10 @@ export default function Hero() {
             DIMASAK OLEH KOKI PROFESIONAL & DAPUR HIGIENIS
           </p>
           <p className="text-lg mb-4">
-            Terima catering setiap hari dengan minimal order 30 box dan H-1
-            sebelum acara, kamu dapat menikmati kelezatan cita rasa nusantara
-            pada catering SNACK & COFFEE BREAK alarasa.
+            Terima catering setiap hari dengan minimal order 20 box isi 3 pcs (2
+            snack dan 1 air mineral) maksimal pemesanan H-1 sebelum acara. Kamu
+            dapat menikmati kelezatan cita rasa nusantara pada catering SNACK &
+            COFFEE BREAK alarasa.
           </p>
 
           <div className="w-full h-1 bg-white mb-4"></div>
