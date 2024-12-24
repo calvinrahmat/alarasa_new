@@ -38,7 +38,7 @@ export default function Hero() {
             SOLUSI CATERING PRASMANAN-MU!
           </h1>
           <p className="font-sans text-base md:text-xl xl:text-2xl text-white font-bold mb-6">
-            PRASMANAN EXCLUSIVE MULAI DARI 35 RB
+            PRASMANAN EXCLUSIVE MULAI DARI 75 RB MINIMAL ORDER 50 PAX
             <br />
             TERIMA PENGIRIMAN JADETABEK
             <br />
