@@ -56,7 +56,7 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="font-sans md:font-sans text-4xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight">
-          SOLUSI CATERINGMU!
+          Solusi Catering Premium
         </h1>
         <p className="mt-6 text-xl sm:text-2xl text-gray-300">
           Percayakan Alarasa Catering untuk melengkapi setiap acara special

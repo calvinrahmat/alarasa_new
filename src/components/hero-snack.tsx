@@ -34,11 +34,13 @@ export default function Hero() {
         </div>
 
         <div>
-          <h1 className="font-sans text-4xl sm:text-5xl md:text-4xl  font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug">
-            SOLUSI CATERING SNACK & COFFEE BREAK-MU!
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-4xl  font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug">
+            SOLUSI CATERING SNACK & COFFEE BREAK PREMIUM <br />
+            <span className="text-red-500">
+              SNACK & COFFEE BREAK EXCLUSIVE MULAI DARI 35 RB
+            </span>
           </h1>
           <p className="font-sans text-base md:text-xl xl:text-2xl text-white font-bold mb-6">
-            SNACK & COFFEE BREAK EXCLUSIVE MULAI DARI 35 RB
             <br />
             TERIMA PENGIRIMAN JADETABEK
             <br />
@@ -54,11 +56,11 @@ export default function Hero() {
           <div className="w-full h-1 bg-white mb-4"></div>
           <p className="font-bold mb-4">
             <span className="text-yellow-300 text-xl">
-              CATERING SNACK & COFFEE BREAK ALARASA
+              CATERING Snack & Coffee Break Premium ALARASA
             </span>
             <br />
-            Pesan sekarang SNACK & COFFEE BREAK alarasa dan dapatkan beragam
-            promo lainnya.
+            Pesan sekarang Snack & Coffee Break Premium alarasa dan dapatkan
+            beragam promo lainnya.
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
             <Link
@@ -67,14 +69,14 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LIHAT MENU SNACK & COFFEE BREAK
+              LIHAT MENU Snack & Coffee Break Premium
             </Link>
             <OrderButton
-              value="PESAN CATERING SNACK & COFFEE BREAK"
+              value="PESAN CATERING Snack & Coffee Break Premium"
               whatsappText="Halo Minrasa! Mau tanya-tanya tentang paket catering Snack Box & Coffee Break Alarasa"
               phoneNumber="6285280730787"
             >
-              PESAN CATERING SNACK & COFFEE BREAK
+              PESAN CATERING Snack & Coffee Break Premium
             </OrderButton>
           </div>
         </div>

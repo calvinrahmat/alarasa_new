@@ -63,8 +63,8 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="font-sans text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6">
-          <span className="text-yellow-300">SOLUSI CATERINGMU!</span>
+        <h1 className="font-sans text-4xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug mb-6">
+          <span className="text-yellow-300">SOLUSI CATERING JADETABEK</span>
         </h1>
 
         <p className="text-xl sm:text-2xl text-white">

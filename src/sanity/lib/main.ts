@@ -2,7 +2,7 @@
  * Demo data used as placeholders and initial values for the blog
  */
 
-export const title = "Alarasa Solusi Cateringmu untuk melengkapi setiap acara special";
+export const title = "Alarasa Solusi Catering Premium untuk melengkapi setiap acara special";
 
 export const description = [
   {

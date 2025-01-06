@@ -36,11 +36,13 @@ export default function Hero() {
         </div>
 
         <div>
-          <h1 className="font-sans text-4xl sm:text-5xl md:text-4xl  font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug">
-            SOLUSI CATERING NASI BOX-MU!
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-4xl  font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug">
+            SOLUSI CATERING NASI BOX PREMIUM <br />
+            <span className="text-red-500">
+              NASI BOX EXCLUSIVE MULAI DARI 35 RB
+            </span>
           </h1>
           <p className="font-sans text-base md:text-xl xl:text-2xl text-white font-bold mb-6">
-            NASI BOX EXCLUSIVE MULAI DARI 35 RB
             <br />
             TERIMA PENGIRIMAN JADETABEK
             <br />

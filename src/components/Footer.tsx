@@ -20,11 +20,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and About */}
           <div className="space-y-4">
-            <div className="flex items-center">
-              <Image src="/logo.png" alt="alarasa" width={50} height={50} />
-              <h2 className={`${berenikaBold.className} text-2xl ml-2`}>
-                alarasa
-              </h2>
+            <div className="flex flex-col items-start">
+              <div className="flex items-center">
+                <Image src="/logo.png" alt="alarasa" width={50} height={50} />
+                <h2 className={`${berenikaBold.className} text-2xl ml-2`}>
+                  alarasa
+                </h2>
+              </div>
+              {/* <Image
+                src="/halal.png"
+                alt="halal certified"
+                width={80}
+                height={80}
+                className="mt-3"
+              /> */}
             </div>
           </div>
 
