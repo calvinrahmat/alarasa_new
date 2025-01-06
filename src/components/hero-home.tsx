@@ -72,6 +72,17 @@ export default function Hero() {
           kalian! Enak, higienis dan terjangkau!
         </p>
       </div>
+
+      {/* Add Halal Logo */}
+      <div className="absolute bottom-8 left-8 z-20">
+        <Image
+          src="/halal.png"
+          alt="Halal Certified"
+          width={80}
+          height={80}
+          className="opacity-90"
+        />
+      </div>
     </div>
   );
 }

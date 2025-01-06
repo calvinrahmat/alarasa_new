@@ -27,6 +27,12 @@ export default function CompanyValues() {
       description:
         "Alarasa Catering berkomitmen untuk memberikan pelayanan terbaik dengan harga yang terjangkau.",
     },
+    {
+      number: "05",
+      title: "BERSERTIFIKASI HALAL.",
+      description:
+        "Alarasa sudah bersertifikasi Halal dari MUI, pastinya menjadi hidangan yang ramah bagi pelanggan Muslim. Dengan adanya sertfiikat Halal, membuktikan bahwa upaya Kami terus menjaga kepercayaan pelanggan terhadap hidangan Alarasa.",
+    },
   ];
 
   return (
