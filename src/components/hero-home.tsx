@@ -29,7 +29,7 @@ export default function Hero() {
           <div className="flex flex-col">
             <div className="ml-4 mb-4">
               <Image
-                src="/halal.png"
+                src="/halal-circle.png"
                 alt="Halal Certified"
                 width={90}
                 height={90}
