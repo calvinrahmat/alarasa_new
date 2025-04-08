@@ -37,7 +37,7 @@ export default function Hero() {
           <h1 className="font-sans text-3xl sm:text-5xl md:text-4xl  font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug">
             SOLUSI CATERING PRASMANAN PREMIUM <br />
             <span className="text-red-500">
-              PRASMANAN EXCLUSIVE MULAI DARI 75 RB
+              PRASMANAN EXCLUSIVE MULAI DARI 80 RB
             </span>
           </h1>
           <p className="font-sans text-base md:text-xl xl:text-2xl text-white font-bold mb-6">
