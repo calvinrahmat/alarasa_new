@@ -39,7 +39,7 @@ export default function Hero() {
           <h1 className="font-sans text-3xl sm:text-5xl md:text-4xl  font-bold text-yellow-300 max-w-4xl leading-tight sm:leading-snug lg:leading-snug">
             SOLUSI CATERING NASI BOX PREMIUM <br />
             <span className="text-red-500">
-              NASI BOX EXCLUSIVE MULAI DARI 35 RB
+              NASI BOX EXCLUSIVE MULAI DARI 38 RB
             </span>
           </h1>
           <p className="font-sans text-base md:text-xl xl:text-2xl text-white font-bold mb-6">
@@ -64,7 +64,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
             <Link
-              href="https://drive.google.com/file/d/1Fd0pNxfBqRxfbwQECYSTjUMSLPLfNrou/view?usp=sharing"
+              href="https://drive.google.com/file/d/1lin8yiG4dRGe-ICVxxw6qZwCrZnxutHV/view?usp=sharing"
               className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full text-center"
               target="_blank"
               rel="noopener noreferrer"
