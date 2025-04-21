@@ -7,6 +7,7 @@ import Whatsapp from "@/components/whatsapp";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { FacebookPixelEvents } from "@/components/pixel-events";
 import { Suspense } from "react";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <GoogleTagManager gtmId="GTM-MD5GR22W" />
+      {/* Google Ads conversion tracking script */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-11304618111"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-11304618111');
+        `}
+      </Script>
       <body className="flex flex-col min-h-screen">
         <noscript>
           <iframe
