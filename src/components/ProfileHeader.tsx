@@ -11,11 +11,7 @@ const berenikaBold = localFont({
   variable: "--font-berenika",
 });
 
-interface ProfileHeaderProps {
-  description: string;
-}
-
-const ProfileHeader: React.FC<ProfileHeaderProps> = ({ description }) => {
+const ProfileHeader: React.FC = () => {
   return (
     <div className="flex flex-col items-center">
       <div className="w-20 h-20 relative">
@@ -28,7 +24,7 @@ const ProfileHeader: React.FC<ProfileHeaderProps> = ({ description }) => {
         />
       </div>
       <h1 className={`${berenikaBold.className} text-2xl font-bold mb-2`}>alarasa</h1>
-      <p className="text-muted-foreground text-center max-w-md">{description}</p>
+      <p className="text-muted-foreground text-center max-w-md" dangerouslySetInnerHTML={{ __html: `Percayakan Alarasa Catering untuk melengkapi setiap acara special kalian!<br />Enak, higienis dan terjangkau!` }} />
     </div>
   );
 };
