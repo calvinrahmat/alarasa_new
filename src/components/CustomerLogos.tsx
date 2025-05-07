@@ -25,7 +25,7 @@ export default function CustomerLogos() {
     // Set a timeout to ensure we have a fallback width even if calculation fails
     const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2000);
 
     const calculateWidth = () => {
       if (rowRef.current) {
