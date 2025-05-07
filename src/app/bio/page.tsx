@@ -71,7 +71,7 @@ const Index = () => {
               
               <LinkButton 
                 href={whatsappUrl}
-                className="bg-yellow-500 hover:bg-yellow-600 font-bold text-white py-4 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg"
+                className="bg-yellow-500 hover:bg-yellow-600 font-bold text-white py-4 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg animate-bounce"
                 icon={<Image src="/whatsapp.png" alt="WhatsApp" width={30} height={30} />}
                 onClick={async () => {
                   if (typeof window !== "undefined") {
