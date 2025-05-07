@@ -69,14 +69,14 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LIHAT MENU Snack & Coffee Break Premium
+              LIHAT MENU SNACK & COFFEE BREAK PREMIUM
             </Link>
             <OrderButton
               value="PESAN CATERING Snack & Coffee Break Premium"
               whatsappText="Halo Minrasa! Mau tanya-tanya tentang paket catering Snack Box & Coffee Break Alarasa"
               phoneNumber="6285280730787"
             >
-              PESAN CATERING Snack & Coffee Break Premium
+             PESAN CATERING SNACK & COFFEE BREAK PREMIUM
             </OrderButton>
           </div>
         </div>

@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": [],
     "lib": [
       "dom",
       "dom.iterable",
@@ -33,7 +35,8 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/aboutUs.tsx.bkp"
+    "src/components/aboutUs.tsx.bkp",
+    "src/types/**/*"
   ],
   "exclude": [
     "node_modules"

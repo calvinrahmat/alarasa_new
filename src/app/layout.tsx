@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
-import Whatsapp from "@/components/whatsapp";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { FacebookPixelEvents } from "@/components/pixel-events";
 import { Suspense } from "react";
 import Script from "next/script";
+import ClientWhatsapp from "@/components/ClientWhatsapp";
+import ClientNavbar from "@/components/ClientNavbar";
+
+export const dynamic = 'force-dynamic';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,10 +44,12 @@ export default function RootLayout({
       />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'AW-11304618111');
+          if (typeof window !== 'undefined') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-11304618111');
+          }
         `}
       </Script>
       <body className="flex flex-col min-h-screen">
@@ -60,10 +64,10 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <FacebookPixelEvents />
         </Suspense>
-        <Navbar />
+        <ClientNavbar />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <Whatsapp />
+        <ClientWhatsapp />
       </body>
     </html>
   );

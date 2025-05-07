@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import HeroArticle from "@/components/hero-article";
 import ArticleGrid from "@/components/ArticleGrid";
 export default function Home() {

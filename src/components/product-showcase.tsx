@@ -21,6 +21,7 @@ export default function ProductShowcase({
 
   useEffect(() => {
     const handleResize = () => {
+      if (typeof window === 'undefined') return;
       if (window.innerWidth < 640) {
         setVisibleThumbnails(3);
       } else {
@@ -29,8 +30,10 @@ export default function ProductShowcase({
     };
 
     handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   const nextImage = () => {

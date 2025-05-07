@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import Hero from "@/components/hero-home";
 import OurProduct from "@/components/ourProduct";
 import ParallaxHighlights from "@/components/parallax-highlights";

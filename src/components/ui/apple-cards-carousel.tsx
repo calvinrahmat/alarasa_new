@@ -177,13 +177,19 @@ export const Card = ({
     }
 
     if (open) {
-      document.body.style.overflow = "hidden";
+      if (typeof document !== 'undefined') {
+        document.body.style.overflow = "hidden";
+      }
     } else {
-      document.body.style.overflow = "auto";
+      if (typeof document !== 'undefined') {
+        document.body.style.overflow = "auto";
+      }
     }
 
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    if (typeof window !== 'undefined') {
+      window.addEventListener("keydown", onKeyDown);
+      return () => window.removeEventListener("keydown", onKeyDown);
+    }
   }, [open]);
 
   useOutsideClick(containerRef, () => handleClose());
@@ -200,11 +206,12 @@ export const Card = ({
       }
     };
 
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
+    if (typeof document !== 'undefined') {
+      document.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }
   }, [handleClose]);
 
   return (
