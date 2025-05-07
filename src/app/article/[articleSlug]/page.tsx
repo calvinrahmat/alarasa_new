@@ -11,8 +11,8 @@ import type { PortableTextBlock, PortableTextReactComponents } from "next-sanity
 export const runtime = 'edge';
 
 type Props = {
-  params: { articleSlug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: Promise<{ articleSlug: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 const articleQuery = `*[_type == "post" && slug.current == $articleSlug][0]{
@@ -50,9 +50,10 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
+  const resolvedParams = await params;
   const { data: post } = await sanityFetch({
     query: articleQuery,
-    params: { articleSlug: params.articleSlug },
+    params: { articleSlug: resolvedParams.articleSlug },
     stega: false,
   });
   
@@ -141,9 +142,10 @@ function extractTocSections(body: PortableTextBlock[]): TocSection[] {
 }
 
 export default async function ArticlePage({ params }: Props) {
+  const resolvedParams = await params;
   const { data: post } = await sanityFetch({ 
     query: articleQuery, 
-    params: { articleSlug: params.articleSlug }
+    params: { articleSlug: resolvedParams.articleSlug }
   });
 
   if (!post?._id) {
