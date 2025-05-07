@@ -31,7 +31,7 @@ const Index = () => {
         <div className="max-w-md mx-auto">
           <Card className="p-8 bg-white/10 backdrop-blur-sm shadow-lg rounded-xl border-white/20">
             <ProfileHeader 
-              description="Percayakan Alarasa Catering untuk melengkapi setiap acara special kalian! Enak, higienis dan terjangkau!" 
+              description="Aneka Lauk Selera Nusantara!" 
             />
             <div className="mt-8">
               <CustomerLogos />

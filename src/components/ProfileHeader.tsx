@@ -17,8 +17,8 @@ interface ProfileHeaderProps {
 
 const ProfileHeader: React.FC<ProfileHeaderProps> = ({ description }) => {
   return (
-    <div className="flex flex-col items-center mb-8">
-      <div className="w-32 h-32 relative mb-4">
+    <div className="flex flex-col items-center">
+      <div className="w-20 h-20 relative">
         <Image 
           src="/logo.png"
           alt="Alarasa Logo"

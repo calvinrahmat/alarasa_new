@@ -45,8 +45,8 @@ export default function CustomerLogos() {
               <Image
                 src={customer.logo}
                 alt={`${customer.name} logo`}
-                width={120}
-                height={120}
+                width={60}
+                height={60}
                 className="max-w-full h-auto"
               />
             </div>
