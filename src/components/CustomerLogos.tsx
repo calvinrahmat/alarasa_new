@@ -99,7 +99,7 @@ export default function CustomerLogos() {
       <style>
         {`
           .customer-logos-marquee {
-            animation: customerLogosMarquee 10s linear infinite;
+            animation: customerLogosMarquee 15s linear infinite;
             will-change: transform;
             transform: translateZ(0);
             backface-visibility: hidden;
@@ -110,7 +110,7 @@ export default function CustomerLogos() {
           }
           @media (max-width: 768px) {
             .customer-logos-marquee {
-              animation-duration: 10s;
+              animation-duration: 18s;
             }
           }
         `}
