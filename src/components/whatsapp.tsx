@@ -1,6 +1,7 @@
 "use client";
 
 import { sendGTMEvent } from "@next/third-parties/google";
+import ReactPixel from "react-facebook-pixel";
 
 export default function Component({
   phoneNumber = "6285280730787",
@@ -10,6 +11,24 @@ export default function Component({
     message
   )}`;
 
+  const handleClick = () => {
+    // Send GTM event
+    sendGTMEvent({
+      event: "button_click",
+      value: "WhatsApp Floating Button",
+    });
+    
+    // Send Meta Pixel event
+    ReactPixel.track("Contact", {
+      content_name: "WhatsApp Floating Button",
+      content_category: "Contact",
+      content_type: "button",
+      button_location: "floating",
+      button_type: "whatsapp",
+      message: message
+    });
+  };
+
   return (
     <a
       href={whatsappUrl}
@@ -17,12 +36,7 @@ export default function Component({
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 z-[9999] sm:p-4"
       aria-label="Chat on WhatsApp"
-      onClick={() =>
-        sendGTMEvent({
-          event: "button_click",
-          value: "WhatsApp Floating Button",
-        })
-      }
+      onClick={handleClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

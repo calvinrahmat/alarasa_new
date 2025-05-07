@@ -98,7 +98,7 @@ export default function CustomerLogos() {
       </div>
       <style jsx>{`
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 10s linear infinite;
           will-change: transform;
           transform: translateZ(0);
           backface-visibility: hidden;
@@ -109,7 +109,7 @@ export default function CustomerLogos() {
         }
         @media (max-width: 768px) {
           .animate-marquee {
-            animation-duration: 20s;
+            animation-duration: 10s;
           }
         }
       `}</style>
