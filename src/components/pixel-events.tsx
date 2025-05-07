@@ -1,19 +1,21 @@
 "use client";
-import React, { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
 
-export const FacebookPixelEvents: React.FC = () => {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+import { useEffect } from "react";
 
+export function FacebookPixelEvents() {
   useEffect(() => {
-    import("react-facebook-pixel")
-      .then((x) => x.default)
-      .then((ReactPixel) => {
-        ReactPixel.init("2168736646808729"); //don't forget to change this
-        ReactPixel.pageView();
-      });
-  }, [pathname, searchParams]);
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((x) => x.default)
+        .then((ReactPixel) => {
+          ReactPixel.init("2168736646808729", undefined, {
+            autoConfig: true,
+            debug: false
+          });
+          ReactPixel.pageView();
+        });
+    }
+  }, []);
 
   return null;
-};
+}

@@ -60,7 +60,7 @@ export default function CustomerLogos() {
       </h2>
       <div className="relative overflow-hidden">
         <div
-          className="flex animate-marquee space-x-8 whitespace-nowrap"
+          className="flex customer-logos-marquee space-x-8 whitespace-nowrap"
           ref={rowRef}
           style={{ 
             minWidth: rowWidth ? `${rowWidth * 2}px` : '100%',
@@ -96,23 +96,25 @@ export default function CustomerLogos() {
           ))}
         </div>
       </div>
-      <style jsx>{`
-        .animate-marquee {
-          animation: marquee 10s linear infinite;
-          will-change: transform;
-          transform: translateZ(0);
-          backface-visibility: hidden;
-        }
-        @keyframes marquee {
-          0% { transform: translateX(0) translateZ(0); }
-          100% { transform: translateX(-50%) translateZ(0); }
-        }
-        @media (max-width: 768px) {
-          .animate-marquee {
-            animation-duration: 10s;
+      <style>
+        {`
+          .customer-logos-marquee {
+            animation: customerLogosMarquee 10s linear infinite;
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
           }
-        }
-      `}</style>
+          @keyframes customerLogosMarquee {
+            0% { transform: translateX(0) translateZ(0); }
+            100% { transform: translateX(-50%) translateZ(0); }
+          }
+          @media (max-width: 768px) {
+            .customer-logos-marquee {
+              animation-duration: 10s;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 } 

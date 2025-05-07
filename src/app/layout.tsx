@@ -9,6 +9,8 @@ import Script from "next/script";
 import ClientWhatsapp from "@/components/ClientWhatsapp";
 import ClientNavbar from "@/components/ClientNavbar";
 
+export const dynamic = 'force-dynamic';
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

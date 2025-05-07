@@ -1,8 +1,6 @@
 "use client";
 
 import { sendGTMEvent } from "@next/third-parties/google";
-import { useEffect } from "react";
-import ReactPixel from "react-facebook-pixel";
 
 export default function Component({
   phoneNumber = "6285280730787",
@@ -12,27 +10,25 @@ export default function Component({
     message
   )}`;
 
-  useEffect(() => {
-    // Initialize Facebook Pixel only on client side
-    ReactPixel.init('2168736646808729'); // Replace with your actual Pixel ID
-  }, []);
-
   const handleClick = () => {
-    // Send GTM event
+    // Track with Google Tag Manager
     sendGTMEvent({
       event: "button_click",
       value: "WhatsApp Floating Button",
     });
     
-    // Send Meta Pixel event
-    ReactPixel.track("Contact", {
-      content_name: "WhatsApp Floating Button",
-      content_category: "Contact",
-      content_type: "button",
-      button_location: "floating",
-      button_type: "whatsapp",
-      message: message
-    });
+    // Track with Meta Pixel
+    if (typeof window !== "undefined") {
+      import("react-facebook-pixel")
+        .then((x) => x.default)
+        .then((ReactPixel) => {
+          ReactPixel.track('Lead', {
+            content_name: 'WhatsApp Floating Button',
+            content_category: 'Lead',
+            content_type: 'button',
+          });
+        });
+    }
   };
 
   return (
