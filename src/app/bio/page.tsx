@@ -1,3 +1,5 @@
+'use client';
+
 export const runtime = 'edge';
 
 import React from 'react';
@@ -6,6 +8,7 @@ import ProfileHeader from '@/components/ProfileHeader';
 import { Card } from '@/components/ui/card';
 import CustomerLogos from '@/components/CustomerLogos';
 import Image from 'next/image';
+import { Utensils, Globe, Building2 } from 'lucide-react';
 
 const Index = () => {
   const whatsappUrl = `https://wa.me/6285280730787?text=${encodeURIComponent(
@@ -40,27 +43,46 @@ const Index = () => {
             <div className="flex flex-col space-y-4 mt-8">
               <LinkButton 
                 href="https://drive.google.com/file/d/1Glh5vPUDPv7wIY2OIiSRSuowMx_Xe4oD/view?usp=sharing"
+                icon={<Utensils className="h-5 w-5" />}
               >
                 Menu Nasi Box
               </LinkButton>
               
               <LinkButton 
                 href="https://drive.google.com/file/d/1ydDOx7T02ypTom0s_B1OC_602qUDVrLr/view?usp=sharing"
+                icon={<Utensils className="h-5 w-5" />}
               >
                 Menu Prasmanan
               </LinkButton>
               
-              <LinkButton href="https://alarasa.com">
+              <LinkButton 
+                href="https://alarasa.com"
+                icon={<Globe className="h-5 w-5" />}
+              >
                 Website
               </LinkButton>
               
-              <LinkButton href="https://alarasa.com/about">
+              <LinkButton 
+                href="https://alarasa.com/about"
+                icon={<Building2 className="h-5 w-5" />}
+              >
                 Company Profile
               </LinkButton>
               
               <LinkButton 
                 href={whatsappUrl}
-                isPrimary={true}
+                className="bg-yellow-500 hover:bg-yellow-600 font-bold text-white py-4 px-6 rounded-lg transition duration-300 shadow-md hover:shadow-lg animate-bounce"
+                icon={<Image src="/whatsapp.png" alt="WhatsApp" width={30} height={30} />}
+                onClick={async () => {
+                  if (typeof window !== "undefined") {
+                    const ReactPixel = (await import("react-facebook-pixel")).default;
+                    ReactPixel.track('Lead', {
+                      content_name: 'Order disini! Bio Button',
+                      content_category: 'Lead',
+                      content_type: 'button',
+                    });
+                  }
+                }}
               >
                 Order disini!
               </LinkButton>

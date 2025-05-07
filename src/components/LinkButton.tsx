@@ -10,13 +10,17 @@ interface LinkButtonProps {
   children: React.ReactNode;
   isPrimary?: boolean;
   icon?: React.ReactNode;
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({ 
   href, 
   children, 
   isPrimary = false,
-  icon
+  icon,
+  className,
+  onClick
 }) => {
   return (
     <motion.a 
@@ -27,10 +31,12 @@ const LinkButton: React.FC<LinkButtonProps> = ({
         "hover:translate-y-[-2px] active:translate-y-[1px]",
         isPrimary 
           ? "bg-orange-500 text-white hover:bg-orange-600"
-          : "bg-white/10 hover:bg-white/20 text-white hover:border-white/50"
+          : "bg-white/10 hover:bg-white/20 text-white hover:border-white/50",
+        className
       )}
       target="_blank" 
       rel="noopener noreferrer"
+      onClick={onClick}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
       animate={isPrimary ? {
