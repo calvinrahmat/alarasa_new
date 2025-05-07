@@ -62,12 +62,22 @@ export default function CustomerLogos() {
         <div
           className="flex animate-marquee space-x-8 whitespace-nowrap"
           ref={rowRef}
-          style={{ minWidth: rowWidth ? `${rowWidth * 2}px` : '100%' }}
+          style={{ 
+            minWidth: rowWidth ? `${rowWidth * 2}px` : '100%',
+            willChange: 'transform',
+            transform: 'translateZ(0)',
+            backfaceVisibility: 'hidden'
+          }}
         >
           {logos.map((customer, index) => (
             <div
               key={`${customer.name}-${index}`}
               className="flex-shrink-0 w-[120px] flex items-center justify-center bg-white p-4 rounded-lg"
+              style={{
+                willChange: 'transform',
+                transform: 'translateZ(0)',
+                backfaceVisibility: 'hidden'
+              }}
             >
               <Image
                 src={customer.logo}
@@ -75,8 +85,9 @@ export default function CustomerLogos() {
                 width={60}
                 height={60}
                 className="max-w-full h-auto"
+                loading="lazy"
                 onLoad={() => {
-                  if (rowRef.current) {
+                  if (rowRef.current && !rowWidth) {
                     setRowWidth(rowRef.current.scrollWidth / 2);
                   }
                 }}
@@ -87,12 +98,19 @@ export default function CustomerLogos() {
       </div>
       <style jsx>{`
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 20s linear infinite;
           will-change: transform;
+          transform: translateZ(0);
+          backface-visibility: hidden;
         }
         @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          0% { transform: translateX(0) translateZ(0); }
+          100% { transform: translateX(-50%) translateZ(0); }
+        }
+        @media (max-width: 768px) {
+          .animate-marquee {
+            animation-duration: 20s;
+          }
         }
       `}</style>
     </div>
