@@ -1,6 +1,7 @@
 "use client";
 
 import { sendGTMEvent } from "@next/third-parties/google";
+import { useEffect } from "react";
 import ReactPixel from "react-facebook-pixel";
 
 export default function Component({
@@ -10,6 +11,11 @@ export default function Component({
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;
+
+  useEffect(() => {
+    // Initialize Facebook Pixel only on client side
+    ReactPixel.init('2168736646808729'); // Replace with your actual Pixel ID
+  }, []);
 
   const handleClick = () => {
     // Send GTM event

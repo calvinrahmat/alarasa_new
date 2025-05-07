@@ -28,6 +28,7 @@ export function Navbar(): JSX.Element {
 
   useEffect(() => {
     const handleScroll = () => {
+      if (typeof window === 'undefined') return;
       const currentScrollY = window.scrollY;
       setIsAtTop(currentScrollY === 0);
 
@@ -46,10 +47,12 @@ export function Navbar(): JSX.Element {
       lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [isProductsMenuOpen, isMobile, isOpen]);
 
   useEffect(() => {
@@ -73,15 +76,17 @@ export function Navbar(): JSX.Element {
 
   useEffect(() => {
     const checkMobile = () => {
+      if (typeof window === 'undefined') return;
       setIsMobile(window.innerWidth < 768); // 768px is the breakpoint for md in Tailwind
     };
 
     checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-    };
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", checkMobile);
+      return () => {
+        window.removeEventListener("resize", checkMobile);
+      };
+    }
   }, []);
 
   useEffect(() => {
