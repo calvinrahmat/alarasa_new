@@ -8,9 +8,11 @@ import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { sanityFetch } from "@/sanity/lib/live";
 import type { PortableTextBlock, PortableTextReactComponents } from "next-sanity";
 
+export const runtime = 'edge';
+
 type Props = {
-  params: Promise<{ articleSlug: string }>;
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  params: { articleSlug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
 };
 
 const articleQuery = `*[_type == "post" && slug.current == $articleSlug][0]{
@@ -44,27 +46,13 @@ const articleQuery = `*[_type == "post" && slug.current == $articleSlug][0]{
   }
 }`;
 
-export async function generateStaticParams() {
-  const { data } = await sanityFetch({
-    query: `*[_type == "post"]{ 
-      "articleSlug": slug.current 
-    }`,
-    perspective: "published",
-    stega: false,
-  });
-  return data.map((post: { articleSlug: string }) => ({
-    articleSlug: post.articleSlug,
-  }));
-}
-
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const resolvedParams = await params;
   const { data: post } = await sanityFetch({
     query: articleQuery,
-    params: { articleSlug: resolvedParams.articleSlug },
+    params: { articleSlug: params.articleSlug },
     stega: false,
   });
   
@@ -153,10 +141,9 @@ function extractTocSections(body: PortableTextBlock[]): TocSection[] {
 }
 
 export default async function ArticlePage({ params }: Props) {
-  const resolvedParams = await params;
   const { data: post } = await sanityFetch({ 
     query: articleQuery, 
-    params: { articleSlug: resolvedParams.articleSlug }
+    params: { articleSlug: params.articleSlug }
   });
 
   if (!post?._id) {
