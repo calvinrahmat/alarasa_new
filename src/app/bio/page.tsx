@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import React from 'react';
 import LinkButton from '@/components/LinkButton';
 import ProfileHeader from '@/components/ProfileHeader';

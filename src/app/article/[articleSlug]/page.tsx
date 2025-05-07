@@ -8,6 +8,8 @@ import { resolveOpenGraphImage } from "@/sanity/lib/utils";
 import { sanityFetch } from "@/sanity/lib/live";
 import type { PortableTextBlock, PortableTextReactComponents } from "next-sanity";
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ articleSlug: string }>;
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;

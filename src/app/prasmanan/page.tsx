@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { Review } from "@/components/Review";
 import CTASection from "@/components/CTASection";
 import Link from "next/link";
