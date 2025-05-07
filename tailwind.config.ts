@@ -72,14 +72,41 @@ const config: Config = {
 		animation: {
 			scroll:
 			"scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-		  },
-		  keyframes: {
+			scale: "scale 2s ease-in-out infinite",
+			"pulse-glow": "pulse-glow 2s ease-in-out infinite",
+			"pulse-ring": "pulse-ring 2s ease-in-out infinite",
+		},
+		keyframes: {
 			scroll: {
 				to: {
 					transform: "translate(calc(-50% - 0.5rem))",
 				},
 			},
-		  },
+			scale: {
+				"0%, 100%": { transform: "scale(1)" },
+				"50%": { transform: "scale(1.1)" },
+			},
+			"pulse-glow": {
+				"0%, 100%": { 
+					boxShadow: "0 0 5px rgba(249, 115, 22, 0.5), 0 0 20px rgba(249, 115, 22, 0.3)",
+					transform: "scale(1)"
+				},
+				"50%": { 
+					boxShadow: "0 0 20px rgba(249, 115, 22, 0.8), 0 0 40px rgba(249, 115, 22, 0.5)",
+					transform: "scale(1.02)"
+				},
+			},
+			"pulse-ring": {
+				"0%, 100%": { 
+					opacity: "0.5",
+					transform: "scale(1)"
+				},
+				"50%": { 
+					opacity: "0.8",
+					transform: "scale(1.1)"
+				},
+			},
+		},
   	}
   },
   plugins: [addVariablesForColors,     function ({ matchUtilities, theme }: any) {

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
 import Footer from "@/components/Footer";
-import Whatsapp from "@/components/whatsapp";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { FacebookPixelEvents } from "@/components/pixel-events";
 import { Suspense } from "react";
 import Script from "next/script";
+import ClientWhatsapp from "@/components/ClientWhatsapp";
+import ClientNavbar from "@/components/ClientNavbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -60,10 +60,10 @@ export default function RootLayout({
         <Suspense fallback={null}>
           <FacebookPixelEvents />
         </Suspense>
-        <Navbar />
+        <ClientNavbar />
         <main className="flex-grow">{children}</main>
         <Footer />
-        <Whatsapp />
+        <ClientWhatsapp />
       </body>
     </html>
   );
