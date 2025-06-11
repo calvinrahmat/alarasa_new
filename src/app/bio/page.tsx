@@ -42,14 +42,14 @@ const Index = () => {
             </div>
             <div className="flex flex-col space-y-4 mt-8">
               <LinkButton 
-                href="https://drive.google.com/file/d/1qJJyeHZGxojACGppE6MQAmxMTkZDQlPn/view?usp=sharing"
+                href="https://drive.google.com/file/d/1NVsJzx-zXkUMwa-nZwPg6K0rpnAf8fjC/view?usp=drivesdk"
                 icon={<Utensils className="h-5 w-5" />}
               >
                 Menu Nasi Box
               </LinkButton>
               
               <LinkButton 
-                href="https://drive.google.com/file/d/1QI2QNXYU5BWc7GI2IFZcL3KHp3z9lqZP/view?usp=sharing"
+                href="https://drive.google.com/file/d/1vorbzHBQi9E_xrMwlSxlRWl3koilchVT/view?usp=drivesdk"
                 icon={<Utensils className="h-5 w-5" />}
               >
                 Menu Prasmanan
