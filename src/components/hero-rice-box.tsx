@@ -64,7 +64,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
             <Link
-              href="https://drive.google.com/file/d/1Glh5vPUDPv7wIY2OIiSRSuowMx_Xe4oD/view?usp=sharing"
+              href="https://drive.google.com/file/d/1qJJyeHZGxojACGppE6MQAmxMTkZDQlPn/view?usp=sharing"
               className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full text-center"
               target="_blank"
               rel="noopener noreferrer"
