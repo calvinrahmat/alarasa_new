@@ -12,7 +12,7 @@ import { Utensils, Globe, Building2 } from 'lucide-react';
 
 const Index = () => {
   const whatsappUrl = `https://wa.me/6285280730787?text=${encodeURIComponent(
-    "Halo Minrasa! Mau tanya-tanya tentang paket catering Alarasa"
+    "Halo MinRasa! Saya tertarik dengan catering Alarasa, boleh tanya tanya?"
   )}`;
 
   return (
