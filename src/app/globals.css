@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Sweet Sans Pro Heavy';
-  src: url('/fonts/sweet-sans-pro/SweetSansProHeavy.otf') format('opentype');
+  src: url('../app/fonts/sweet-sans-pro/SweetSansProHeavy.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }

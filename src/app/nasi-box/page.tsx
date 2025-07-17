@@ -1,10 +1,8 @@
 export const runtime = 'edge';
 
 import { Review } from "@/components/Review";
-import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import HeroRiceBox from "@/components/hero-rice-box";
-import ImageSlider from "@/components/image-slider";
 export default function Home() {
   return (
     <>

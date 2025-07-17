@@ -50,7 +50,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <p className="text-xl md:text-2xl font-['Sweet Sans Pro Heavy']">
+            <p className="text-xl md:text-2xl" style={{ fontFamily: "'Sweet Sans Pro Heavy', sans-serif" }}>
               Nikmati kelezatan cita rasa nusantara pada catering nasi box Alarasa.
             </p>
 
@@ -92,7 +92,7 @@ export default function Hero() {
               <h2 className="font-['Loubag_Semi_Bold'] text-lg text-[#E5DFCC]">
                 NASI BOX BERKAT
               </h2>
-              <p className="font-['Sweet Sans Pro Heavy'] text-sm text-[#E5DFCC]">
+              <p style={{ fontFamily: "'Sweet Sans Pro Heavy', sans-serif" }} className="text-sm text-[#E5DFCC]">
                 Siap H-5 Jam Sebelum Acara
               </p>
             </div>
@@ -103,7 +103,7 @@ export default function Hero() {
             <h2 className="font-['Loubag_Semi_Bold'] text-2xl md:text-3xl text-[#E5DFCC]">
               NASI BOX BERKAT
             </h2>
-            <p className="font-['Sweet Sans Pro Heavy'] text-lg md:text-xl text-[#E5DFCC]">
+            <p style={{ fontFamily: "'Sweet Sans Pro Heavy', sans-serif" }} className="text-lg md:text-xl text-[#E5DFCC]">
               Siap H-5 Jam Sebelum Acara
             </p>
           </div>
