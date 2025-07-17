@@ -13,12 +13,12 @@ export default function Hero() {
       </div>
 
       {/* Main content */}
-      <div className="container mx-auto px-4 py-12 flex items-center">
+      <div className="container mx-auto px-2 py-12 flex items-center">
         <div className="relative grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Content column - Left */}
           <div className="order-2 md:order-1 space-y-8">
-            <h1 className="font-['Loubag_Semi_Bold'] text-4xl md:text-4xl lg:text-6xl text-[#E5DFCC]">
-              Nasi Box Alarasa Mulai dari
+            <h1 className="font-loubag text-3xl md:text-4xl lg:text-5xl text-[#E5DFCC]">
+              Nasi Box Alarasa Mulai dari <br />
               Rp 38.000,-
             </h1>
 
@@ -88,10 +88,10 @@ export default function Hero() {
             </div>
             {/* Bottom right text - Mobile */}
             <div className="md:hidden absolute bottom-0 right-0 text-right">
-              <h2 className="font-['Loubag_Semi_Bold'] text-lg text-[#E5DFCC]">
+              <h2 className="font-loubag text-lg text-[#E5DFCC]">
                 NASI BOX BERKAT
               </h2>
-              <p className="font-['Loubag_Semi_Bold'] text-sm text-[#E5DFCC]">
+              <p className="font-loubag text-sm text-[#E5DFCC]">
                 Siap H-5 Jam Sebelum Acara
               </p>
             </div>
@@ -99,10 +99,10 @@ export default function Hero() {
 
           {/* Bottom right text - Desktop */}
           <div className="hidden md:block absolute bottom-0 right-0 text-right">
-            <h2 className="font-['Loubag_Semi_Bold'] text-2xl md:text-3xl text-[#E5DFCC]">
+            <h2 className="font-loubag text-2xl md:text-3xl text-[#E5DFCC]">
               NASI BOX BERKAT
             </h2>
-            <p className="font-['Loubag_Semi_Bold'] text-lg md:text-xl text-[#E5DFCC]">
+            <p className="font-loubag text-lg md:text-xl text-[#E5DFCC]">
               Siap H-5 Jam Sebelum Acara
             </p>
           </div>

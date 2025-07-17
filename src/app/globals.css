@@ -6,10 +6,19 @@
 }
 
 @font-face {
-  font-family: 'Loubag_Semi_Bold';
-  src: url('/fonts/loubag-semi-bold.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Loubag Medium';
+  src: url('../app/fonts/Loubag-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loubag Semi Bold';
+  src: url('../app/fonts/loubag-semi-bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 @tailwind base;

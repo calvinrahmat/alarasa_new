@@ -20,6 +20,8 @@ const config: Config = {
 			sans: ["var(--font-geist-sans)"],
 			mono: ["var(--font-geist-mono)"],
 			berenikaBold: ["var(--font-berenika-bold)"],
+			loubag: ["Loubag Medium"],
+			loubagSemiBold: ["Loubag Semi Bold"],
 		},
   		colors: {
 			'brown': '#a57e42',
