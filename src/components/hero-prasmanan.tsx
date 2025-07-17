@@ -9,8 +9,8 @@ export default function Hero() {
       <Image
         src="/kitchen2.jpg"
         alt="Kitchen background"
-        layout="fill"
-        objectFit="cover"
+        fill
+        className="object-cover"
         priority
       />
 
@@ -24,9 +24,8 @@ export default function Hero() {
             <Image
               src="/prasmanan-hero.png"
               alt="Prasmanan"
-              layout="fill"
-              objectFit="contain"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-contain"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
               priority
             />

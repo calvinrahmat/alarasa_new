@@ -150,19 +150,19 @@ export function Navbar(): JSX.Element {
                   <div className="py-1">
                     <Link
                       href="/nasi-box"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Heavy']"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Medium']"
                     >
                       Nasi Box
                     </Link>
                     <Link
                       href="/prasmanan"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Heavy']"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Medium']"
                     >
                       Prasmanan
                     </Link>
                     <Link
                       href="/snack-box"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Heavy']"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Medium']"
                     >
                       Snack Box & Coffee Break
                     </Link>

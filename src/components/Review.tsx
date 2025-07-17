@@ -33,8 +33,8 @@ export function Review() {
           <Image
             src="/kitchen3.jpg"
             alt="Review Background"
-            layout="fill"
-            objectFit="cover"
+            fill
+            className="object-cover"
             priority
           />
         </div>
@@ -42,13 +42,13 @@ export function Review() {
         <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
 
         <div className="relative z-20 w-full">
-          <div className="h-[20rem] w-full flex flex-col antialiased items-center justify-center">
-            <p className="text-center text-yellow-300 mb-8 px-4 md:text-2xl font-bold">
+          <div className="h-[16rem] w-full flex flex-col antialiased items-center justify-center">
+            <p className="text-center text-yellow-300 mb-6 px-4 md:text-2xl font-bold">
               Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai
               Pelengkap Hidangan Berbagai Acara!
             </p>
             <div className="w-full max-w-md px-4">
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 overflow-hidden">
                 {testimonials.map((testimonial, index) => (
                   <div
                     key={index}
@@ -70,9 +70,9 @@ export function Review() {
             </div>
           </div>
 
-          <div className="w-full py-6 md:py-12 lg:py-12">
+          <div className="w-full py-4 md:py-8 lg:py-8">
             <div className="w-full max-w-[2000px] mx-auto px-4 md:px-6">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white">
+              <h2 className="text-3xl font-bold text-center mb-8 text-white">
                 Our Customers
               </h2>
               <div className="relative overflow-hidden">

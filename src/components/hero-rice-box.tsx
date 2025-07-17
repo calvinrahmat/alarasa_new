@@ -6,14 +6,14 @@ import OrderButton from "./OrderButton";
 
 export default function Hero() {
   return (
-    <div className="relative bg-[#657A4E] text-white">
+    <div className="relative bg-[#657A4E] text-white md:py-28">
       {/* Navigation bar placeholder - you may want to use your actual Navbar component here */}
       <div className="absolute top-0 left-0 right-0 z-30">
         {/* Your navigation component */}
       </div>
 
       {/* Main content */}
-      <div className="container mx-auto px-4 py-16 min-h-screen flex items-center">
+      <div className="container mx-auto px-4 py-12 flex items-center">
         <div className="relative grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           {/* Content column - Left */}
           <div className="order-2 md:order-1 space-y-8">
@@ -50,7 +50,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <p className="text-xl md:text-2xl" style={{ fontFamily: "'Sweet Sans Pro Heavy', sans-serif" }}>
+            <p className="text-xl md:text-2xl" style={{ fontFamily: "'Sweet Sans Pro Medium', sans-serif" }}>
               Nikmati kelezatan cita rasa nusantara pada catering nasi box Alarasa.
             </p>
 
@@ -80,9 +80,8 @@ export default function Hero() {
               <Image
                 src="/berkat-01.png"
                 alt="Nasi Box"
-                layout="fill"
-                objectFit="contain"
-                className="rounded-lg"
+                fill
+                className="rounded-lg object-contain"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 priority
               />
@@ -92,7 +91,7 @@ export default function Hero() {
               <h2 className="font-['Loubag_Semi_Bold'] text-lg text-[#E5DFCC]">
                 NASI BOX BERKAT
               </h2>
-              <p style={{ fontFamily: "'Sweet Sans Pro Heavy', sans-serif" }} className="text-sm text-[#E5DFCC]">
+              <p className="font-['Loubag_Semi_Bold'] text-sm text-[#E5DFCC]">
                 Siap H-5 Jam Sebelum Acara
               </p>
             </div>
@@ -103,7 +102,7 @@ export default function Hero() {
             <h2 className="font-['Loubag_Semi_Bold'] text-2xl md:text-3xl text-[#E5DFCC]">
               NASI BOX BERKAT
             </h2>
-            <p style={{ fontFamily: "'Sweet Sans Pro Heavy', sans-serif" }} className="text-lg md:text-xl text-[#E5DFCC]">
+            <p className="font-['Loubag_Semi_Bold'] text-lg md:text-xl text-[#E5DFCC]">
               Siap H-5 Jam Sebelum Acara
             </p>
           </div>
