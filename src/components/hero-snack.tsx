@@ -18,7 +18,7 @@ export default function Hero() {
           {/* Content column - Left */}
           <div className="order-2 md:order-1 space-y-8">
             <h1 className="font-loubagSemiBold text-3xl md:text-4xl lg:text-5xl text-[#E5DFCC]">
-              Snack Box Alarasa Mulai dari <br />
+              Snack Box Alarasa Mulai dari 
               Rp 25.000,-
             </h1>
 
