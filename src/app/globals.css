@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Sweet Sans Pro Heavy';
+  src: url('/fonts/sweet-sans-pro/SweetSansProHeavy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Loubag_Semi_Bold';
+  src: url('/fonts/loubag-semi-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
