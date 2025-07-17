@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-bottom">
         <Image
-          src="/hero-image2.jpg"
+          src="/home-page.png"
           alt="Nasi Box"
           width={1920}
           height={1080}
@@ -20,8 +20,6 @@ export default function Hero() {
         />
       </div>
 
-      {/* Green Overlay */}
-      <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24 pb-20">

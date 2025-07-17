@@ -98,7 +98,7 @@ export function Navbar(): JSX.Element {
     setIsProductsMenuOpen(!isProductsMenuOpen);
   };
 
-  const isHomePage = pathname === "/";
+  const isHomePage = pathname === "/asdf";
 
   return (
     <nav

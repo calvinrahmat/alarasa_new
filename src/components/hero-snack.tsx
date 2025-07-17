@@ -6,7 +6,7 @@ import OrderButton from "./OrderButton";
 
 export default function Hero() {
   return (
-    <div className="relative bg-[#657A4E] text-white md:py-28">
+    <div className="relative bg-[#657A4E] text-white md:py-10">
       {/* Navigation bar placeholder - you may want to use your actual Navbar component here */}
       <div className="absolute top-0 left-0 right-0 z-30">
         {/* Your navigation component */}
@@ -78,7 +78,7 @@ export default function Hero() {
           <div className="relative order-1 md:order-2 space-y-6 flex justify-center items-center">
             <div className="relative w-full max-w-[300px] md:max-w-[600px] aspect-square">
               <Image
-                src="/snackbox.png"
+                src="/snack-box.png"
                 alt="Snack Box"
                 fill
                 className="rounded-lg object-contain"

@@ -6,7 +6,7 @@ import OrderButton from "./OrderButton";
 
 export default function Hero() {
   return (
-    <div className="relative bg-[#657A4E] text-white md:py-28">
+    <div className="relative bg-[#657A4E] text-white md:py-10">
       {/* Navigation bar placeholder - you may want to use your actual Navbar component here */}
       <div className="absolute top-0 left-0 right-0 z-30">
         {/* Your navigation component */}
