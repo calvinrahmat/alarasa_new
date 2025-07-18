@@ -1,3 +1,26 @@
+@font-face {
+  font-family: 'Sweet Sans Pro Heavy';
+  src: url('../app/fonts/sweet-sans-pro/SweetSansProHeavy.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Loubag Medium';
+  src: url('../app/fonts/Loubag-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Loubag Semi Bold';
+  src: url('../app/fonts/loubag-semi-bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

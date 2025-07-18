@@ -19,7 +19,7 @@ export default function OrderButton({
   return (
     <Link
       href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappText)}`}
-      className="inline-block bg-yellow-500 font-bold text-white py-3 px-6 rounded-lg hover:bg-yellow-600 transition duration-300 w-full text-center animate-bounce"
+      className="inline-block bg-[#223324] font-bold text-white py-3 px-6 rounded-full hover:bg-green-800 transition duration-300 w-full text-center animate-bounce"
       target="_blank"
       rel="noopener noreferrer"
       onClick={() =>

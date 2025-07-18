@@ -10,9 +10,8 @@ export default function Component() {
             <Image
               src="/kitchen2.jpg"
               alt="kitchen"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
           <div className="space-y-4">
@@ -38,9 +37,8 @@ export default function Component() {
             <Image
               src="/kitchen3.jpg"
               alt="kitchen"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
         </div>
@@ -51,9 +49,8 @@ export default function Component() {
             <Image
               src="/our-values.png"
               alt="Our Values"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
           <div className="space-y-4">
@@ -80,9 +77,8 @@ export default function Component() {
             <Image
               src="/PAKET-CATERING.jpg"
               alt="Paket Catering"
-              layout="fill"
-              objectFit="object-scale-down h-48 w-48"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-scale-down h-48 w-48"
             />
           </div>
         </div>
@@ -93,9 +89,8 @@ export default function Component() {
             <Image
               src="/halal.png"
               alt="Halal Certified"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-lg"
+              fill
+              className="rounded-lg object-cover"
             />
           </div>
           <div className="space-y-4">

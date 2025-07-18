@@ -91,14 +91,14 @@ export function Navbar(): JSX.Element {
 
   useEffect(() => {
     setIsOpen(false);
-    setIsProductsMenuOpen(false); // Add this line
+    setIsProductsMenuOpen(false);
   }, [pathname]);
 
   const toggleProductsMenu = () => {
     setIsProductsMenuOpen(!isProductsMenuOpen);
   };
 
-  const isArticleDetailPage = pathname?.includes("/article/");
+  const isHomePage = pathname === "/asdf";
 
   return (
     <nav
@@ -111,14 +111,18 @@ export function Navbar(): JSX.Element {
     >
       <div
         className={`w-full h-full absolute top-0 left-0 transition-all duration-300 ${
-          isAtTop && !isHovered && !isOpen
-            ? "bg-transparent"
-            : "bg-[#1C2C1C]/80"
+          isHomePage
+            ? isAtTop && !isHovered && !isOpen
+              ? "bg-transparent"
+              : "bg-[#223324]/80"
+            : "bg-[#223324]/95"
         } ${
           isMobile
             ? isOpen || isMobileProductsOpen
-              ? "bg-[#1C2C1C]/95"
-              : "bg-transparent"
+              ? "bg-[#223324]/95"
+              : isHomePage
+                ? "bg-transparent"
+                : "bg-[#223324]/95"
             : ""
         }`}
       ></div>
@@ -130,19 +134,13 @@ export function Navbar(): JSX.Element {
           <div className="hidden md:flex items-center space-x-7">
             <Link
               href="/"
-              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage && isAtTop ? "text-slate-800" : "text-white"
-              }`}
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg font-['Sweet_Sans_Pro_Heavy'] text-[#E5DFCC]`}
             >
               Home
             </Link>
             <div className="relative" ref={productsMenuRef}>
               <button
-                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center text-lg ${
-                  isArticleDetailPage && isAtTop
-                    ? "text-slate-800"
-                    : "text-white"
-                }`}
+                className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 flex items-center text-lg font-['Sweet_Sans_Pro_Heavy'] text-[#E5DFCC]`}
                 onClick={toggleProductsMenu}
               >
                 Products <ChevronDown className="ml-1 h-5 w-5" />
@@ -152,19 +150,19 @@ export function Navbar(): JSX.Element {
                   <div className="py-1">
                     <Link
                       href="/nasi-box"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Medium']"
                     >
                       Nasi Box
                     </Link>
                     <Link
                       href="/prasmanan"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Medium']"
                     >
                       Prasmanan
                     </Link>
                     <Link
                       href="/snack-box"
-                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100"
+                      className="block px-4 py-2 text-base text-gray-700 hover:bg-gray-100 font-['Sweet_Sans_Pro_Medium']"
                     >
                       Snack Box & Coffee Break
                     </Link>
@@ -174,26 +172,20 @@ export function Navbar(): JSX.Element {
             </div>
             <Link
               href="/about"
-              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage && isAtTop ? "text-slate-800" : "text-white"
-              }`}
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg font-['Sweet_Sans_Pro_Heavy'] text-[#E5DFCC]`}
             >
               About Us
             </Link>
             <Link
               href="/article"
-              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg ${
-                isArticleDetailPage && isAtTop ? "text-slate-800" : "text-white"
-              }`}
+              className={`py-4 px-2 font-semibold hover:text-green-500 transition duration-300 text-lg font-['Sweet_Sans_Pro_Heavy'] text-[#E5DFCC]`}
             >
               Blog
             </Link>
           </div>
           <div className="md:hidden flex items-center">
             <button
-              className={`outline-none mobile-menu-button ${
-                isArticleDetailPage ? "text-slate-800" : "text-white"
-              }`}
+              className="outline-none mobile-menu-button text-[#E5DFCC]"
               onClick={toggleMenu}
             >
               {isOpen ? (
@@ -208,42 +200,42 @@ export function Navbar(): JSX.Element {
       <div className={`md:hidden ${isOpen ? "block" : "hidden"} relative z-10`}>
         <Link
           href="/"
-          className="block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-6 text-sm text-[#E5DFCC] hover:bg-green-500 hover:text-white transition duration-300 font-['Sweet_Sans_Pro_Heavy']"
         >
           Home
         </Link>
 
-        <div className="block py-2 px-6 text-sm text-white bg-green-900/30">
+        <div className="block py-2 px-6 text-sm text-[#E5DFCC] bg-green-900/30 font-['Sweet_Sans_Pro_Heavy']">
           Products
         </div>
         <Link
           href="/nasi-box"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-10 text-sm text-[#E5DFCC] hover:bg-green-500 hover:text-white transition duration-300 font-['Sweet_Sans_Pro_Heavy']"
         >
           Nasi Box
         </Link>
         <Link
           href="/prasmanan"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-10 text-sm text-[#E5DFCC] hover:bg-green-500 hover:text-white transition duration-300 font-['Sweet_Sans_Pro_Heavy']"
         >
           Prasmanan
         </Link>
         <Link
           href="/snack-box"
-          className="block py-2 px-10 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300"
+          className="block py-2 px-10 text-sm text-[#E5DFCC] hover:bg-green-500 hover:text-white transition duration-300 font-['Sweet_Sans_Pro_Heavy']"
         >
           Snack Box & Coffee Break
         </Link>
 
         <Link
           href="/about"
-          className={`block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300`}
+          className={`block py-2 px-6 text-sm text-[#E5DFCC] hover:bg-green-500 hover:text-white transition duration-300 font-['Sweet_Sans_Pro_Heavy']`}
         >
           About Us
         </Link>
         <Link
           href="/article"
-          className={`block py-2 px-6 text-sm text-white hover:bg-green-500 hover:text-white transition duration-300`}
+          className={`block py-2 px-6 text-sm text-[#E5DFCC] hover:bg-green-500 hover:text-white transition duration-300 font-['Sweet_Sans_Pro_Heavy']`}
         >
           Blog
         </Link>

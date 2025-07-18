@@ -2,7 +2,6 @@ import React from "react";
 import localFont from "next/font/local";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const berenikaBold = localFont({
   src: [
@@ -19,8 +18,6 @@ interface LogoProps {
 }
 
 const Logo: React.FC<LogoProps> = ({ showText }) => {
-  const pathname = usePathname();
-  const isArticlePage = pathname?.includes("article/");
 
   return (
     <Link href="/" aria-label="Go to homepage">
@@ -35,9 +32,8 @@ const Logo: React.FC<LogoProps> = ({ showText }) => {
         />
         {showText && (
           <div
-            className={`${berenikaBold.className} text-2xl ml-2 ${
-              isArticlePage ? "text-slate-800" : "text-white"
-            }`}
+            className={`${berenikaBold.className} text-2xl ml-2`}
+            style={{ color: "#E5DFCC" }}
           >
             alarasa
           </div>

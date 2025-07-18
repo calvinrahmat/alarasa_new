@@ -1,16 +1,14 @@
 export const runtime = 'edge';
 
 import { Review } from "@/components/Review";
-import Link from "next/link";
 import CTASection from "@/components/CTASection";
 import HeroRiceBox from "@/components/hero-rice-box";
-import ImageSlider from "@/components/image-slider";
 export default function Home() {
   return (
     <>
       <HeroRiceBox />
-      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-10">
-        <div className="max-w-7xl mx-auto flex items-center">
+      <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100">
+        {/* <div className="max-w-7xl mx-auto flex items-center">
           <div className="flex flex-col md:flex-row items-center justify-center w-full">
             <div className="w-full md:w-1/2 px-4 md:px-0 flex items-center justify-center">
               <ImageSlider
@@ -54,9 +52,9 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="mt-10" />
+        
         <Review />
         <CTASection
           description="Sudah ada 1000++ Customer Yang Mempercayakan Alarasa Sebagai Pelengkap Hidangan Berbagai Acara. Catering Nasi Box Premium Dengan Budget Minim, Cocok Untuk Acara Kantor, Ulang Tahun, Wedding, Dan Lainnya."

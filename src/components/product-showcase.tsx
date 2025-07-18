@@ -55,9 +55,8 @@ export default function ProductShowcase({
           <Image
             src={images[currentImage]}
             alt={`Main ${title} image ${currentImage + 1}`}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
+            fill
+            className="rounded-lg object-cover"
           />
         </div>
         <div className="relative">
@@ -78,8 +77,8 @@ export default function ProductShowcase({
                     <Image
                       src={src}
                       alt={`${title} image ${startIndex + index + 1}`}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                 </button>
