@@ -8,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-bottom">
         <Image
-          src="/home-page.png"
+          src="/home-page2.jpg"
           alt="Nasi Box"
           width={1920}
           height={1080}
@@ -76,7 +76,7 @@ export default function Hero() {
           <span className="text-yellow-300">Nasi Box Andalanmu</span>
         </h1>
 
-        <p className="text-xl sm:text-2xl text-white">
+        <p className="text-xl sm:text-2xl text-green-800">
           Percayakan Alarasa Catering untuk melengkapi setiap acara special
           kalian! Enak, higienis dan terjangkau!
         </p>
