@@ -28,23 +28,7 @@ export default function PrasmananPage() {
                 priority
               />
               
-              {/* Overlay with additional info */}
-              <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-70 rounded-lg p-4 text-white">
-                <div className="flex flex-col sm:flex-row justify-between items-center">
-                  <div className="text-sm sm:text-base">
-                    <p className="font-semibold">Mulai dari Rp. 80.000</p>
-                    <p className="text-xs sm:text-sm opacity-90">Berlaku selama bulan Agustus</p>
-                  </div>
-                  <Link
-                    href={`https://wa.me/6285280730787?text=${encodeURIComponent("Halo Minrasa! Mau tanya-tanya tentang Promo Spesial Kemerdekaan Prasmanan Hemat")}`}
-                    className="mt-2 sm:mt-0 bg-green-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300 text-sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Pesan Sekarang
-                  </Link>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
