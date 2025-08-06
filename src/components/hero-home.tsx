@@ -20,6 +20,8 @@ export default function Hero() {
         />
       </div>
 
+      {/* Green Overlay */}
+      <div className="absolute inset-0 bg-[#141e14]/80 z-10" />
 
       {/* Content */}
       <div className="relative z-20 text-left px-4 sm:px-6 lg:px-8 max-w-xl ml-8 sm:ml-16 md:ml-24 pb-20">
@@ -76,7 +78,7 @@ export default function Hero() {
           <span className="text-yellow-300">Nasi Box Andalanmu</span>
         </h1>
 
-        <p className="text-xl sm:text-2xl text-green-800">
+        <p className="text-xl sm:text-2xl text-white">
           Percayakan Alarasa Catering untuk melengkapi setiap acara special
           kalian! Enak, higienis dan terjangkau!
         </p>
