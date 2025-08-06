@@ -5,11 +5,35 @@ import CTASection from "@/components/CTASection";
 import Link from "next/link";
 import HeroPrasmanan from "@/components/hero-prasmanan";
 import ImageSlider from "@/components/image-slider";
+import Image from "next/image";
 
 export default function PrasmananPage() {
   return (
     <>
       <HeroPrasmanan />
+      
+      {/* Promotional Poster Section */}
+      <section className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          
+          
+          <div className="flex justify-center">
+            <div className="relative max-w-2xl w-full">
+              <Image
+                src="/poster-prasmanan.jpeg"
+                alt="Promo Spesial Kemerdekaan - Prasmanan Hemat Mulai dari Rp. 80.000"
+                width={800}
+                height={1000}
+                className="w-full h-auto rounded-lg shadow-2xl"
+                priority
+              />
+              
+
+            </div>
+          </div>
+        </div>
+      </section>
+
       <main className="bg-gradient-to-b from-[#141e14] to-[#1C2C1C] text-slate-100 py-10">
         <div className="max-w-7xl mx-auto flex items-center">
           <div className="flex flex-col md:flex-row items-center justify-center w-full">
