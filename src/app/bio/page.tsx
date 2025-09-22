@@ -8,7 +8,7 @@ import ProfileHeader from '@/components/ProfileHeader';
 import { Card } from '@/components/ui/card';
 import CustomerLogos from '@/components/CustomerLogos';
 import Image from 'next/image';
-import { Utensils, Globe, Building2 } from 'lucide-react';
+import { Utensils, Globe, Building2, MapPin } from 'lucide-react';
 
 const Index = () => {
   const whatsappUrl = `https://wa.me/6285280730787?text=${encodeURIComponent(
@@ -62,11 +62,19 @@ const Index = () => {
                 Website
               </LinkButton>
               
+              
               <LinkButton 
                 href="https://alarasa.com/about"
                 icon={<Building2 className="h-5 w-5" />}
               >
                 Company Profile
+              </LinkButton>
+              
+              <LinkButton 
+                href="https://maps.app.goo.gl/xm2ua6oYnhxwWd6T6?g_st=ipc"
+                icon={<MapPin className="h-5 w-5" />}
+              >
+                Lokasi Dapur
               </LinkButton>
               
               <LinkButton 
