@@ -42,7 +42,7 @@ const Index = () => {
             </div>
             <div className="flex flex-col space-y-4 mt-8">
               <LinkButton 
-                href="https://drive.google.com/file/d/1NVsJzx-zXkUMwa-nZwPg6K0rpnAf8fjC/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1E8ZZz3Rb9D9Ips_d_anPL627zSUisQ-R/view?usp=sharing"
                 icon={<Utensils className="h-5 w-5" />}
               >
                 Menu Nasi Box
