@@ -49,7 +49,7 @@ const Index = () => {
               </LinkButton>
               
               <LinkButton 
-                href="https://drive.google.com/file/d/1vorbzHBQi9E_xrMwlSxlRWl3koilchVT/view?usp=drivesdk"
+                href="https://drive.google.com/file/d/1_66fP1YQcstppfMkElJQK-vP3BX8BjHw/view?usp=sharing"
                 icon={<Utensils className="h-5 w-5" />}
               >
                 Menu Prasmanan
