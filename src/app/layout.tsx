@@ -36,13 +36,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+      {/* Google Tag Manager 1 */}
       <GoogleTagManager gtmId="GTM-MD5GR22W" />
-      {/* Google Ads conversion tracking script */}
+      {/* Google Tag Manager 2 */}
+      <GoogleTagManager gtmId="GTM-P894HXLL" />
+      
+      {/* Google Ads conversion tracking script 1 */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-11304618111"
         strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="afterInteractive">
+      <Script id="google-analytics-1" strategy="afterInteractive">
         {`
           if (typeof window !== 'undefined') {
             window.dataLayer = window.dataLayer || [];
@@ -52,10 +56,37 @@ export default function RootLayout({
           }
         `}
       </Script>
+      
+      {/* Google Ads conversion tracking script 2 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17740167253"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics-2" strategy="afterInteractive">
+        {`
+          if (typeof window !== 'undefined') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17740167253');
+          }
+        `}
+      </Script>
+      
       <body className="flex flex-col min-h-screen">
+        {/* Google Tag Manager noscript 1 */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MD5GR22W"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* Google Tag Manager noscript 2 */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P894HXLL"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
