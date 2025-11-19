@@ -6,7 +6,11 @@ declare global {
   }
 }
 
-export const FB_PIXEL_ID = "2168736646808729";
+// Multiple Meta Pixel IDs
+export const FB_PIXEL_IDS = [
+  "2168736646808729",
+  "824799943675762"
+];
 
 export const pageview = () => {
   if (typeof window !== 'undefined' && window.fbq) {

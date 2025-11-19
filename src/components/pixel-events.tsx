@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { FB_PIXEL_IDS } from "@/lib/meta-pixel";
 
 export function FacebookPixelEvents() {
   useEffect(() => {
@@ -8,10 +9,14 @@ export function FacebookPixelEvents() {
       import("react-facebook-pixel")
         .then((x) => x.default)
         .then((ReactPixel) => {
-          ReactPixel.init("2168736646808729", undefined, {
-            autoConfig: true,
-            debug: false
+          // Initialize all Meta Pixel IDs
+          FB_PIXEL_IDS.forEach((pixelId) => {
+            ReactPixel.init(pixelId, undefined, {
+              autoConfig: true,
+              debug: false
+            });
           });
+          // Track pageview for all pixels
           ReactPixel.pageView();
         });
     }
