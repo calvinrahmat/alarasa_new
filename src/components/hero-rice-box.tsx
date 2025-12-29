@@ -57,7 +57,7 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col  sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
               <Link
-                href="https://drive.google.com/file/d/1E8ZZz3Rb9D9Ips_d_anPL627zSUisQ-R/view?usp=sharing"
+                href="https://drive.google.com/file/d/1pUUumdLgHzwXTy6m4tT6kkxPC7E5NWWx/view?usp=drivesdk"
                 className="inline-block bg-[#E5DFCC] text-green-900 font-semibold py-3 px-6 rounded-full hover:bg-green-800 hover:text-white transition duration-300 w-full text-center"
                 target="_blank"
                 rel="noopener noreferrer"

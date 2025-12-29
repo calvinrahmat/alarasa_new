@@ -40,7 +40,7 @@ export default function Home() {
                 <div className="flex justify-center space-x-4 mb-6">
                   <div className="flex flex-row justify-center items-center space-x-4">
                     <Link
-                      href="https://drive.google.com/file/d/1E8ZZz3Rb9D9Ips_d_anPL627zSUisQ-R/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1pUUumdLgHzwXTy6m4tT6kkxPC7E5NWWx/view?usp=drivesdk"
                       className="inline-block bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-800 transition duration-300 w-full sm:w-auto"
                       target="_blank"
                       rel="noopener noreferrer"
